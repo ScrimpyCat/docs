@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.15.1">
+    <title>Gingerbread – Gingerbread vdev</title>
+    <link rel="stylesheet" href="dist/app-af302bfcc4.css" />
+    
+    <script src="dist/sidebar_items-b1a124bc3d.js"></script>
+  </head>
+  <body data-type="extras">
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
+
+<div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+
+  
+  <a href="gingerbread.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Gingerbread
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        vdev
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+
+    
+  </ul>
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+
+<h1> Gingerbread (Entity Management)</h1><p>Manages the entities belonging to different identities. An entity is a unique ID that can be tagged to help identify it, and can be connected to other entities to form various relationships.</p><p>An entity ID is static and will remain unique for the lifetime of the database, regardless if the entity has been destroyed or not. This allows other services to safely associate other data with entity IDs.</p><h3> Usage</h3><p>The service component (<code>Gingerbread.Service</code>) is an OTP application that should be started prior to making any requests to the service. This component should only be interacted with to configure/control the service explicitly.</p><p>An API (<a href="Gingerbread.API.html"><code>Gingerbread.API</code></a>) is provided to allow for convenient interaction with the service from external applications.</p><h3> Ownership</h3><p>An entity is associated with one identity. This identity is an external UUID that can be used to associate that entity belongs to an external resource. An identity can own any number of entities. Ownership of an entity can also be transferred from one identity to another. <strong>Depending on the scenario, transfer may be an unsafe operation. In order to make it trusted, an external verification mechanism may need to be used to be sure the both identities (the current owner and the new owner) approve the transfer.</strong></p><h3> Relationship</h3><p>Entities can be grouped into various relationships. This is exposed through parent-child connections, however this relationship isn't limited to a single parent-child. Rather this relationship can take the form of a one-to-many, many-to-one, many-to-many, tree, circular, or even self. The only restriction on a relationship is that the specific parent-child connection can only be made once (to avoid duplicates of the same relationship). Some examples of these relationships are as follows:</p><svg font-family="Arial" font-size="14" height="176" width="376" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<marker id="triangle" markerHeight="10" markerUnits="strokeWidth" markerWidth="10" orient="auto" refX="0" refY="5" viewBox="0 0 40 40">
+<path d="M 0 0 L 10 5 L 0 10 z"/>
+</marker>
+</defs>
+<style>
+
+     <![CDATA[ 
+    line, path {
+      stroke: black;
+      stroke-width: 2;
+      stroke-opacity: 1;
+      fill-opacity: 1;
+      stroke-linecap: round;
+      stroke-linejoin: miter;
+    }
+     ]]> 
+    
+</style>
+<path d=" M 4 8 L 4 32 M 4 8 L 32 8 M 8 8 L 32 8 M 36 8 L 36 32 M 36 8 L 32 8 M 76 8 L 76 32 M 76 8 L 104 8 M 80 8 L 104 8 M 108 8 L 108 32 M 108 8 L 104 8 M 140 8 L 140 32 M 140 8 L 168 8 M 144 8 L 168 8 M 172 8 L 172 32 M 172 8 L 168 8 M 212 8 L 212 32 M 212 8 L 240 8 M 216 8 L 240 8 M 244 8 L 244 32 M 244 8 L 240 8 M 276 8 L 276 32 M 276 8 L 304 8 M 280 8 L 304 8 M 308 8 L 308 32 M 308 8 L 304 8 M 320 8 L 328 8 M 332 8 L 332 32 M 332 8 L 328 8 M 4 16 L 4 32 M 36 16 L 36 32 M 48 24 L 36 24 M 76 16 L 76 32 M 108 16 L 108 32 M 140 16 L 140 32 M 172 16 L 172 32 M 212 16 L 212 32 M 244 16 L 244 32 M 276 16 L 276 32 M 308 16 L 308 32 M 332 16 L 332 32 M 4 40 L 4 32 M 4 40 L 32 40 M 8 40 L 32 40 M 36 40 L 36 32 M 36 40 L 32 40 M 76 40 L 76 32 M 76 40 L 104 40 M 80 40 L 104 40 M 108 40 L 108 32 M 108 40 L 104 40 M 140 40 L 140 32 M 140 40 L 168 40 M 144 40 L 168 40 M 172 40 L 172 32 M 172 40 L 168 40 M 212 40 L 212 32 M 212 40 L 240 40 M 216 40 L 240 40 M 244 40 L 244 32 M 244 40 L 240 40 M 276 40 L 276 32 M 276 40 L 304 40 M 280 40 L 304 40 M 308 40 L 308 32 M 308 40 L 304 40 M 320 40 L 328 40 M 332 40 L 332 32 M 332 40 L 328 40 M 4 72 L 4 96 M 4 72 L 32 72 M 8 72 L 32 72 M 36 72 L 36 96 M 36 72 L 32 72 M 68 72 L 68 96 M 68 72 L 96 72 M 72 72 L 96 72 M 100 72 L 100 96 M 100 72 L 96 72 M 140 72 L 140 96 M 140 72 L 168 72 M 144 72 L 168 72 M 172 72 L 172 96 M 172 72 L 168 72 M 204 72 L 204 96 M 204 72 L 232 72 M 208 72 L 232 72 M 236 72 L 236 96 M 236 72 L 232 72 M 268 72 L 268 96 M 268 72 L 296 72 M 272 72 L 296 72 M 300 72 L 300 96 M 300 72 L 296 72 M 340 72 L 340 96 M 340 72 L 368 72 M 344 72 L 368 72 M 372 72 L 372 96 M 372 72 L 368 72 M 4 80 L 4 96 M 36 80 L 36 96 M 48 88 L 36 88 M 68 80 L 68 96 M 100 80 L 100 96 M 112 88 L 100 88 M 140 80 L 140 96 M 172 80 L 172 96 M 204 80 L 204 96 M 236 80 L 236 96 M 248 88 L 236 88 M 268 80 L 268 96 M 300 80 L 300 96 M 312 88 L 300 88 M 340 80 L 340 96 M 372 80 L 372 96 M 4 104 L 4 96 M 4 104 L 16 104 M 8 104 L 16 104 M 20 104 L 20 144 M 16 104 L 32 104 M 24 104 L 32 104 M 36 104 L 36 96 M 36 104 L 32 104 M 68 104 L 68 96 M 68 104 L 96 104 M 72 104 L 96 104 M 100 104 L 100 96 M 100 104 L 96 104 M 140 104 L 140 96 M 140 104 L 168 104 M 144 104 L 168 104 M 172 104 L 172 96 M 172 104 L 168 104 M 204 104 L 204 96 M 204 104 L 232 104 M 208 104 L 232 104 M 236 104 L 236 96 M 236 104 L 232 104 M 268 104 L 268 96 M 268 104 L 296 104 M 272 104 L 296 104 M 300 104 L 300 96 M 300 104 L 296 104 M 340 104 L 340 96 M 340 104 L 352 104 M 344 104 L 352 104 M 356 104 L 356 144 M 352 104 L 368 104 M 360 104 L 368 104 M 372 104 L 372 96 M 372 104 L 368 104 M 20 112 L 20 144 M 356 112 L 356 144 M 68 136 L 68 160 M 68 136 L 96 136 M 72 136 L 96 136 M 100 136 L 100 160 M 100 136 L 96 136 M 220 128 L 220 144 M 20 152 L 20 144 M 68 144 L 68 160 M 100 144 L 100 160 M 220 152 L 220 144 M 220 152 L 352 152 M 224 152 L 352 152 M 356 152 L 356 144 M 356 152 L 352 152 M 68 168 L 68 160 M 68 168 L 96 168 M 72 168 L 96 168 M 100 168 L 100 160 M 100 168 L 96 168" fill="none"/>
+<path d="" fill="none" stroke-dasharray="3 3"/>
+<line marker-end="url(#triangle)" x1="320" x2="316" y1="8" y2="8"/>
+<line marker-end="url(#triangle)" x1="48" x2="68" y1="24" y2="24"/>
+<line marker-end="url(#triangle)" x1="184" x2="180" y1="24" y2="24"/>
+<line marker-end="url(#triangle)" x1="184" x2="204" y1="24" y2="24"/>
+<line marker-end="url(#triangle)" x1="320" x2="316" y1="40" y2="40"/>
+<line marker-end="url(#triangle)" x1="48" x2="60" y1="88" y2="88"/>
+<line marker-end="url(#triangle)" x1="112" x2="132" y1="88" y2="88"/>
+<line marker-end="url(#triangle)" x1="248" x2="260" y1="88" y2="88"/>
+<line marker-end="url(#triangle)" x1="312" x2="332" y1="88" y2="88"/>
+<line marker-end="url(#triangle)" x1="220" x2="220" y1="128" y2="112"/>
+<line marker-end="url(#triangle)" x1="20" x2="60" y1="152" y2="152"/>
+<line marker-end="url(#triangle)" x1="24" x2="60" y1="152" y2="152"/>
+<text x="18" y="28">
+A
+</text>
+<text x="90" y="28">
+B
+</text>
+<text x="154" y="28">
+A
+</text>
+<text x="226" y="28">
+B
+</text>
+<text x="290" y="28">
+A
+</text>
+<text x="18" y="92">
+A
+</text>
+<text x="82" y="92">
+B
+</text>
+<text x="154" y="92">
+C
+</text>
+<text x="218" y="92">
+A
+</text>
+<text x="282" y="92">
+B
+</text>
+<text x="354" y="92">
+C
+</text>
+<text x="82" y="156">
+D
+</text>
+</svg>
+<p>Relationships can be removed and re-added as necessary. They can be applied to any entity, regardless of owning identity. If a relationship is removed (either explicitly or an entity consisting of one part of that relationship is destroyed), any other connections that were apart of that relationship hierarchy will be unchanged. Any kind of specific behaviour around how relationships should behave under those circumstances must be handled externally.</p><h3> Use Cases?</h3><p>Anywhere you want to retain relationships between various types of data, but allow for those relationships to be handled in a transactional manner. Regardless of where external data associated with those entities may be stored.</p><h2 id="todo" class="section-heading">
+  <a href="#todo" class="hover-link"><i class="icon-link"></i></a>
+  Todo
+</h2>
+<ul><li><input type="checkbox" disabled>Possibly support different kinds of relationship types (to simplify need for external logic).</li><li><input type="checkbox" disabled>PubSub?</li></ul>
+      <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.15.1),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle" />
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  <script src="dist/app-e9767fa739.js"></script>
+  </body>
+</html>
+

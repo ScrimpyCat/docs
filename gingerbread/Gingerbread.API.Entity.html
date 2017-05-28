@@ -1,0 +1,454 @@
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.15.1">
+    <title>Gingerbread.API.Entity – Gingerbread vdev</title>
+    <link rel="stylesheet" href="dist/app-af302bfcc4.css" />
+    
+    <script src="dist/sidebar_items-b1a124bc3d.js"></script>
+  </head>
+  <body data-type="modules">
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
+
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+
+  
+  <a href="gingerbread.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Gingerbread
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        vdev
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+
+    
+  </ul>
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">Gingerbread vdev</small>
+        Gingerbread.API.Entity
+        
+        
+          <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_api/lib/gingerbread.api/entity.ex#L1" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
+        
+      </h1>
+
+      
+        <section id="moduledoc">
+          <p>  Manages unique (optionally tagged) entities.</p><p>  Entities are unique IDs that are associated with an identity and can have a tag to  help identify them. Entities can be connected to other entities in order to map out  various relationships between the entities.</p><p>  An entities unique ID will be static and remain unique for the entire lifetime of  the database. This means that destroyed entities, only destroys the entity itself  but does not make that ID re-available.</p>
+        </section>
+      
+
+      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:uuid/0">uuid()</a>
+  </div>
+  
+</div>
+
+  </div>
+
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#add_child/2">add_child(parent, child)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Create a parent-child relationship between two entities</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#create/2">create(identity, name \\ nil)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Create a unique entity with a name (to help classify it) and an identity for it  to be associated with</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#dependants/1">dependants(entity)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Get the children of an entity</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#destroy/1">destroy(entity)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Destroy an entity</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#entities/1">entities(identity)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Get the entities associated with the given identity</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#name/1">name(entity)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Get the name of an entity</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#remove_child/2">remove_child(parent, child)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Remove a parent-child relationship between two entities</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#transfer/2">transfer(entity, identity)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Transfer an entity to a new identity</p></div>
+  
+</div>
+
+  </div>
+
+
+          
+
+        </section>
+      
+
+      
+        <section id="types" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <i class="icon-link"></i>
+            </a>
+            Types
+          </h1>
+          <div class="types-list">
+            <div class="detail" id="t:uuid/0">
+  
+  <div class="detail-header">
+    <a href="#t:uuid/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">uuid()</span>
+    
+      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_api/lib/gingerbread.api/entity.ex#L14" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>uuid() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a></pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+
+          </div>
+        </section>
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="add_child/2">
+  
+  <div class="detail-header">
+    <a href="#add_child/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">add_child(parent, child)</span>
+    
+      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_api/lib/gingerbread.api/entity.ex#L63" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>add_child(<a href="#t:uuid/0">uuid</a>, <a href="#t:uuid/0">uuid</a>) :: :ok | {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Create a parent-child relationship between two entities.</p><p>  Entity relationships can consist of any form (tree, circular, self, etc.).</p><p>  Returns <code>:ok</code> if the relationship was created. Otherwise returns the reason for  failure.</p>
+  </section>
+</div>
+<div class="detail" id="create/2">
+  
+    <span id="create/1" />
+  
+  <div class="detail-header">
+    <a href="#create/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">create(identity, name \\ nil)</span>
+    
+      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_api/lib/gingerbread.api/entity.ex#L26" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>create(<a href="#t:uuid/0">uuid</a>, atom | nil) ::
+  {:ok, {atom | nil, <a href="#t:uuid/0">uuid</a>}} |
+  {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Create a unique entity with a name (to help classify it) and an identity for it  to be associated with.</p><p>  Returns <code>{ :ok, { name, entity } }</code> if the entity was created. Otherwise returns  the reason for failure.</p>
+  </section>
+</div>
+<div class="detail" id="dependants/1">
+  
+  <div class="detail-header">
+    <a href="#dependants/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">dependants(entity)</span>
+    
+      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_api/lib/gingerbread.api/entity.ex#L96" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>dependants(<a href="#t:uuid/0">uuid</a>) :: [{atom | nil, <a href="#t:uuid/0">uuid</a>}]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Get the children of an entity.</p><p>  Returns the list of entities belonging to the entity, where each entity is a tagged  entity <code>{ name, entity }</code>.</p>
+  </section>
+</div>
+<div class="detail" id="destroy/1">
+  
+  <div class="detail-header">
+    <a href="#destroy/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">destroy(entity)</span>
+    
+      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_api/lib/gingerbread.api/entity.ex#L39" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>destroy(<a href="#t:uuid/0">uuid</a>) :: :ok | {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Destroy an entity.</p><p>  After destruction an entity can no longer be used. But it's unique ID will remain,  so services that depend on that ID being unique can work unaffected.</p><p>  Returns <code>:ok</code> if the entity was destroyed. Otherwise returns the reason for failure.</p>
+  </section>
+</div>
+<div class="detail" id="entities/1">
+  
+  <div class="detail-header">
+    <a href="#entities/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">entities(identity)</span>
+    
+      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_api/lib/gingerbread.api/entity.ex#L85" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>entities(<a href="#t:uuid/0">uuid</a>) :: [{atom | nil, <a href="#t:uuid/0">uuid</a>}]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Get the entities associated with the given identity.</p><p>  Returns the list of entities belonging to the identity, where each entity is a  tagged entity <code>{ name, entity }</code>.</p>
+  </section>
+</div>
+<div class="detail" id="name/1">
+  
+  <div class="detail-header">
+    <a href="#name/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">name(entity)</span>
+    
+      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_api/lib/gingerbread.api/entity.ex#L106" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>name(<a href="#t:uuid/0">uuid</a>) :: {:ok, atom | nil} | {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Get the name of an entity.</p><p>  Returns <code>{ :ok, name }</code> if successful. Otherwise returns the reason for failure.</p>
+  </section>
+</div>
+<div class="detail" id="remove_child/2">
+  
+  <div class="detail-header">
+    <a href="#remove_child/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">remove_child(parent, child)</span>
+    
+      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_api/lib/gingerbread.api/entity.ex#L74" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>remove_child(<a href="#t:uuid/0">uuid</a>, <a href="#t:uuid/0">uuid</a>) :: :ok | {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Remove a parent-child relationship between two entities.</p><p>  Returns <code>:ok</code> if the relationship was removed. Otherwise returns the reason for  failure.</p>
+  </section>
+</div>
+<div class="detail" id="transfer/2">
+  
+  <div class="detail-header">
+    <a href="#transfer/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">transfer(entity, identity)</span>
+    
+      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_api/lib/gingerbread.api/entity.ex#L50" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>transfer(<a href="#t:uuid/0">uuid</a>, <a href="#t:uuid/0">uuid</a>) :: :ok | {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Transfer an entity to a new identity.</p><p>  Returns <code>:ok</code> if the entity was transferred. Otherwise returns the reason for  failure.</p>
+  </section>
+</div>
+
+        </section>
+      
+
+      
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.15.1),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle" />
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  <script src="dist/app-e9767fa739.js"></script>
+  </body>
+</html>
+

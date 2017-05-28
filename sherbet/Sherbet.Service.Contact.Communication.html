@@ -1,0 +1,598 @@
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.15.1">
+    <title>Sherbet.Service.Contact.Communication – Sherbet vdev</title>
+    <link rel="stylesheet" href="dist/app-af302bfcc4.css" />
+    
+    <script src="dist/sidebar_items-3404037142.js"></script>
+  </head>
+  <body data-type="modules">
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
+
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+
+  
+  <a href="sherbet.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Sherbet
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        vdev
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+
+    
+  </ul>
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">Sherbet vdev</small>
+        Sherbet.Service.Contact.Communication
+        
+        
+          <a href="https://github.com/ScrimpyCat/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/contact/communication.ex#L1" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
+        
+      </h1>
+
+      
+        <section id="moduledoc">
+          <p>  Provides interfaces to communications.</p>
+        </section>
+      
+
+      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:uuid/0">uuid()</a>
+  </div>
+  
+</div>
+
+  </div>
+
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#add/3">add(type, communication, identity)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Add a communication type to be associated with the given identity</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#add/4">add(type, communication, atom, identity)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Add a communication type to be associated with the given identity. And set its  priority</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#contacts/2">contacts(type, identity)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Get a list of communications of type associated with the given identity</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#finalise_removal/3">finalise_removal(type, communication, key)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Finalise the request that a communication type be removed</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#finalise_verification/4">finalise_verification(type, communication, key, identity)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Finalise the verification request for a communication type</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#owner/2">owner(type, communication)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Get the owning identity for the specific communication of type</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#primary_contact/2">primary_contact(type, identity)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Get the primary communication of type associated with the given identity</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#remove/3">remove(type, communication, identity)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Remove a communication type from a given identity</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#request_removal/2">request_removal(type, communication)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Request a communication type associated with another identity, be removed</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#request_verification/3">request_verification(type, communication, identity)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Request a comunication type be verified</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#set_priority/4">set_priority(type, communication, priority, identity)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Change a communication type associated with the identity to a new priority</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#verified?/3">verified?(type, communication, identity)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Check if a communication type belonging to the given identity has been verified</p></div>
+  
+</div>
+
+  </div>
+
+
+          
+
+        </section>
+      
+
+      
+        <section id="types" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <i class="icon-link"></i>
+            </a>
+            Types
+          </h1>
+          <div class="types-list">
+            <div class="detail" id="t:uuid/0">
+  
+  <div class="detail-header">
+    <a href="#t:uuid/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">uuid()</span>
+    
+      <a href="https://github.com/ScrimpyCat/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/contact/communication.ex#L10" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>uuid() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a></pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+
+          </div>
+        </section>
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="add/3">
+  
+  <div class="detail-header">
+    <a href="#add/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">add(type, communication, identity)</span>
+    
+      <a href="https://github.com/ScrimpyCat/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/contact/communication.ex#L19" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>add(atom, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, <a href="#t:uuid/0">uuid</a>) :: :ok | {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Add a communication type to be associated with the given identity.</p><p>  Returns <code>:ok</code> on successful addition. Otherwise returns a error.</p>
+  </section>
+</div>
+<div class="detail" id="add/4">
+  
+  <div class="detail-header">
+    <a href="#add/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">add(type, communication, atom, identity)</span>
+    
+      <a href="https://github.com/ScrimpyCat/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/contact/communication.ex#L30" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>add(atom, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, :secondary | :primary, <a href="#t:uuid/0">uuid</a>) ::
+  :ok |
+  {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Add a communication type to be associated with the given identity. And set its  priority.</p><p>  Returns <code>:ok</code> on successful addition. Otherwise returns a error.</p>
+  </section>
+</div>
+<div class="detail" id="contacts/2">
+  
+  <div class="detail-header">
+    <a href="#contacts/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">contacts(type, identity)</span>
+    
+      <a href="https://github.com/ScrimpyCat/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/contact/communication.ex#L129" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>contacts(atom, <a href="#t:uuid/0">uuid</a>) ::
+  {:ok, [{:unverified | :verified, :secondary | :primary, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}]} |
+  {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Get a list of communications of type associated with the given identity.</p><p>  Returns <code>{ :ok, contacts }</code> if the operation was successful, where <code>contacts</code> is  the list of communication methods associated with the given identity and their  current verification status and priority. Otherwise returns the reason of failure.</p>
+  </section>
+</div>
+<div class="detail" id="finalise_removal/3">
+  
+  <div class="detail-header">
+    <a href="#finalise_removal/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">finalise_removal(type, communication, key)</span>
+    
+      <a href="https://github.com/ScrimpyCat/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/contact/communication.ex#L81" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>finalise_removal(atom, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) ::
+  :ok |
+  {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Finalise the request that a communication type be removed.</p><p>  If the communication is verified, then it should return an error.</p><p>  Returns <code>:ok</code> if removal was successful. Otherwise returns an error.</p>
+  </section>
+</div>
+<div class="detail" id="finalise_verification/4">
+  
+  <div class="detail-header">
+    <a href="#finalise_verification/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">finalise_verification(type, communication, key, identity)</span>
+    
+      <a href="https://github.com/ScrimpyCat/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/contact/communication.ex#L117" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>finalise_verification(atom, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, <a href="#t:uuid/0">uuid</a>) ::
+  :ok |
+  {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Finalise the verification request for a communication type.</p><p>  If the communication is already verified, then it should return an error.</p><p>  Returns <code>:ok</code> if verification was successful. Otherwise returns an error.</p>
+  </section>
+</div>
+<div class="detail" id="owner/2">
+  
+  <div class="detail-header">
+    <a href="#owner/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">owner(type, communication)</span>
+    
+      <a href="https://github.com/ScrimpyCat/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/contact/communication.ex#L152" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>owner(atom, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) :: {:ok, <a href="#t:uuid/0">uuid</a>} | {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Get the owning identity for the specific communication of type.</p><p>  Returns <code>{ :ok, identity }</code> if the operation was successful. Otherwise returns  the reason of failure.</p>
+  </section>
+</div>
+<div class="detail" id="primary_contact/2">
+  
+  <div class="detail-header">
+    <a href="#primary_contact/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">primary_contact(type, identity)</span>
+    
+      <a href="https://github.com/ScrimpyCat/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/contact/communication.ex#L141" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>primary_contact(atom, <a href="#t:uuid/0">uuid</a>) ::
+  {:ok, {:unverified | :verified, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}} |
+  {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Get the primary communication of type associated with the given identity.</p><p>  Returns <code>{ :ok, contact }</code> if the operation was successful, where <code>contact</code> is  the primary communication method associated with the given identity and its  current verification status. Otherwise returns the reason of failure.</p>
+  </section>
+</div>
+<div class="detail" id="remove/3">
+  
+  <div class="detail-header">
+    <a href="#remove/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">remove(type, communication, identity)</span>
+    
+      <a href="https://github.com/ScrimpyCat/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/contact/communication.ex#L44" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>remove(atom, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, <a href="#t:uuid/0">uuid</a>) :: :ok | {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Remove a communication type from a given identity.</p><p>  Returns <code>:ok</code> on successful removal. Otherwise returns an error.</p>
+  </section>
+</div>
+<div class="detail" id="request_removal/2">
+  
+  <div class="detail-header">
+    <a href="#request_removal/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">request_removal(type, communication)</span>
+    
+      <a href="https://github.com/ScrimpyCat/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/contact/communication.ex#L69" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>request_removal(atom, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) :: :ok | {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Request a communication type associated with another identity, be removed.</p><p>  Removal requests only apply to unverified communications.</p><p>  Returns <code>:ok</code> if request was successful. Otherwise returns an error.</p>
+  </section>
+</div>
+<div class="detail" id="request_verification/3">
+  
+  <div class="detail-header">
+    <a href="#request_verification/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">request_verification(type, communication, identity)</span>
+    
+      <a href="https://github.com/ScrimpyCat/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/contact/communication.ex#L105" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>request_verification(atom, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, <a href="#t:uuid/0">uuid</a>) ::
+  :ok |
+  {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Request a comunication type be verified.</p><p>  If the comunication is already verified, then it should return an error.</p><p>  Returns <code>:ok</code> if request was successful. Otherwise returns an error.</p>
+  </section>
+</div>
+<div class="detail" id="set_priority/4">
+  
+  <div class="detail-header">
+    <a href="#set_priority/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">set_priority(type, communication, priority, identity)</span>
+    
+      <a href="https://github.com/ScrimpyCat/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/contact/communication.ex#L57" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>set_priority(atom, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, :secondary | :primary, <a href="#t:uuid/0">uuid</a>) ::
+  :ok |
+  {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Change a communication type associated with the identity to a new priority.</p><p>  Will turn any other primary communication of that type for that identity into a  secondary communication option.</p><p>  Returns <code>:ok</code> on successful change. Otherwise returns an error.</p>
+  </section>
+</div>
+<div class="detail" id="verified?/3">
+  
+  <div class="detail-header">
+    <a href="#verified?/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">verified?(type, communication, identity)</span>
+    
+      <a href="https://github.com/ScrimpyCat/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/contact/communication.ex#L93" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>verified?(atom, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, <a href="#t:uuid/0">uuid</a>) ::
+  {:ok, boolean} |
+  {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Check if a communication type belonging to the given identity has been verified.</p><p>  Returns <code>{ :ok, verified }</code> if the operation was successful, where <code>verified</code>  is whether the email was verified (<code>true</code>) or not (<code>false</code>). Otherwise returns  an error.</p>
+  </section>
+</div>
+
+        </section>
+      
+
+      
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.15.1),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle" />
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  <script src="dist/app-e9767fa739.js"></script>
+  </body>
+</html>
+

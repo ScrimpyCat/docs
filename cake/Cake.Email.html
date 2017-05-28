@@ -1,0 +1,332 @@
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.15.1">
+    <title>Cake.Email – Cake vdev</title>
+    <link rel="stylesheet" href="dist/app-af302bfcc4.css" />
+    
+    <script src="dist/sidebar_items-7cf2521c17.js"></script>
+  </head>
+  <body data-type="modules">
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
+
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+
+  
+  <a href="cake.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Cake
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        vdev
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+
+    
+  </ul>
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">Cake vdev</small>
+        Cake.Email
+        
+        
+          <a href="https://github.com/ScrimpyCat/cake/blob/master/apps/cake_email/lib/cake.email.ex#L1" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
+        
+      </h1>
+
+      
+        <section id="moduledoc">
+          <p>  Compose and represent emails.</p><p>  The <a href="Cake.Email.html#content"><code>Cake.Email</code></a> struct is enumerable, where it will enumerate over fields  that are non-nil.</p><p>  <h2 id="module-fields" class="section-heading">
+  <a href="#module-fields" class="hover-link"><i class="icon-link"></i></a>
+  Fields
+</h2>
+</p><p>  <h3>:from</h3>  The email address of the sender.</p><p>  <h3>:to</h3>  The email address for the recipient(s).</p><p>  <h3>:reply_to</h3>  The email address to direct replies to.</p><p>  <h3>:headers</h3>  Any headers to include with the email.</p><p>  <h3>:cc</h3>  The email address for any recipient(s) to CC to.</p><p>  <h3>:bcc</h3>  The email address of any recipient(s) to BCC to.</p><p>  <h3>:subject</h3>  The subject title of the email.</p><p>  <h3>:body</h3>  The content of the email.</p><p>  <h3>:attachments</h3>  The file attachments included in the email.</p>
+        </section>
+      
+
+      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:address/0">address()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:attachment/0">attachment()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:t/0">t()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:template/0">template()</a>
+  </div>
+  
+</div>
+
+  </div>
+
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#compose/2">compose(email, params \\ [])</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Create an email from the given input</p></div>
+  
+</div>
+
+  </div>
+
+
+          
+
+        </section>
+      
+
+      
+        <section id="types" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <i class="icon-link"></i>
+            </a>
+            Types
+          </h1>
+          <div class="types-list">
+            <div class="detail" id="t:address/0">
+  
+  <div class="detail-header">
+    <a href="#t:address/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">address()</span>
+    
+      <a href="https://github.com/ScrimpyCat/cake/blob/master/apps/cake_email/lib/cake.email.ex#L39" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>address() :: {name :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, email :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>} | email :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a></pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:attachment/0">
+  
+  <div class="detail-header">
+    <a href="#t:attachment/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">attachment()</span>
+    
+      <a href="https://github.com/ScrimpyCat/cake/blob/master/apps/cake_email/lib/cake.email.ex#L40" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>attachment() :: %{:path => <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, optional(:filename) => <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, optional(:content_type) => <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>} | file :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a></pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:t/0">
+  
+  <div class="detail-header">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">t()</span>
+    
+      <a href="https://github.com/ScrimpyCat/cake/blob/master/apps/cake_email/lib/cake.email.ex#L41" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>t() :: %Cake.Email{attachments: [<a href="#t:attachment/0">attachment</a>] | <a href="#t:attachment/0">attachment</a> | nil, bcc: [<a href="#t:address/0">address</a>] | <a href="#t:address/0">address</a> | nil, body: <a href="Cake.Email.Body.html#t:t/0">Cake.Email.Body.t</a> | nil, cc: [<a href="#t:address/0">address</a>] | <a href="#t:address/0">address</a> | nil, from: <a href="#t:address/0">address</a> | nil, headers: %{optional(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) => <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>} | nil, reply_to: <a href="#t:address/0">address</a> | nil, subject: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a> | nil, to: [<a href="#t:address/0">address</a>] | <a href="#t:address/0">address</a> | nil}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:template/0">
+  
+  <div class="detail-header">
+    <a href="#t:template/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">template()</span>
+    
+      <a href="https://github.com/ScrimpyCat/cake/blob/master/apps/cake_email/lib/cake.email.ex#L52" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>template() :: %{:formatter => (<a href="#t:template/0">template</a> -> <a href="#t:t/0">t</a>), optional(any) => any}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+
+          </div>
+        </section>
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="compose/2">
+  
+    <span id="compose/1" />
+  
+  <div class="detail-header">
+    <a href="#compose/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">compose(email, params \\ [])</span>
+    
+      <a href="https://github.com/ScrimpyCat/cake/blob/master/apps/cake_email/lib/cake.email.ex#L94" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>compose(<a href="#t:t/0">t</a> | <a href="#t:template/0">template</a>, keyword) :: <a href="#t:t/0">t</a></pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Create an email from the given input.</p><p>  Emails can be composed from pre-existing emails and overriding certain fields. Or  from constructing them from templates. A valid email template only needs to be a  map consisting of a <code>:formatter</code> field with a function that accepts that map and  returns an email.</p><p>  A common approach for templates is to use them for building commonly structured  emails.</p><pre><code class="iex elixir">iex&gt; template = %Cake.Email.Template{
+...&gt;    formatter: fn %{ data: name } -&gt;
+...&gt;        %Cake.Email{
+...&gt;            subject: &quot;A message to #{name}&quot;,
+...&gt;            body: %Cake.Email.Body{
+...&gt;                text: &quot;Hello #{name}!&quot;
+...&gt;            }
+...&gt;        }
+...&gt;    end,
+...&gt;    data: &quot;Blah&quot;
+...&gt; }
+iex&gt; Cake.Email.compose(template)
+%Cake.Email{attachments: nil, bcc: nil, body: %Cake.Email.Body{html: nil, text: &quot;Hello Blah!&quot;}, cc: nil, from: nil, headers: nil, reply_to: nil, subject: &quot;A message to Blah&quot;, to: nil}
+iex&gt; Cake.Email.compose(template, to: &quot;foo@bar&quot;, subject: &quot;Overridden&quot;)
+%Cake.Email{attachments: nil, bcc: nil, body: %Cake.Email.Body{html: nil, text: &quot;Hello Blah!&quot;}, cc: nil, from: nil, headers: nil, reply_to: nil, subject: &quot;Overridden&quot;, to: &quot;foo@bar&quot;}</code></pre>
+  </section>
+</div>
+
+        </section>
+      
+
+      
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.15.1),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle" />
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  <script src="dist/app-e9767fa739.js"></script>
+  </body>
+</html>
+
