@@ -8,7 +8,7 @@
     <title>Gingerbread.Service.Entity – Gingerbread vdev</title>
     <link rel="stylesheet" href="dist/app-af302bfcc4.css" />
     
-    <script src="dist/sidebar_items-b1a124bc3d.js"></script>
+    <script src="dist/sidebar_items-8c3592a479.js"></script>
   </head>
   <body data-type="modules">
     <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
@@ -144,10 +144,26 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#identity/1">identity(entity_id)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Get the identity of an entity</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#name/1">name(entity_id)</a>
   </div>
   
     <div class="summary-synopsis"><p>Get the name of an entity</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#parents/1">parents(entity)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Get the parents of an entity</p></div>
   
 </div>
 <div class="summary-row">
@@ -236,7 +252,7 @@
     </a>
     <span class="signature">add_child(parent, child)</span>
     
-      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_service/lib/gingerbread.service/entity.ex#L116" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_service/lib/gingerbread.service/entity.ex#L118" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -263,7 +279,7 @@
     </a>
     <span class="signature">create(identity, name \\ nil)</span>
     
-      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_service/lib/gingerbread.service/entity.ex#L46" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_service/lib/gingerbread.service/entity.ex#L48" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -290,7 +306,7 @@
     </a>
     <span class="signature">dependants(entity)</span>
     
-      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_service/lib/gingerbread.service/entity.ex#L181" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_service/lib/gingerbread.service/entity.ex#L203" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -315,7 +331,7 @@
     </a>
     <span class="signature">destroy(entity_id)</span>
     
-      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_service/lib/gingerbread.service/entity.ex#L65" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_service/lib/gingerbread.service/entity.ex#L67" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -340,7 +356,7 @@
     </a>
     <span class="signature">entities(identity)</span>
     
-      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_service/lib/gingerbread.service/entity.ex#L162" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_service/lib/gingerbread.service/entity.ex#L164" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -357,6 +373,25 @@
     <p>  Get the entities associated with the given identity.</p><p>  Returns the list of entities belonging to the identity, where each entity is a  tagged entity <code>{ name, entity }</code>.</p>
   </section>
 </div>
+<div class="detail" id="identity/1">
+  
+  <div class="detail-header">
+    <a href="#identity/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">identity(entity_id)</span>
+    
+      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_service/lib/gingerbread.service/entity.ex#L238" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>  Get the identity of an entity.</p><p>  Returns <code>{ :ok, identity }</code> if successful. Otherwise returns the reason for failure.</p>
+  </section>
+</div>
 <div class="detail" id="name/1">
   
   <div class="detail-header">
@@ -365,7 +400,7 @@
     </a>
     <span class="signature">name(entity_id)</span>
     
-      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_service/lib/gingerbread.service/entity.ex#L200" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_service/lib/gingerbread.service/entity.ex#L222" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -382,6 +417,31 @@
     <p>  Get the name of an entity.</p><p>  Returns <code>{ :ok, name }</code> if successful. Otherwise returns the reason for failure.</p>
   </section>
 </div>
+<div class="detail" id="parents/1">
+  
+  <div class="detail-header">
+    <a href="#parents/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">parents(entity)</span>
+    
+      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_service/lib/gingerbread.service/entity.ex#L183" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>parents(<a href="#t:uuid/0">uuid</a>) :: [{atom | nil, <a href="#t:uuid/0">uuid</a>}]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Get the parents of an entity.</p><p>  Returns the list of entities that this entity belongs to, where each entity is a  tagged entity <code>{ name, entity }</code>.</p>
+  </section>
+</div>
 <div class="detail" id="remove_child/2">
   
   <div class="detail-header">
@@ -390,7 +450,7 @@
     </a>
     <span class="signature">remove_child(parent, child)</span>
     
-      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_service/lib/gingerbread.service/entity.ex#L141" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_service/lib/gingerbread.service/entity.ex#L143" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -434,7 +494,7 @@
     </a>
     <span class="signature">transfer(entity_id, identity)</span>
     
-      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_service/lib/gingerbread.service/entity.ex#L94" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_service/lib/gingerbread.service/entity.ex#L96" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

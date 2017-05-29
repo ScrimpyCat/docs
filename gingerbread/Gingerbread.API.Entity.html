@@ -8,7 +8,7 @@
     <title>Gingerbread.API.Entity – Gingerbread vdev</title>
     <link rel="stylesheet" href="dist/app-af302bfcc4.css" />
     
-    <script src="dist/sidebar_items-b1a124bc3d.js"></script>
+    <script src="dist/sidebar_items-8c3592a479.js"></script>
   </head>
   <body data-type="modules">
     <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
@@ -144,10 +144,26 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#identity/1">identity(entity)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Get the identity of an entity</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#name/1">name(entity)</a>
   </div>
   
     <div class="summary-synopsis"><p>Get the name of an entity</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#parents/1">parents(entity)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Get the parents of an entity</p></div>
   
 </div>
 <div class="summary-row">
@@ -284,7 +300,7 @@
     </a>
     <span class="signature">dependants(entity)</span>
     
-      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_api/lib/gingerbread.api/entity.ex#L96" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_api/lib/gingerbread.api/entity.ex#L107" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -351,6 +367,31 @@
     <p>  Get the entities associated with the given identity.</p><p>  Returns the list of entities belonging to the identity, where each entity is a  tagged entity <code>{ name, entity }</code>.</p>
   </section>
 </div>
+<div class="detail" id="identity/1">
+  
+  <div class="detail-header">
+    <a href="#identity/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">identity(entity)</span>
+    
+      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_api/lib/gingerbread.api/entity.ex#L127" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>identity(<a href="#t:uuid/0">uuid</a>) :: {:ok, <a href="#t:uuid/0">uuid</a>} | {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Get the identity of an entity.</p><p>  Returns <code>{ :ok, identity }</code> if successful. Otherwise returns the reason for failure.</p>
+  </section>
+</div>
 <div class="detail" id="name/1">
   
   <div class="detail-header">
@@ -359,7 +400,7 @@
     </a>
     <span class="signature">name(entity)</span>
     
-      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_api/lib/gingerbread.api/entity.ex#L106" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_api/lib/gingerbread.api/entity.ex#L117" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -374,6 +415,31 @@
   </div>
   <section class="docstring">
     <p>  Get the name of an entity.</p><p>  Returns <code>{ :ok, name }</code> if successful. Otherwise returns the reason for failure.</p>
+  </section>
+</div>
+<div class="detail" id="parents/1">
+  
+  <div class="detail-header">
+    <a href="#parents/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">parents(entity)</span>
+    
+      <a href="https://github.com/ScrimpyCat/gingerbread/blob/master/apps/gingerbread_api/lib/gingerbread.api/entity.ex#L96" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>parents(<a href="#t:uuid/0">uuid</a>) :: [{atom | nil, <a href="#t:uuid/0">uuid</a>}]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Get the parents of an entity.</p><p>  Returns the list of entities that this entity belongs to, where each entity is a  tagged entity <code>{ name, entity }</code>.</p>
   </section>
 </div>
 <div class="detail" id="remove_child/2">
