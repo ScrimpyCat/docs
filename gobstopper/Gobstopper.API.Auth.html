@@ -8,7 +8,7 @@
     <title>Gobstopper.API.Auth – Gobstopper vdev</title>
     <link rel="stylesheet" href="dist/app-af302bfcc4.css" />
     
-    <script src="dist/sidebar_items-1c38cab188.js"></script>
+    <script src="dist/sidebar_items-836a4f0bab.js"></script>
   </head>
   <body data-type="modules">
     <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
@@ -62,7 +62,7 @@
         Gobstopper.API.Auth
         
         
-          <a href="https://github.com/ScrimpyCat/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -118,6 +118,14 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#refresh/1">refresh(token)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Refresh an identity's session</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#verify/1">verify(token)</a>
   </div>
   
@@ -150,7 +158,7 @@
     </a>
     <span class="signature">token()</span>
     
-      <a href="https://github.com/ScrimpyCat/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth.ex#L8" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth.ex#L8" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -175,7 +183,7 @@
     </a>
     <span class="signature">uuid()</span>
     
-      <a href="https://github.com/ScrimpyCat/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth.ex#L9" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth.ex#L9" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -213,7 +221,7 @@
     </a>
     <span class="signature">logout(token)</span>
     
-      <a href="https://github.com/ScrimpyCat/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth.ex#L15" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth.ex#L15" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -230,6 +238,31 @@
     <p>  Logout of an identity's active session.</p>
   </section>
 </div>
+<div class="detail" id="refresh/1">
+  
+  <div class="detail-header">
+    <a href="#refresh/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">refresh(token)</span>
+    
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth.ex#L36" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>refresh(<a href="#t:token/0">token</a>) :: {:ok, <a href="#t:uuid/0">uuid</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Refresh an identity's session.</p><p>  Returns a new session token and disables the previous one. Otherwise returns  an error.</p>
+  </section>
+</div>
 <div class="detail" id="verify/1">
   
   <div class="detail-header">
@@ -238,7 +271,7 @@
     </a>
     <span class="signature">verify(token)</span>
     
-      <a href="https://github.com/ScrimpyCat/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth.ex#L27" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth.ex#L27" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

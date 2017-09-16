@@ -8,7 +8,7 @@
     <title>Gobstopper.Service.Auth.Identity – Gobstopper vdev</title>
     <link rel="stylesheet" href="dist/app-af302bfcc4.css" />
     
-    <script src="dist/sidebar_items-1c38cab188.js"></script>
+    <script src="dist/sidebar_items-836a4f0bab.js"></script>
   </head>
   <body data-type="modules">
     <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
@@ -62,7 +62,7 @@
         Gobstopper.Service.Auth.Identity
         
         
-          <a href="https://github.com/ScrimpyCat/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/auth/identity.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/auth/identity.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -139,6 +139,14 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#refresh/1">refresh(token)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Refresh an active session token</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#remove/2">remove(type, token)</a>
   </div>
   
@@ -188,7 +196,7 @@
     </a>
     <span class="signature">all_credentials(token)</span>
     
-      <a href="https://github.com/ScrimpyCat/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/auth/identity.ex#L160" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/auth/identity.ex#L173" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -215,7 +223,7 @@
     </a>
     <span class="signature">create(type, credential)</span>
     
-      <a href="https://github.com/ScrimpyCat/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/auth/identity.ex#L21" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/auth/identity.ex#L21" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -240,7 +248,7 @@
     </a>
     <span class="signature">create(type, credential, token)</span>
     
-      <a href="https://github.com/ScrimpyCat/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/auth/identity.ex#L41" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/auth/identity.ex#L41" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -265,7 +273,7 @@
     </a>
     <span class="signature">credential?(type, token)</span>
     
-      <a href="https://github.com/ScrimpyCat/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/auth/identity.ex#L137" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/auth/identity.ex#L150" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -292,7 +300,7 @@
     </a>
     <span class="signature">login(type, credential)</span>
     
-      <a href="https://github.com/ScrimpyCat/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/auth/identity.ex#L83" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/auth/identity.ex#L83" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -317,7 +325,7 @@
     </a>
     <span class="signature">logout(token)</span>
     
-      <a href="https://github.com/ScrimpyCat/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/auth/identity.ex#L99" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/auth/identity.ex#L99" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -334,6 +342,31 @@
     <p>  Logout of an identity's active session.</p><p>  Returns <code>:ok</code> on successful logout. Otherwise returns an error.</p>
   </section>
 </div>
+<div class="detail" id="refresh/1">
+  
+  <div class="detail-header">
+    <a href="#refresh/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">refresh(token)</span>
+    
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/auth/identity.ex#L112" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>refresh(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) :: {:ok, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>} | {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Refresh an active session token.</p><p>  Returns <code>{ :ok, token }</code> on successful refresh. Otherwise returns an error.</p>
+  </section>
+</div>
 <div class="detail" id="remove/2">
   
   <div class="detail-header">
@@ -342,7 +375,7 @@
     </a>
     <span class="signature">remove(type, token)</span>
     
-      <a href="https://github.com/ScrimpyCat/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/auth/identity.ex#L70" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/auth/identity.ex#L70" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -367,7 +400,7 @@
     </a>
     <span class="signature">update(type, credential, token)</span>
     
-      <a href="https://github.com/ScrimpyCat/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/auth/identity.ex#L57" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/auth/identity.ex#L57" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -392,7 +425,7 @@
     </a>
     <span class="signature">verify(token)</span>
     
-      <a href="https://github.com/ScrimpyCat/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/auth/identity.ex#L123" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/auth/identity.ex#L136" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
