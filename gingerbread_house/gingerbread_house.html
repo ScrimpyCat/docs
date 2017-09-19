@@ -8,7 +8,7 @@
     <title>GingerbreadHouse – GingerbreadHouse vdev</title>
     <link rel="stylesheet" href="dist/app-af302bfcc4.css" />
     
-    <script src="dist/sidebar_items-30ebd9707a.js"></script>
+    <script src="dist/sidebar_items-46511e9c28.js"></script>
   </head>
   <body data-type="extras">
     <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
@@ -59,11 +59,7 @@
     <div id="content" class="content-inner">
 
 
-<p><h1> GingerbreadHouse (Business Management)</h1></p><p>Manages and verifies (<em>using Stripe</em>) business details for different countries.</p><h3> Usage</h3><p>The service component (<code>GingerbreadHouse.Service</code>) is an OTP application that should be started prior to making any requests to the service. This component should only be interacted with to configure/control the service explicitly.</p><p>An API (<a href="GingerbreadHouse.API.html"><code>GingerbreadHouse.API</code></a>) is provided to allow for convenient interaction with the service from external applications.</p><p>A business details library (<a href="GingerbreadHouse.BusinessDetails.html"><code>GingerbreadHouse.BusinessDetails</code></a>) provides convenient templates to fill out the details required for different business types.</p><h2 id="todo" class="section-heading">
-  <a href="#todo" class="hover-link"><i class="icon-link"></i></a>
-  Todo
-</h2>
-<ul><li><input type="checkbox" disabled>Verify using stripe</li><li><input type="checkbox" disabled>Make a verification adapter? (to support stripe and others)</li><li><input type="checkbox" disabled>Support additional countries</li><li><input type="checkbox" disabled>PubSub?</li></ul>
+<p><h1> GingerbreadHouse (Business Management)</h1></p><p>Manages and verifies (<em>using Stripe</em>) business details for different countries.</p><h3> Usage</h3><p>The service component (<a href="GingerbreadHouse.Service.html"><code>GingerbreadHouse.Service</code></a>) is an OTP application that should be started prior to making any requests to the service. This component should only be interacted with to configure/control the service explicitly.</p><p>An API (<a href="GingerbreadHouse.API.html"><code>GingerbreadHouse.API</code></a>) is provided to allow for convenient interaction with the service from external applications.</p><p>A business details library (<a href="GingerbreadHouse.BusinessDetails.html"><code>GingerbreadHouse.BusinessDetails</code></a>) provides convenient templates to fill out the details required for different business types.</p><h3> Configuration</h3><p>The service may be configured with the following options:</p><h4> Setup Mode</h4><p>The service has two setup modes: <code>:auto</code> and <code>:manual</code>. When the service is started in <code>:auto</code>, it will automatically handle creating and migrating the database. When the service is started in <code>:manual</code>, the state of the database is left up to the user to manually setup.</p><p>By default the service runs in <code>:auto</code> mode. To change this behaviour, pass in the <code>{ :setup_mode, mode }</code> when starting the application.</p><h4> Database</h4><p>The database options can be configured by providing the config for the key <a href="GingerbreadHouse.Service.Repo.html"><code>GingerbreadHouse.Service.Repo</code></a>. If no configuration is provided, a default configuration is used for <code>:test</code> and <code>:dev</code> builds. This default Ecto repo uses a locally hosted (accessible through localhost) PostgreSQL database, with the user/name as <code>postgres</code> and <code>postgres</code>.</p><p>For details on how to configure an <a href="https://hexdocs.pm/ecto/Ecto.Repo.html">Ecto repo</a>.</p><p><strong>Note:</strong> If a PostgreSQL database is used, the service will create a custom type. For details on how to interact with this type, see the <a href="http://hexdocs.pm/ecto_enum">EctoEnum docs</a>.</p>
       <footer class="footer">
         <p>
           <span class="line">

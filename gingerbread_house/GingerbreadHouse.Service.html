@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.15.1">
-    <title>GingerbreadHouse.BusinessDetails.AU.Address – GingerbreadHouse vdev</title>
+    <title>GingerbreadHouse.Service – GingerbreadHouse vdev</title>
     <link rel="stylesheet" href="dist/app-af302bfcc4.css" />
     
     <script src="dist/sidebar_items-46511e9c28.js"></script>
@@ -61,10 +61,10 @@
 
       <h1>
         <small class="visible-xs">GingerbreadHouse vdev</small>
-        GingerbreadHouse.BusinessDetails.AU.Address
+        GingerbreadHouse.Service
         
         
-          <a href="https://github.com/ZURASTA/gingerbread_house/blob/master/apps/gingerbread_house_business_details/lib/gingerbread_house.business_details/au/address.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/ZURASTA/gingerbread_house/blob/master/apps/gingerbread_house_service/lib/gingerbread_house.service.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -72,11 +72,7 @@
 
       
         <section id="moduledoc">
-          <p>  A struct representing an Australian address.</p><p>  <h2 id="module-fields" class="section-heading">
-  <a href="#module-fields" class="hover-link"><i class="icon-link"></i></a>
-  Fields
-</h2>
-</p><p>  <h3>:street</h3>  Is the street part of the address. Is a <code>string</code>.</p><p>  <h3>:city</h3>  Is the city part of the address. Is a <code>string</code>.</p><p>  <h3>:postcode</h3>  Is the postal code part of the address. Is a <code>string</code>.</p><p>  <h3>:state</h3>  Is the state part of the address. Is a <code>string</code>.</p>
+          <p>  The service application for managing and verifying business  details.</p>
         </section>
       
 
@@ -89,14 +85,18 @@
             Summary
           </h1>
           
-  <div class="summary-types summary">
+
+          
+  <div class="summary-functions summary">
     <h2>
-      <a href="#types">Types</a>
+      <a href="#functions">Functions</a>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#t:t/0">t()</a>
+    <a href="#start/2">start(type, args)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Start the service application</p></div>
   
 </div>
 
@@ -105,50 +105,40 @@
 
           
 
-          
-
         </section>
       
 
       
-        <section id="types" class="details-list">
+
+      
+        <section id="functions" class="details-list">
           <h1 class="section-heading">
-            <a class="hover-link" href="#types">
+            <a class="hover-link" href="#functions">
               <i class="icon-link"></i>
             </a>
-            Types
+            Functions
           </h1>
-          <div class="types-list">
-            <div class="detail" id="t:t/0">
+          <div class="detail" id="start/2">
   
   <div class="detail-header">
-    <a href="#t:t/0" class="detail-link" title="Link to this type">
+    <a href="#start/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">t()</span>
+    <span class="signature">start(type, args)</span>
     
-      <a href="https://github.com/ZURASTA/gingerbread_house/blob/master/apps/gingerbread_house_business_details/lib/gingerbread_house.business_details/au/address.ex#L29" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gingerbread_house/blob/master/apps/gingerbread_house_service/lib/gingerbread_house.service.ex#L19" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
     
-      <div class="specs">
-        
-          <pre>t() :: %GingerbreadHouse.BusinessDetails.AU.Address{city: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, postcode: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, state: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, street: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
-        
-      </div>
-    
   </div>
   <section class="docstring">
-    
+    <p>  Start the service application.</p><p>  By default the service will run in <code>:auto</code> setup mode, which  will automatically create and migrate the database. To override  this behaviour, the mode can be passed in as an argument for the  <code>:setup_mode</code> key. The supported setup modes are: <code>:auto</code> and  <code>:manual</code>. If using manual mode, the state of the database is  left up to the caller.</p>
   </section>
 </div>
 
-          </div>
         </section>
-      
-
       
 
       
