@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.15.1">
-    <title>Gingerbread.Service.Entity.Relationship.Model – Gingerbread vdev</title>
+    <title>Gingerbread.Service – Gingerbread vdev</title>
     <link rel="stylesheet" href="dist/app-af302bfcc4.css" />
     
     <script src="dist/sidebar_items-f08042a4e5.js"></script>
@@ -59,10 +59,10 @@
 
       <h1>
         <small class="visible-xs">Gingerbread vdev</small>
-        Gingerbread.Service.Entity.Relationship.Model
+        Gingerbread.Service
         
         
-          <a href="https://github.com/ZURASTA/gingerbread/blob/master/apps/gingerbread_service/lib/gingerbread.service/entity/relationship/model.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/ZURASTA/gingerbread/blob/master/apps/gingerbread_service/lib/gingerbread.service.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -70,11 +70,7 @@
 
       
         <section id="moduledoc">
-          <p>  A model representing an entity relationship.</p><p>  <h2 id="module-fields" class="section-heading">
-  <a href="#module-fields" class="hover-link"><i class="icon-link"></i></a>
-  Fields
-</h2>
-</p><p>  <h3>:id</h3>  Is the unique reference to the entity entry. Is an <code>integer</code>.</p><p>  <h3>:parent_id</h3>  Is the reference to the entity that is the parent in this relationship. Is an  <code>integer</code> to <a href="Gingerbread.Service.Entity.Model.html"><code>Gingerbread.Service.Entity.Model</code></a>.</p><p>  <h3>:child_id</h3>  Is the reference to the entity that is the parent in this relationship. Is an  <code>integer</code> to <a href="Gingerbread.Service.Entity.Model.html"><code>Gingerbread.Service.Entity.Model</code></a>.</p>
+          <p>  The service application for managing entity relationships.</p>
         </section>
       
 
@@ -95,10 +91,10 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#changeset/2">changeset(struct, params \\ %{})</a>
+    <a href="#start/2">start(type, args)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Builds a changeset for the <code>struct</code> and <code>params</code></p></div>
+    <div class="summary-synopsis"><p>Called when an application is started</p></div>
   
 </div>
 
@@ -120,17 +116,15 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="changeset/2">
-  
-    <span id="changeset/1" />
+          <div class="detail" id="start/2">
   
   <div class="detail-header">
-    <a href="#changeset/2" class="detail-link" title="Link to this function">
+    <a href="#start/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">changeset(struct, params \\ %{})</span>
+    <span class="signature">start(type, args)</span>
     
-      <a href="https://github.com/ZURASTA/gingerbread/blob/master/apps/gingerbread_service/lib/gingerbread.service/entity/relationship/model.ex#L39" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gingerbread/blob/master/apps/gingerbread_service/lib/gingerbread.service.ex#L8" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -138,7 +132,8 @@
     
   </div>
   <section class="docstring">
-    <p>  Builds a changeset for the <code>struct</code> and <code>params</code>.</p><p>  Enforces:  <ul><li><code>parent_id</code> field is required</li><li><code>child_id</code> field is required</li><li><code>parent_id</code> field is associated with an entry in <a href="Gingerbread.Service.Entity.Model.html"><code>Gingerbread.Service.Entity.Model</code></a></li><li><code>child_id</code> field is associated with an entry in <a href="Gingerbread.Service.Entity.Model.html"><code>Gingerbread.Service.Entity.Model</code></a></li><li>checks uniqueness of relationship</li></ul></p>
+    <p>Called when an application is started.</p><p>This function is called when an application is started using<a href="https://hexdocs.pm/elixir/Application.html#start/2"><code>Application.start/2</code></a> (and functions on top of that, such as<a href="https://hexdocs.pm/elixir/Application.html#ensure_started/2"><code>Application.ensure_started/2</code></a>). This function should start the top-levelprocess of the application (which should be the top supervisor of theapplication's supervision tree if the application follows the OTP designprinciples around supervision).</p><p><code>start_type</code> defines how the application is started:</p><p>  <ul><li><code>:normal</code> - used if the startup is a normal startup or if the application</li><li><code>{:takeover, node}</code> - used if the application is distributed and is</li><li><code>{:failover, node}</code> - used if the application is distributed and is</li><pre><code class="elixir">started on the current node because of a failover on node `node`, and the
+application specification key `:start_phases` is not `:undefined`.</code></pre></ul></p><p><code>start_args</code> are the arguments passed to the application in the <code>:mod</code>specification key (e.g., <code>mod: {MyApp, [:my_args]}</code>).</p><p>This function should either return <code>{:ok, pid}</code> or <code>{:ok, pid, state}</code> ifstartup is successful. <code>pid</code> should be the PID of the top supervisor. <code>state</code>can be an arbitrary term, and if omitted will default to <code>[]</code>; if theapplication is later stopped, <code>state</code> is passed to the <code>stop/1</code> callback (seethe documentation for the <code>c:stop/1</code> callback for more information).</p><p><code>use Application</code> provides no default implementation for the <a href="#start/2"><code>start/2</code></a>callback.</p><p>Callback implementation for <a href="https://hexdocs.pm/elixir/Application.html#c:start/2"><code>Application.start/2</code></a>.</p>
   </section>
 </div>
 
