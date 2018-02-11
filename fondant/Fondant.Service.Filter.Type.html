@@ -1,0 +1,524 @@
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.18.2">
+    <title>Fondant.Service.Filter.Type – Fondant vdev</title>
+    <link rel="stylesheet" href="dist/app-81d381dea4.css" />
+    
+    <script src="dist/sidebar_items-3ccaa28845.js"></script>
+    
+    
+    
+    
+  </head>
+  <body data-type="modules">
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
+
+    <div class="main">
+<button class="sidebar-button sidebar-toggle">
+  <span class="icon-menu" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Sidebar</span>
+</button>
+<button class="sidebar-button night-mode-toggle">
+  <span class="icon-theme" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Theme</span>
+</button>
+<section class="sidebar">
+
+  
+  <a href="fondant.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Fondant
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        vdev
+      </h2>
+    </div>
+    
+  </a>
+
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <input name="q" type="text" id="search-list" class="search-input" placeholder="Search" aria-label="Search" autocomplete="off" />
+  </form>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
+
+    
+  </ul>
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">Fondant vdev</small>
+        Fondant.Service.Filter.Type <small>behaviour</small>
+        
+          <a href="https://github.com/ZURASTA/fondant/blob/master/apps/fondant_service/lib/fondant.service/filter/type.ex#L1" title="View Source" class="view-source" rel="help">
+            <span class="icon-code" aria-hidden="true"></span>
+            <span class="sr-only">View Source</span>
+          </a>
+        
+      </h1>
+
+      
+        <section id="moduledoc">
+          <p>  Manages the interactions with filter types.</p><p>  Filter types will implement the given callbacks to expose the given filter.</p><p>  <h2 id="module-implementing-a-filter-type" class="section-heading">
+  <a href="#module-implementing-a-filter-type" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Implementing a filter type
+</h2>
+</p><p>  Filter types should be implemented in a module conforming to  <code>Fondant.Service.Filter.Type.type</code>. Where type is the capitalized  filter type.</p><p>  e.g. For a filter type that should be identified using the :diet atom, then the  implementation for that communication method should fall under  <a href="Fondant.Service.Filter.Type.Diet.html"><code>Fondant.Service.Filter.Type.Diet</code></a>.</p>
+        </section>
+      
+
+      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Summary
+          </h1>
+          
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:filter/0">filter()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:locale/0">locale()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:page/0">page()</a>
+  </div>
+  
+</div>
+
+  </div>
+
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#find/3">find(type, query, options \\ [])</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Find all filters of type that match the given query</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get/3">get(type, id, locale)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Retrieve a specific filter of type for the given id</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#queryables/1">queryables(type)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Get the list of queryable parameters that can be applied to the given filter  type</p></div>
+  
+</div>
+
+  </div>
+
+
+          
+  <div class="summary-callbacks summary">
+    <h2>
+      <a href="#callbacks">Callbacks</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#c:find/2">find(query, options)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Implement the behaviour for finding filters that match the given query</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#c:get/2">get(id, locale)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Implement the behaviour for retrieving a specific filter of type with  the given id</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#c:queryables/0">queryables()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Implement the behaviour for returning a list of the queryable parameters</p></div>
+  
+</div>
+
+  </div>
+
+
+        </section>
+      
+
+      
+        <section id="types" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Types
+          </h1>
+          <div class="types-list">
+            <div class="detail" id="t:filter/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:filter/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">filter()</span>
+    
+      <a href="https://github.com/ZURASTA/fondant/blob/master/apps/fondant_service/lib/fondant.service/filter/type.ex#L20" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>filter() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">struct</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:locale/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:locale/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">locale()</span>
+    
+      <a href="https://github.com/ZURASTA/fondant/blob/master/apps/fondant_service/lib/fondant.service/filter/type.ex#L18" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>locale() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:page/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:page/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">page()</span>
+    
+      <a href="https://github.com/ZURASTA/fondant/blob/master/apps/fondant_service/lib/fondant.service/filter/type.ex#L19" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>page() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+
+          </div>
+        </section>
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="find/3">
+  
+  
+    <span id="find/2"></span>
+  
+  <div class="detail-header">
+    <a href="#find/3" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">find(type, query, options \\ [])</span>
+    
+      <a href="https://github.com/ZURASTA/fondant/blob/master/apps/fondant_service/lib/fondant.service/filter/type.ex#L91" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>find(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">atom</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">keyword</a>(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">keyword</a>(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>())) ::
+  {:ok, {[<a href="#t:filter/0">filter</a>()], <a href="#t:page/0">page</a>()}} |
+  {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Find all filters of type that match the given query.</p><p>  The query field accepts any fields returned by  <a href="Fondant.Service.Filter.Type.html#queryables/1"><code>Fondant.Service.Filter.Type.queryables/1</code></a>. For more detail on the specific  fields, see the type's implementation.</p><p>  The options field can specify the <code>:locale</code>, <code>:page</code>, and <code>:limit</code>. Other  fields may also be supported, to find details on them see the type's  implementation.</p><p>  <ul><li><code>:locale</code> - The localisation <a href="Fondant.Service.Filter.Type.html#t:locale/0"><code>Fondant.Service.Filter.Type.locale/0</code></a>  to be applied for the search (see <a href="Fondant.Service.Locale.html"><code>Fondant.Service.Locale</code></a>).</li><li><code>:page</code> - The pagination index to retrieve the results of.</li><li><code>:limit</code> - The max number of entries to retrieve.</li></ul></p><p>  Returns <code>{ :ok, { filters, page } }</code> if the operation was successful, where  <code>filters</code> is the list of filters, and <code>page</code> is the next pagination index.  Otherwise returns an error.</p>
+  </section>
+</div>
+<div class="detail" id="get/3">
+  
+  
+  <div class="detail-header">
+    <a href="#get/3" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">get(type, id, locale)</span>
+    
+      <a href="https://github.com/ZURASTA/fondant/blob/master/apps/fondant_service/lib/fondant.service/filter/type.ex#L66" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>get(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">atom</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="#t:locale/0">locale</a>()) ::
+  {:ok, <a href="#t:filter/0">filter</a>()} |
+  {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Retrieve a specific filter of type for the given id.</p><p>  If no filter exists with the given id, it will return an error.</p><p>  Returns <code>{ :ok, filter }</code> if the operation was successful, otherwise returns  an error.</p>
+  </section>
+</div>
+<div class="detail" id="queryables/1">
+  
+  
+  <div class="detail-header">
+    <a href="#queryables/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">queryables(type)</span>
+    
+      <a href="https://github.com/ZURASTA/fondant/blob/master/apps/fondant_service/lib/fondant.service/filter/type.ex#L100" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>queryables(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">atom</a>()) :: [<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">atom</a>()]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Get the list of queryable parameters that can be applied to the given filter  type.</p>
+  </section>
+</div>
+
+        </section>
+      
+
+      
+        <section id="callbacks" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#callbacks">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Callbacks
+          </h1>
+          <div class="detail" id="c:find/2">
+  
+  
+  <div class="detail-header">
+    <a href="#c:find/2" class="detail-link" title="Link to this callback">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this callback</span>
+    </a>
+    <span class="signature">find(query, options)</span>
+    
+      <a href="https://github.com/ZURASTA/fondant/blob/master/apps/fondant_service/lib/fondant.service/filter/type.ex#L50" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>find(query :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">keyword</a>(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()), options :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">keyword</a>(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>())) ::
+  {:ok, {[<a href="#t:filter/0">filter</a>()], <a href="#t:page/0">page</a>()}} |
+  {:error, reason :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Implement the behaviour for finding filters that match the given query.</p><p>  Common behaviour is to support an all inclusive search (<code>:any</code>), and specific  query options for each searchable field.</p><p>  Options may be provided to customise the operation. Required options that  must be supported are:</p><p>  <ul><li><code>:locale</code> - The localisation <a href="Fondant.Service.Filter.Type.html#t:locale/0"><code>Fondant.Service.Filter.Type.locale/0</code></a>  to be applied for the search (see <a href="Fondant.Service.Locale.html"><code>Fondant.Service.Locale</code></a>).</li><li><code>:page</code> - The pagination index to retrieve the results of.</li><li><code>:limit</code> - The max number of entries to retrieve.</li></ul></p><p>  If the operation was successful return <code>{ :ok, { filters, page } }</code>, where  <code>filters</code> is the list of filters, and <code>page</code> is the next pagination index.  Otherwise return the error.</p>
+  </section>
+</div>
+<div class="detail" id="c:get/2">
+  
+  
+  <div class="detail-header">
+    <a href="#c:get/2" class="detail-link" title="Link to this callback">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this callback</span>
+    </a>
+    <span class="signature">get(id, locale)</span>
+    
+      <a href="https://github.com/ZURASTA/fondant/blob/master/apps/fondant_service/lib/fondant.service/filter/type.ex#L30" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>get(id :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="#t:locale/0">locale</a>()) ::
+  {:ok, <a href="#t:filter/0">filter</a>()} |
+  {:error, reason :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Implement the behaviour for retrieving a specific filter of type with  the given id.</p><p>  If the filter does not exist it will return an error.</p><p>  If the operation was successful return <code>{ :ok, filter }</code>.</p>
+  </section>
+</div>
+<div class="detail" id="c:queryables/0">
+  
+  
+  <div class="detail-header">
+    <a href="#c:queryables/0" class="detail-link" title="Link to this callback">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this callback</span>
+    </a>
+    <span class="signature">queryables()</span>
+    
+      <a href="https://github.com/ZURASTA/fondant/blob/master/apps/fondant_service/lib/fondant.service/filter/type.ex#L55" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>queryables() :: [<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">atom</a>()]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Implement the behaviour for returning a list of the queryable parameters.</p>
+  </section>
+</div>
+
+        </section>
+      
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.18.2),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  <script src="dist/app-ad33bc0e7d.js"></script>
+  
+  
+  
+  
+  </body>
+</html>
+
