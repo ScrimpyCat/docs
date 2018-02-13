@@ -1,0 +1,1942 @@
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.18.2">
+    <title>Yum.Data – Yum v0.1.0</title>
+    <link rel="stylesheet" href="dist/app-81d381dea4.css" />
+    
+    <script src="dist/sidebar_items-5e878e0c04.js"></script>
+    
+    
+    
+    
+  </head>
+  <body data-type="modules">
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
+
+    <div class="main">
+<button class="sidebar-button sidebar-toggle">
+  <span class="icon-menu" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Sidebar</span>
+</button>
+<button class="sidebar-button night-mode-toggle">
+  <span class="icon-theme" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Theme</span>
+</button>
+<section class="sidebar">
+
+  
+  <a href="yum.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Yum
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.1.0
+      </h2>
+    </div>
+    
+  </a>
+
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <input name="q" type="text" id="search-list" class="search-input" placeholder="Search" aria-label="Search" autocomplete="off" />
+  </form>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+
+    
+  </ul>
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">Yum v0.1.0</small>
+        Yum.Data
+        
+          <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L1" title="View Source" class="view-source" rel="help">
+            <span class="icon-code" aria-hidden="true"></span>
+            <span class="sr-only">View Source</span>
+          </a>
+        
+      </h1>
+
+      
+        <section id="moduledoc">
+          <p>  Import food data.</p><p>  The location of the data can either be set globally in the config:</p><pre><code class="elixir">config :yum, path: &quot;path/to/data&quot;</code></pre><p>  Or it can be explicitly passed to a function.</p>
+        </section>
+      
+
+      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Summary
+          </h1>
+          
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:allergen_info/0">allergen_info()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:allergen_list/0">allergen_list()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:allergen_reducer/0">allergen_reducer()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:allergen_tree/0">allergen_tree()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:cuisine_info/0">cuisine_info()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:cuisine_reducer/0">cuisine_reducer()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:cuisine_tree/0">cuisine_tree()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:diet_info/0">diet_info()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:diet_list/0">diet_list()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:diet_reducer/0">diet_reducer()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:diet_tree/0">diet_tree()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:file_filter/0">file_filter()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:ingredient_info/0">ingredient_info()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:ingredient_reducer/0">ingredient_reducer()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:ingredient_tree/0">ingredient_tree()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:list_reducer/1">list_reducer(type)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:migration/0">migration()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:nutrition/0">nutrition()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:translation/0">translation()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:translation_tree/0">translation_tree()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:tree_reducer/1">tree_reducer(type)</a>
+  </div>
+  
+</div>
+
+  </div>
+
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#allergens/0">allergens()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Load the allergen names and translations</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#allergens/1">allergens(filter)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Load the allergen names and translations</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#allergens/2">allergens(data, filter)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Load the allergen names and translations</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#cuisines/1">cuisines(group \\ &quot;&quot;)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Load the cuisine data</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#cuisines/2">cuisines(group, filter)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Load the cuisine data</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#cuisines/3">cuisines(group, data, filter)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Load the cuisine data</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#diets/0">diets()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Load the diet names and translations</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#diets/1">diets(filter)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Load the diet names and translations</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#diets/2">diets(data, filter)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Load the diet names and translations</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#ingredients/1">ingredients(group \\ &quot;&quot;)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Load the ingredient data</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#ingredients/2">ingredients(group, filter)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Load the ingredient data</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#ingredients/3">ingredients(group, data, filter)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Load the ingredient data</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#migrations/2">migrations(type, timestamp \\ -1)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Load the migration data</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#migrations/3">migrations(type, timestamp, data)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Load the migration data</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#reduce_allergens/2">reduce_allergens(acc, fun)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Reduce the allergen data</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#reduce_allergens/3">reduce_allergens(acc, fun, filter)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Reduce the allergen data</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#reduce_allergens/4">reduce_allergens(acc, fun, data, filter)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Reduce the allergen data</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#reduce_cuisines/3">reduce_cuisines(acc, fun, group \\ &quot;&quot;)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Reduce the cuisine data</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#reduce_cuisines/4">reduce_cuisines(acc, fun, group, filter)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Reduce the cuisine data</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#reduce_cuisines/5">reduce_cuisines(acc, fun, group, data, filter)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Reduce the cuisine data</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#reduce_diets/2">reduce_diets(acc, fun)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Reduce the diet data</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#reduce_diets/3">reduce_diets(acc, fun, filter)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Reduce the diet data</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#reduce_diets/4">reduce_diets(acc, fun, data, filter)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Reduce the diet data</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#reduce_ingredients/3">reduce_ingredients(acc, fun, group \\ &quot;&quot;)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Reduce the ingredient data</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#reduce_ingredients/4">reduce_ingredients(acc, fun, group, filter)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Reduce the ingredient data</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#reduce_ingredients/5">reduce_ingredients(acc, fun, group, data, filter)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Reduce the ingredient data</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#reduce_migrations/4">reduce_migrations(acc, type, fun, timestamp \\ -1)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Reduce the migration data</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#reduce_migrations/5">reduce_migrations(acc, type, fun, timestamp, data)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Reduce the migration data</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#ref_filter/1">ref_filter(ref)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Get a filter that can be used for the given refs</p></div>
+  
+</div>
+
+  </div>
+
+
+          
+
+        </section>
+      
+
+      
+        <section id="types" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Types
+          </h1>
+          <div class="types-list">
+            <div class="detail" id="t:allergen_info/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:allergen_info/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">allergen_info()</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L17" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>allergen_info() :: %{optional(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) => <a href="#t:translation_tree/0">translation_tree</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:allergen_list/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:allergen_list/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">allergen_list()</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L16" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>allergen_list() :: [<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:allergen_reducer/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:allergen_reducer/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">allergen_reducer()</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L29" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>allergen_reducer() :: <a href="#t:list_reducer/1">list_reducer</a>(<a href="#t:allergen_info/0">allergen_info</a>())</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:allergen_tree/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:allergen_tree/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">allergen_tree()</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L18" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>allergen_tree() :: %{optional(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) => <a href="#t:allergen_info/0">allergen_info</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:cuisine_info/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:cuisine_info/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">cuisine_info()</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L21" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>cuisine_info() :: %{optional(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) => <a href="#t:translation_tree/0">translation_tree</a>() | <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:cuisine_reducer/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:cuisine_reducer/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">cuisine_reducer()</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L31" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>cuisine_reducer() :: <a href="#t:tree_reducer/1">tree_reducer</a>(<a href="#t:cuisine_info/0">cuisine_info</a>())</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:cuisine_tree/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:cuisine_tree/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">cuisine_tree()</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L23" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>cuisine_tree() :: %{optional(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) => <a href="#t:cuisine_tree/0">cuisine_tree</a>(), :__info__ => <a href="#t:cuisine_info/0">cuisine_info</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:diet_info/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:diet_info/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">diet_info()</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L14" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>diet_info() :: %{optional(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) => <a href="#t:translation_tree/0">translation_tree</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:diet_list/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:diet_list/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">diet_list()</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L13" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>diet_list() :: [<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:diet_reducer/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:diet_reducer/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">diet_reducer()</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L28" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>diet_reducer() :: <a href="#t:list_reducer/1">list_reducer</a>(<a href="#t:diet_info/0">diet_info</a>())</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:diet_tree/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:diet_tree/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">diet_tree()</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L15" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>diet_tree() :: %{optional(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) => <a href="#t:diet_info/0">diet_info</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:file_filter/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:file_filter/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">file_filter()</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L25" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>file_filter() :: (<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() -> <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">boolean</a>())</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:ingredient_info/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:ingredient_info/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">ingredient_info()</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L20" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>ingredient_info() :: %{optional(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) => <a href="#t:translation_tree/0">translation_tree</a>() | <a href="#t:diet_list/0">diet_list</a>() | <a href="#t:allergen_list/0">allergen_list</a>() | <a href="#t:nutrition/0">nutrition</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:ingredient_reducer/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:ingredient_reducer/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">ingredient_reducer()</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L30" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>ingredient_reducer() :: <a href="#t:tree_reducer/1">tree_reducer</a>(<a href="#t:ingredient_info/0">ingredient_info</a>())</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:ingredient_tree/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:ingredient_tree/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">ingredient_tree()</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L22" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>ingredient_tree() :: %{optional(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) => <a href="#t:ingredient_tree/0">ingredient_tree</a>(), :__info__ => <a href="#t:ingredient_info/0">ingredient_info</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:list_reducer/1">
+  
+  
+  <div class="detail-header">
+    <a href="#t:list_reducer/1" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">list_reducer(type)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L26" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>list_reducer(type) :: ({<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), type}, <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>() -> <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>())</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:migration/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:migration/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">migration()</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L24" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>migration() :: %{optional(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) => <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | {<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()}}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:nutrition/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:nutrition/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">nutrition()</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L19" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>nutrition() :: %{optional(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) => <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:translation/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:translation/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">translation()</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L11" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>translation() :: %{optional(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) => <a href="#t:translation/0">translation</a>() | <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:translation_tree/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:translation_tree/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">translation_tree()</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L12" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>translation_tree() :: %{optional(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) => <a href="#t:translation/0">translation</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:tree_reducer/1">
+  
+  
+  <div class="detail-header">
+    <a href="#t:tree_reducer/1" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">tree_reducer(type)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L27" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>tree_reducer(type) :: ({<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), type}, [{<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), type}], <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>() -> <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>())</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+
+          </div>
+        </section>
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="allergens/0">
+  
+  
+  <div class="detail-header">
+    <a href="#allergens/0" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">allergens()</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L122" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>allergens() :: <a href="#t:allergen_tree/0">allergen_tree</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Load the allergen names and translations.</p><p>  Uses the path set in the config under <code>:path</code>.</p><p>  See <a href="#allergens/1"><code>allergens/1</code></a>.</p>
+  </section>
+</div>
+<div class="detail" id="allergens/1">
+  
+  
+  <div class="detail-header">
+    <a href="#allergens/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">allergens(filter)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L133" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>allergens(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | <a href="#t:file_filter/0">file_filter</a>()) :: <a href="#t:allergen_tree/0">allergen_tree</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Load the allergen names and translations.</p><p>  Uses the path referenced by <code>data</code>.</p><p>  The files to be loaded can be filtered by providing a filter.</p>
+  </section>
+</div>
+<div class="detail" id="allergens/2">
+  
+  
+  <div class="detail-header">
+    <a href="#allergens/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">allergens(data, filter)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L143" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>allergens(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="#t:file_filter/0">file_filter</a>()) :: <a href="#t:allergen_tree/0">allergen_tree</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Load the allergen names and translations.</p><p>  Uses the path referenced by <code>data</code>.</p><p>  The files to be loaded can be filtered by providing a filter.</p>
+  </section>
+</div>
+<div class="detail" id="cuisines/1">
+  
+  
+    <span id="cuisines/0"></span>
+  
+  <div class="detail-header">
+    <a href="#cuisines/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">cuisines(group \\ &quot;&quot;)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L276" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>cuisines(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | <a href="#t:file_filter/0">file_filter</a>()) :: <a href="#t:cuisine_tree/0">cuisine_tree</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Load the cuisine data.</p><p>  Uses the path set in the config under <code>:path</code>.</p><p>  See <a href="#cuisines/2"><code>cuisines/2</code></a></p>
+  </section>
+</div>
+<div class="detail" id="cuisines/2">
+  
+  
+  <div class="detail-header">
+    <a href="#cuisines/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">cuisines(group, filter)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L291" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>cuisines(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | <a href="#t:file_filter/0">file_filter</a>()) :: <a href="#t:cuisine_tree/0">cuisine_tree</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Load the cuisine data.</p><p>  If only a particular group of cuisines is required, the path to  find these can be provided to <code>group</code>. This will however not include  any parent information that should be applied to these child cuisines.</p><p>  Uses the path referenced by <code>data</code>.</p><p>  The files to be loaded can be filtered by providing a filter.</p>
+  </section>
+</div>
+<div class="detail" id="cuisines/3">
+  
+  
+  <div class="detail-header">
+    <a href="#cuisines/3" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">cuisines(group, data, filter)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L305" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>cuisines(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="#t:file_filter/0">file_filter</a>()) :: <a href="#t:cuisine_tree/0">cuisine_tree</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Load the cuisine data.</p><p>  If only a particular group of cuisines is required, the path to  find these can be provided to <code>group</code>. This will however not include  any parent information that should be applied to these child cuisines.</p><p>  Uses the path referenced by <code>data</code>.</p><p>  The files to be loaded can be filtered by providing a filter.</p>
+  </section>
+</div>
+<div class="detail" id="diets/0">
+  
+  
+  <div class="detail-header">
+    <a href="#diets/0" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">diets()</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L56" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>diets() :: <a href="#t:diet_tree/0">diet_tree</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Load the diet names and translations.</p><p>  Uses the path set in the config under <code>:path</code>.</p><p>  See <a href="#diets/1"><code>diets/1</code></a>.</p>
+  </section>
+</div>
+<div class="detail" id="diets/1">
+  
+  
+  <div class="detail-header">
+    <a href="#diets/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">diets(filter)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L67" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>diets(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | <a href="#t:file_filter/0">file_filter</a>()) :: <a href="#t:diet_tree/0">diet_tree</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Load the diet names and translations.</p><p>  Uses the path referenced by <code>data</code>.</p><p>  The files to be loaded can be filtered by providing a filter.</p>
+  </section>
+</div>
+<div class="detail" id="diets/2">
+  
+  
+  <div class="detail-header">
+    <a href="#diets/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">diets(data, filter)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L77" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>diets(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="#t:file_filter/0">file_filter</a>()) :: <a href="#t:diet_tree/0">diet_tree</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Load the diet names and translations.</p><p>  Uses the path referenced by <code>data</code>.</p><p>  The files to be loaded can be filtered by providing a filter.</p>
+  </section>
+</div>
+<div class="detail" id="ingredients/1">
+  
+  
+    <span id="ingredients/0"></span>
+  
+  <div class="detail-header">
+    <a href="#ingredients/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">ingredients(group \\ &quot;&quot;)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L190" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>ingredients(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | <a href="#t:file_filter/0">file_filter</a>()) :: <a href="#t:ingredient_tree/0">ingredient_tree</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Load the ingredient data.</p><p>  Uses the path set in the config under <code>:path</code>.</p><p>  See <a href="#ingredients/2"><code>ingredients/2</code></a>.</p>
+  </section>
+</div>
+<div class="detail" id="ingredients/2">
+  
+  
+  <div class="detail-header">
+    <a href="#ingredients/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">ingredients(group, filter)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L205" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>ingredients(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | <a href="#t:file_filter/0">file_filter</a>()) :: <a href="#t:ingredient_tree/0">ingredient_tree</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Load the ingredient data.</p><p>  If only a particular group of ingredients is required, the path to  find these can be provided to <code>group</code>. This will however not include  any parent information that should be applied to these child ingredients.</p><p>  Uses the path referenced by <code>data</code>.</p><p>  The files to be loaded can be filtered by providing a filter.</p>
+  </section>
+</div>
+<div class="detail" id="ingredients/3">
+  
+  
+  <div class="detail-header">
+    <a href="#ingredients/3" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">ingredients(group, data, filter)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L219" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>ingredients(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="#t:file_filter/0">file_filter</a>()) :: <a href="#t:ingredient_tree/0">ingredient_tree</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Load the ingredient data.</p><p>  If only a particular group of ingredients is required, the path to  find these can be provided to <code>group</code>. This will however not include  any parent information that should be applied to these child ingredients.</p><p>  Uses the path referenced by <code>data</code>.</p><p>  The files to be loaded can be filtered by providing a filter.</p>
+  </section>
+</div>
+<div class="detail" id="migrations/2">
+  
+  
+    <span id="migrations/1"></span>
+  
+  <div class="detail-header">
+    <a href="#migrations/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">migrations(type, timestamp \\ -1)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L360" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>migrations(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()) :: [<a href="#t:migration/0">migration</a>()]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Load the migration data.</p><p>  Uses the path set in the config under <code>:path</code>.</p><p>  See <a href="#migrations/3"><code>migrations/3</code></a></p>
+  </section>
+</div>
+<div class="detail" id="migrations/3">
+  
+  
+  <div class="detail-header">
+    <a href="#migrations/3" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">migrations(type, timestamp, data)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L374" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>migrations(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) :: [<a href="#t:migration/0">migration</a>()]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Load the migration data.</p><p>  The path to the set of migration data for a certain type should be passed  to <code>type</code>.</p><p>  Any migration files after <code>timestamp</code> will be loaded, any earlier or  equal to will be ignored.</p><p>  Uses the path referenced by <code>data</code>.</p>
+  </section>
+</div>
+<div class="detail" id="reduce_allergens/2">
+  
+  
+  <div class="detail-header">
+    <a href="#reduce_allergens/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">reduce_allergens(acc, fun)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L153" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>reduce_allergens(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(), <a href="#t:allergen_reducer/0">allergen_reducer</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Reduce the allergen data.</p><p>  Uses the path set in the config under <code>:path</code>.</p><p>  See <a href="#reduce_allergens/3"><code>reduce_allergens/3</code></a>.</p>
+  </section>
+</div>
+<div class="detail" id="reduce_allergens/3">
+  
+  
+  <div class="detail-header">
+    <a href="#reduce_allergens/3" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">reduce_allergens(acc, fun, filter)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L166" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>reduce_allergens(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(), <a href="#t:allergen_reducer/0">allergen_reducer</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | <a href="#t:file_filter/0">file_filter</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Reduce the allergen data.</p><p>  Each allergen is passed to <code>fun</code> and an updated accumulator is returned.</p><p>  Uses the path referenced by <code>data</code>.</p><p>  The files to be loaded can be filtered by providing a filter.</p>
+  </section>
+</div>
+<div class="detail" id="reduce_allergens/4">
+  
+  
+  <div class="detail-header">
+    <a href="#reduce_allergens/4" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">reduce_allergens(acc, fun, data, filter)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L178" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>reduce_allergens(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(), <a href="#t:allergen_reducer/0">allergen_reducer</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="#t:file_filter/0">file_filter</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Reduce the allergen data.</p><p>  Each allergen is passed to <code>fun</code> and an updated accumulator is returned.</p><p>  Uses the path referenced by <code>data</code>.</p><p>  The files to be loaded can be filtered by providing a filter.</p>
+  </section>
+</div>
+<div class="detail" id="reduce_cuisines/3">
+  
+  
+    <span id="reduce_cuisines/2"></span>
+  
+  <div class="detail-header">
+    <a href="#reduce_cuisines/3" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">reduce_cuisines(acc, fun, group \\ &quot;&quot;)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L317" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>reduce_cuisines(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(), <a href="#t:cuisine_reducer/0">cuisine_reducer</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | <a href="#t:file_filter/0">file_filter</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Reduce the cuisine data.</p><p>  Uses the path set in the config under <code>:path</code>.</p><p>  See <a href="#reduce_cuisines/4"><code>reduce_cuisines/4</code></a></p>
+  </section>
+</div>
+<div class="detail" id="reduce_cuisines/4">
+  
+  
+  <div class="detail-header">
+    <a href="#reduce_cuisines/4" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">reduce_cuisines(acc, fun, group, filter)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L334" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>reduce_cuisines(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(), <a href="#t:cuisine_reducer/0">cuisine_reducer</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | <a href="#t:file_filter/0">file_filter</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Reduce the cuisine data.</p><p>  Each cuisine is passed to <code>fun</code> and an updated accumulator is returned.</p><p>  If only a particular group of cuisines is required, the path to  find these can be provided to <code>group</code>. This will however not include  any parent information that should be applied to these child cuisines.</p><p>  Uses the path referenced by <code>data</code>.</p><p>  The files to be loaded can be filtered by providing a filter.</p>
+  </section>
+</div>
+<div class="detail" id="reduce_cuisines/5">
+  
+  
+  <div class="detail-header">
+    <a href="#reduce_cuisines/5" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">reduce_cuisines(acc, fun, group, data, filter)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L350" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>reduce_cuisines(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(), <a href="#t:cuisine_reducer/0">cuisine_reducer</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="#t:file_filter/0">file_filter</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Reduce the cuisine data.</p><p>  Each cuisine is passed to <code>fun</code> and an updated accumulator is returned.</p><p>  If only a particular group of cuisines is required, the path to  find these can be provided to <code>group</code>. This will however not include  any parent information that should be applied to these child cuisines.</p><p>  Uses the path referenced by <code>data</code>.</p><p>  The files to be loaded can be filtered by providing a filter.</p>
+  </section>
+</div>
+<div class="detail" id="reduce_diets/2">
+  
+  
+  <div class="detail-header">
+    <a href="#reduce_diets/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">reduce_diets(acc, fun)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L87" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>reduce_diets(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(), <a href="#t:diet_reducer/0">diet_reducer</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Reduce the diet data.</p><p>  Uses the path set in the config under <code>:path</code>.</p><p>  See <a href="#reduce_diets/3"><code>reduce_diets/3</code></a>.</p>
+  </section>
+</div>
+<div class="detail" id="reduce_diets/3">
+  
+  
+  <div class="detail-header">
+    <a href="#reduce_diets/3" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">reduce_diets(acc, fun, filter)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L100" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>reduce_diets(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(), <a href="#t:diet_reducer/0">diet_reducer</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | <a href="#t:file_filter/0">file_filter</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Reduce the diet data.</p><p>  Each diet is passed to <code>fun</code> and an updated accumulator is returned.</p><p>  Uses the path referenced by <code>data</code>.</p><p>  The files to be loaded can be filtered by providing a filter.</p>
+  </section>
+</div>
+<div class="detail" id="reduce_diets/4">
+  
+  
+  <div class="detail-header">
+    <a href="#reduce_diets/4" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">reduce_diets(acc, fun, data, filter)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L112" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>reduce_diets(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(), <a href="#t:diet_reducer/0">diet_reducer</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="#t:file_filter/0">file_filter</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Reduce the diet data.</p><p>  Each diet is passed to <code>fun</code> and an updated accumulator is returned.</p><p>  Uses the path referenced by <code>data</code>.</p><p>  The files to be loaded can be filtered by providing a filter.</p>
+  </section>
+</div>
+<div class="detail" id="reduce_ingredients/3">
+  
+  
+    <span id="reduce_ingredients/2"></span>
+  
+  <div class="detail-header">
+    <a href="#reduce_ingredients/3" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">reduce_ingredients(acc, fun, group \\ &quot;&quot;)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L231" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>reduce_ingredients(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(), <a href="#t:ingredient_reducer/0">ingredient_reducer</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | <a href="#t:file_filter/0">file_filter</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Reduce the ingredient data.</p><p>  Uses the path set in the config under <code>:path</code>.</p><p>  See <a href="#reduce_ingredients/4"><code>reduce_ingredients/4</code></a></p>
+  </section>
+</div>
+<div class="detail" id="reduce_ingredients/4">
+  
+  
+  <div class="detail-header">
+    <a href="#reduce_ingredients/4" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">reduce_ingredients(acc, fun, group, filter)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L248" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>reduce_ingredients(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(), <a href="#t:ingredient_reducer/0">ingredient_reducer</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | <a href="#t:file_filter/0">file_filter</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Reduce the ingredient data.</p><p>  Each ingredient is passed to <code>fun</code> and an updated accumulator is returned.</p><p>  If only a particular group of ingredients is required, the path to  find these can be provided to <code>group</code>. This will however not include  any parent information that should be applied to these child ingredients.</p><p>  Uses the path referenced by <code>data</code>.</p><p>  The files to be loaded can be filtered by providing a filter.</p>
+  </section>
+</div>
+<div class="detail" id="reduce_ingredients/5">
+  
+  
+  <div class="detail-header">
+    <a href="#reduce_ingredients/5" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">reduce_ingredients(acc, fun, group, data, filter)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L264" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>reduce_ingredients(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(), <a href="#t:ingredient_reducer/0">ingredient_reducer</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="#t:file_filter/0">file_filter</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Reduce the ingredient data.</p><p>  Each ingredient is passed to <code>fun</code> and an updated accumulator is returned.</p><p>  If only a particular group of ingredients is required, the path to  find these can be provided to <code>group</code>. This will however not include  any parent information that should be applied to these child ingredients.</p><p>  Uses the path referenced by <code>data</code>.</p><p>  The files to be loaded can be filtered by providing a filter.</p>
+  </section>
+</div>
+<div class="detail" id="reduce_migrations/4">
+  
+  
+    <span id="reduce_migrations/3"></span>
+  
+  <div class="detail-header">
+    <a href="#reduce_migrations/4" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">reduce_migrations(acc, type, fun, timestamp \\ -1)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L389" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>reduce_migrations(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), (<a href="#t:migration/0">migration</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>() -> <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()), <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Reduce the migration data.</p><p>  Uses the path set in the config under <code>:path</code>.</p><p>  See <a href="#reduce_migrations/5"><code>reduce_migrations/5</code></a></p>
+  </section>
+</div>
+<div class="detail" id="reduce_migrations/5">
+  
+  
+  <div class="detail-header">
+    <a href="#reduce_migrations/5" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">reduce_migrations(acc, type, fun, timestamp, data)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L405" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>reduce_migrations(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), (<a href="#t:migration/0">migration</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>() -> <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()), <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Reduce the migration data.</p><p>  Each migration is passed to <code>fun</code> and an updated accumulator is returned.</p><p>  The path to the set of migration data for a certain type should be passed  to <code>type</code>.</p><p>  Any migration files after <code>timestamp</code> will be loaded, any earlier or  equal to will be ignored.</p><p>  Uses the path referenced by <code>data</code>.</p>
+  </section>
+</div>
+<div class="detail" id="ref_filter/1">
+  
+  
+  <div class="detail-header">
+    <a href="#ref_filter/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">ref_filter(ref)</span>
+    
+      <a href="https://github.com/ZURASTA/yum/blob/master/lib/yum/data.ex#L43" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>ref_filter(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | [<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()]) :: <a href="#t:file_filter/0">file_filter</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Get a filter that can be used for the given refs.</p>
+  </section>
+</div>
+
+        </section>
+      
+
+      
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.18.2),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  <script src="dist/app-ad33bc0e7d.js"></script>
+  
+  
+  
+  
+  </body>
+</html>
+

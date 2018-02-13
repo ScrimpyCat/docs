@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.18.2">
+    <title>Yum – Yum v0.1.0</title>
+    <link rel="stylesheet" href="dist/app-81d381dea4.css" />
+    
+    <script src="dist/sidebar_items-5e878e0c04.js"></script>
+    
+    
+    
+    
+  </head>
+  <body data-type="extras">
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
+
+<div class="main">
+<button class="sidebar-button sidebar-toggle">
+  <span class="icon-menu" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Sidebar</span>
+</button>
+<button class="sidebar-button night-mode-toggle">
+  <span class="icon-theme" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Theme</span>
+</button>
+<section class="sidebar">
+
+  
+  <a href="yum.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Yum
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.1.0
+      </h2>
+    </div>
+    
+  </a>
+
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <input name="q" type="text" id="search-list" class="search-input" placeholder="Search" aria-label="Search" autocomplete="off" />
+  </form>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+
+    
+  </ul>
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+
+<h1> yum</h1><p><a href="https://badge.waffle.io/ZURASTA/yum.png?label=ready&title=Ready">![Stories in Ready</a>](https://waffle.io/ZURASTA/yum?utm_source=badge)<a href="https://circleci.com/gh/ZURASTA/yum.svg?style=svg">![CircleCI</a>](https://circleci.com/gh/ZURASTA/yum)</p><p>An Elixir library to retrieve various food related data from the <a href="https://github.com/ZURASTA/Food-Data">Food-Data</a> dataset.</p><h2 id="reading-food-data" class="section-heading">
+  <a href="#reading-food-data" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Reading Food-Data
+</h2>
+<p>The library provides convenient functions to retrieve data from the dataset.</p><h4> Load</h4><p>These variants will load the entire dataset desired:</p><pre><code class="elixir">iex(1)&gt; Yum.Data.ingredients
+%{&quot;dairy&quot; =&gt; %{:__info__ =&gt; %{&quot;exclude-diet&quot; =&gt; [&quot;carnivorous&quot;, &quot;vegetarian&quot;,
+       &quot;vegan&quot;, &quot;raw-vegan&quot;, &quot;paleolithic&quot;, &quot;fruitarian&quot;],
+      &quot;translation&quot; =&gt; %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;dairy&quot;},
+        &quot;fr&quot; =&gt; %{&quot;term&quot; =&gt; &quot;produits laitiers&quot;}}},
+    &quot;cheeses&quot; =&gt; %{:__info__ =&gt; %{&quot;translation&quot; =&gt; %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;cheese&quot;},
+          &quot;fr&quot; =&gt; %{&quot;term&quot; =&gt; &quot;fromage&quot;}}},
+      &quot;mozzarella&quot; =&gt; %{__info__: %{&quot;translation&quot; =&gt; %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;mozzarella&quot;}}}}}},
+  &quot;herbs&quot; =&gt; %{:__info__ =&gt; %{&quot;exclude-diet&quot; =&gt; [&quot;carnivorous&quot;, &quot;ketogenic&quot;],
+      &quot;translation&quot; =&gt; %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;herb&quot;}}},
+    &quot;basil&quot; =&gt; %{__info__: %{&quot;translation&quot; =&gt; %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;basil&quot;}}}}},
+  &quot;meats&quot; =&gt; %{:__info__ =&gt; %{&quot;exclude-diet&quot; =&gt; [&quot;vegan&quot;, &quot;vegetarian&quot;,
+       &quot;pescetarian&quot;, &quot;raw-vegan&quot;, &quot;fruitarian&quot;],
+      &quot;translation&quot; =&gt; %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;meat&quot;},
+        &quot;fr&quot; =&gt; %{&quot;term&quot; =&gt; &quot;viande&quot;}}},
+    &quot;pork&quot; =&gt; %{__info__: %{&quot;exclude-diet&quot; =&gt; [&quot;kosher&quot;, &quot;halal&quot;],
+        &quot;translation&quot; =&gt; %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;pork&quot;},
+          &quot;fr&quot; =&gt; %{&quot;term&quot; =&gt; &quot;viande de porc&quot;}}}},
+    &quot;poultry&quot; =&gt; %{__info__: %{&quot;translation&quot; =&gt; %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;poultry&quot;},
+          &quot;fr&quot; =&gt; %{&quot;term&quot; =&gt; &quot;volaille&quot;}}}}},
+  &quot;sauces&quot; =&gt; %{:__info__ =&gt; %{&quot;translation&quot; =&gt; %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;sauce&quot;}}},
+    &quot;tomato-sauce&quot; =&gt; %{__info__: %{&quot;translation&quot; =&gt; %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;tomato sauce&quot;}}}}},
+  &quot;vegetables&quot; =&gt; %{:__info__ =&gt; %{&quot;exclude-diet&quot; =&gt; [&quot;carnivorous&quot;,
+       &quot;ketogenic&quot;],
+      &quot;translation&quot; =&gt; %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;vegetable&quot;},
+        &quot;fr&quot; =&gt; %{&quot;term&quot; =&gt; &quot;légume&quot;}}},
+    &quot;spring-onion&quot; =&gt; %{__info__: %{&quot;translation&quot; =&gt; %{&quot;en&quot; =&gt; %{&quot;AU&quot; =&gt; %{&quot;term&quot; =&gt; &quot;shallot&quot;},
+            &quot;CA&quot; =&gt; %{&quot;term&quot; =&gt; &quot;green onion&quot;},
+            &quot;GB&quot; =&gt; %{&quot;WLS&quot; =&gt; %{&quot;term&quot; =&gt; &quot;gibbon&quot;}},
+            &quot;US&quot; =&gt; %{&quot;term&quot; =&gt; &quot;scallion&quot;}, &quot;term&quot; =&gt; &quot;spring onion&quot;},
+          &quot;fr&quot; =&gt; %{&quot;term&quot; =&gt; &quot;ciboule&quot;}}}},
+    &quot;tomato&quot; =&gt; %{__info__: %{&quot;translation&quot; =&gt; %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;tomato&quot;},
+          &quot;fr&quot; =&gt; %{&quot;term&quot; =&gt; &quot;tomate&quot;}}}},
+    &quot;tubers&quot; =&gt; %{:__info__ =&gt; %{&quot;exclude-diet&quot; =&gt; [&quot;fruitarian&quot;],
+        &quot;translation&quot; =&gt; %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;tuber&quot;}}},
+      &quot;potato&quot; =&gt; %{__info__: %{&quot;translation&quot; =&gt; %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;potato&quot;},
+            &quot;fr&quot; =&gt; %{&quot;term&quot; =&gt; &quot;pomme de terre&quot;}}}}}}}</code></pre><h4> Reduce</h4><p>These variants will load only one file at a time before passing it to a callback. This can be more memory efficient when only certain data is desired.</p><pre><code class="elixir">iex(1)&gt; Yum.Data.reduce_ingredients([], fn
+...(1)&gt;     { name, data }, groups, acc -&gt;
+...(1)&gt;         cond do
+...(1)&gt;             &quot;fruitarian&quot; in (data[&quot;exclude-diet&quot;] || []) -&gt; [name|acc]
+...(1)&gt;             Enum.any?(groups, &amp;(&quot;fruitarian&quot; in (elem(&amp;1, 1)[&quot;exclude-diet&quot;] || []))) -&gt; [name|acc]
+...(1)&gt;             true -&gt; acc
+...(1)&gt;         end
+...(1)&gt; end)
+[&quot;potato&quot;, &quot;tubers&quot;, &quot;poultry&quot;, &quot;pork&quot;, &quot;meats&quot;, &quot;mozzarella&quot;, &quot;cheeses&quot;,
+ &quot;dairy&quot;]</code></pre><h3 id="filtering-and-groups" class="section-heading">
+  <a href="#filtering-and-groups" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+   Filtering and Groups
+</h3>
+<p>When only a specific set of the data is required, filtering can be used to decide which files to process, while groups can be specified to indicate the starting directory. This process can have an affect on the final output data however, when the file depends on some data specified in a parent (tree data sources).</p><p>Using a group to only load files under the <code>vegetables/tubers</code> directory.</p><pre><code class="elixir">iex(1)&gt; Yum.Data.ingredients &quot;/vegetables/tubers&quot;
+%{&quot;potato&quot; =&gt; %{__info__: %{&quot;translation&quot; =&gt; %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;potato&quot;},
+        &quot;fr&quot; =&gt; %{&quot;term&quot; =&gt; &quot;pomme de terre&quot;}}}}}</code></pre><p>Using a filter to only load a file with the ref <code>/vegetables/tubers</code>.</p><pre><code class="elixir">iex(1)&gt; Yum.Data.ingredients &amp;(&amp;1 == &quot;/vegetables/tubers&quot;)
+%{&quot;vegetables&quot; =&gt; %{&quot;tubers&quot; =&gt; %{__info__: %{&quot;exclude-diet&quot; =&gt; [&quot;fruitarian&quot;],
+        &quot;translation&quot; =&gt; %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;tuber&quot;}}}}}}</code></pre><p>Using a filter to load only the files that match each part of the ref <code>/vegetables/tubers</code>. e.g. <code>/vegetables</code> and <code>/vegetables/tubers</code>.</p><pre><code class="elixir">iex(1)&gt; Yum.Data.ingredients Yum.Data.ref_filter(&quot;/vegetables/tubers&quot;)
+%{&quot;vegetables&quot; =&gt; %{:__info__ =&gt; %{&quot;exclude-diet&quot; =&gt; [&quot;carnivorous&quot;,
+       &quot;ketogenic&quot;],
+      &quot;translation&quot; =&gt; %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;vegetable&quot;},
+        &quot;fr&quot; =&gt; %{&quot;term&quot; =&gt; &quot;légume&quot;}}},
+    &quot;tubers&quot; =&gt; %{__info__: %{&quot;exclude-diet&quot; =&gt; [&quot;fruitarian&quot;],
+        &quot;translation&quot; =&gt; %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;tuber&quot;}}}}}}</code></pre><h2 id="structs" class="section-heading">
+  <a href="#structs" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Structs
+</h2>
+<p>Structs are available for each data type to provide a standard interface to the data.</p><pre><code class="elixir">iex(1)&gt; Yum.Data.ingredients |&gt; Yum.Ingredient.new                    
+[%Yum.Ingredient{exclude_allergen: [],
+  exclude_diet: [&quot;carnivorous&quot;, &quot;ketogenic&quot;], nutrition: %{},
+  ref: &quot;/vegetables&quot;,
+  translation: %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;vegetable&quot;},
+    &quot;fr&quot; =&gt; %{&quot;term&quot; =&gt; &quot;légume&quot;}}},
+ %Yum.Ingredient{exclude_allergen: [],
+  exclude_diet: [&quot;fruitarian&quot;, &quot;carnivorous&quot;, &quot;ketogenic&quot;], nutrition: %{},
+  ref: &quot;/vegetables/tubers&quot;, translation: %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;tuber&quot;}}},
+ %Yum.Ingredient{exclude_allergen: [],
+  exclude_diet: [&quot;fruitarian&quot;, &quot;carnivorous&quot;, &quot;ketogenic&quot;], nutrition: %{},
+  ref: &quot;/vegetables/tubers/potato&quot;,
+  translation: %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;potato&quot;},
+    &quot;fr&quot; =&gt; %{&quot;term&quot; =&gt; &quot;pomme de terre&quot;}}},
+ %Yum.Ingredient{exclude_allergen: [],
+  exclude_diet: [&quot;carnivorous&quot;, &quot;ketogenic&quot;], nutrition: %{},
+  ref: &quot;/vegetables/tomato&quot;,
+  translation: %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;tomato&quot;}, &quot;fr&quot; =&gt; %{&quot;term&quot; =&gt; &quot;tomate&quot;}}},
+ %Yum.Ingredient{exclude_allergen: [],
+  exclude_diet: [&quot;carnivorous&quot;, &quot;ketogenic&quot;], nutrition: %{},
+  ref: &quot;/vegetables/spring-onion&quot;,
+  translation: %{&quot;en&quot; =&gt; %{&quot;AU&quot; =&gt; %{&quot;term&quot; =&gt; &quot;shallot&quot;},
+      &quot;CA&quot; =&gt; %{&quot;term&quot; =&gt; &quot;green onion&quot;},
+      &quot;GB&quot; =&gt; %{&quot;WLS&quot; =&gt; %{&quot;term&quot; =&gt; &quot;gibbon&quot;}},
+      &quot;US&quot; =&gt; %{&quot;term&quot; =&gt; &quot;scallion&quot;}, &quot;term&quot; =&gt; &quot;spring onion&quot;},
+    &quot;fr&quot; =&gt; %{&quot;term&quot; =&gt; &quot;ciboule&quot;}}},
+ %Yum.Ingredient{exclude_allergen: [], exclude_diet: [], nutrition: %{},
+  ref: &quot;/sauces&quot;, translation: %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;sauce&quot;}}},
+ %Yum.Ingredient{exclude_allergen: [], exclude_diet: [], nutrition: %{},
+  ref: &quot;/sauces/tomato-sauce&quot;,
+  translation: %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;tomato sauce&quot;}}},
+ %Yum.Ingredient{exclude_allergen: [],
+  exclude_diet: [&quot;vegan&quot;, &quot;vegetarian&quot;, &quot;pescetarian&quot;, &quot;raw-vegan&quot;,
+   &quot;fruitarian&quot;], nutrition: %{}, ref: &quot;/meats&quot;,
+  translation: %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;meat&quot;}, &quot;fr&quot; =&gt; %{&quot;term&quot; =&gt; &quot;viande&quot;}}},
+ %Yum.Ingredient{exclude_allergen: [],
+  exclude_diet: [&quot;vegan&quot;, &quot;vegetarian&quot;, &quot;pescetarian&quot;, &quot;raw-vegan&quot;,
+   &quot;fruitarian&quot;], nutrition: %{}, ref: &quot;/meats/poultry&quot;,
+  translation: %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;poultry&quot;},
+    &quot;fr&quot; =&gt; %{&quot;term&quot; =&gt; &quot;volaille&quot;}}},
+ %Yum.Ingredient{exclude_allergen: [],
+  exclude_diet: [&quot;kosher&quot;, &quot;halal&quot;, &quot;vegan&quot;, &quot;vegetarian&quot;, &quot;pescetarian&quot;,
+   &quot;raw-vegan&quot;, &quot;fruitarian&quot;], nutrition: %{}, ref: &quot;/meats/pork&quot;,
+  translation: %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;pork&quot;},
+    &quot;fr&quot; =&gt; %{&quot;term&quot; =&gt; &quot;viande de porc&quot;}}},
+ %Yum.Ingredient{exclude_allergen: [],
+  exclude_diet: [&quot;carnivorous&quot;, &quot;ketogenic&quot;], nutrition: %{}, ref: &quot;/herbs&quot;,
+  translation: %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;herb&quot;}}},
+ %Yum.Ingredient{exclude_allergen: [],
+  exclude_diet: [&quot;carnivorous&quot;, &quot;ketogenic&quot;], nutrition: %{},
+  ref: &quot;/herbs/basil&quot;, translation: %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;basil&quot;}}},
+ %Yum.Ingredient{exclude_allergen: [],
+  exclude_diet: [&quot;carnivorous&quot;, &quot;vegetarian&quot;, &quot;vegan&quot;, &quot;raw-vegan&quot;,
+   &quot;paleolithic&quot;, &quot;fruitarian&quot;], nutrition: %{}, ref: &quot;/dairy&quot;,
+  translation: %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;dairy&quot;},
+    &quot;fr&quot; =&gt; %{&quot;term&quot; =&gt; &quot;produits laitiers&quot;}}},
+ %Yum.Ingredient{exclude_allergen: [],
+  exclude_diet: [&quot;carnivorous&quot;, &quot;vegetarian&quot;, &quot;vegan&quot;, &quot;raw-vegan&quot;,
+   &quot;paleolithic&quot;, &quot;fruitarian&quot;], nutrition: %{}, ref: &quot;/dairy/cheeses&quot;,
+  translation: %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;cheese&quot;},
+    &quot;fr&quot; =&gt; %{&quot;term&quot; =&gt; &quot;fromage&quot;}}},
+ %Yum.Ingredient{exclude_allergen: [],
+  exclude_diet: [&quot;carnivorous&quot;, &quot;vegetarian&quot;, &quot;vegan&quot;, &quot;raw-vegan&quot;,
+   &quot;paleolithic&quot;, &quot;fruitarian&quot;], nutrition: %{},
+  ref: &quot;/dairy/cheeses/mozzarella&quot;,
+  translation: %{&quot;en&quot; =&gt; %{&quot;term&quot; =&gt; &quot;mozzarella&quot;}}}]</code></pre><h2 id="working-with-refs" class="section-heading">
+  <a href="#working-with-refs" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Working with refs
+</h2>
+<p>Refs are the unique path name for the data source. The library provides convenient functions for working with refs to produce filters (<a href="Yum.Data.html#ref_filter/1"><code>Yum.Data.ref_filter/1</code></a>), ref lists (<a href="Yum.Util.html#match_ref/1"><code>Yum.Util.match_ref/1</code></a> and <a href="Yum.Util.html#ref_list/1"><code>Yum.Util.ref_list/1</code></a>), get the name (<a href="Yum.Util.html#name/1"><code>Yum.Util.name/1</code></a>), get the parent group (<a href="Yum.Util.html#group_ref/1"><code>Yum.Util.group_ref/1</code></a>).</p><pre><code class="elixir">iex(1)&gt; Yum.Data.ref_filter(&quot;/vegetables/tubers&quot;).(&quot;/vegetables&quot;)
+true
+iex(2)&gt; Yum.Data.ref_filter(&quot;/vegetables/tubers&quot;).(&quot;/tubers&quot;)    
+false
+iex(3)&gt; Yum.Data.ref_filter(&quot;/vegetables/tubers&quot;).(&quot;/vegetables/tubers&quot;)
+true
+iex(4)&gt; Yum.Util.match_ref &quot;/vegetables/tubers&quot;
+[&quot;/vegetables/tubers&quot;, &quot;/vegetables&quot;]
+iex(5)&gt; Yum.Util.ref_list [&quot;vegetables&quot;, &quot;tubers&quot;]  
+[&quot;vegetables/tubers&quot;, &quot;vegetables&quot;]
+iex(6)&gt; Yum.Util.name &quot;/vegetables/tubers&quot;
+&quot;tubers&quot;
+iex(7)&gt; Yum.Util.group_ref &quot;/vegetables/tubers&quot;
+&quot;/vegetables&quot;</code></pre><h2 id="migrations" class="section-heading">
+  <a href="#migrations" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Migrations
+</h2>
+<p>The library provides some functions for more efficiently working with migrations.</p><h4> Transactions</h4><p>Handling migrations can be done easily using transactions (<a href="Yum.Migration.html#transactions/1"><code>Yum.Migration.transactions/1</code></a>) which are a list of operations ordered in the order they should be handled to correctly migrate the data.</p><pre><code class="elixir">iex(1)&gt; Yum.Migration.transactions %Yum.Migration{
+...(1)&gt;     timestamp: 1,
+...(1)&gt;     add: [&quot;a&quot;, &quot;b&quot;],
+...(1)&gt;     update: [&quot;c&quot;, &quot;d&quot;],
+...(1)&gt;     move: [{ &quot;e&quot;, &quot;f&quot; }, { &quot;g&quot;, &quot;h&quot; }],
+...(1)&gt;     delete: [&quot;i&quot;, &quot;j&quot;]
+...(1)&gt; }
+[move: {&quot;e&quot;, &quot;f&quot;}, move: {&quot;g&quot;, &quot;h&quot;}, delete: &quot;i&quot;, delete: &quot;j&quot;, add: &quot;a&quot;,
+ add: &quot;b&quot;, update: &quot;c&quot;, update: &quot;d&quot;]
+</code></pre><h4> Merging</h4><p>Migrations can be merged into one single migration, removing any redundant operations so migrating the data can be done more efficiently.</p><pre><code class="elixir">iex(1)&gt; Yum.Migration.merge(%Yum.Migration{
+...(1)&gt;     timestamp: 1,
+...(1)&gt;     add: [&quot;a&quot;, { :b, &quot;b&quot; }, &quot;c&quot;]
+...(1)&gt; }, %Yum.Migration{
+...(1)&gt;     timestamp: 2,
+...(1)&gt;     update: [&quot;a&quot;, &quot;b&quot;, { :c, &quot;c&quot; }, &quot;d&quot;]
+...(1)&gt; })
+%Yum.Migration{add: [&quot;a&quot;, {:b, &quot;b&quot;}, &quot;c&quot;], delete: [], move: [], timestamp: 2,
+ update: [&quot;d&quot;]}</code></pre><h4> Metadata</h4><p>Transaction operations can optionally have metadata attached to them. These are useful for attaching some contextual information with the given operation. Note that metadata will not be merged, rather whatever operation ends up in the output will still retain its metadata (but there will be no trace of the metadata from the operation that was deemed redundant and removed).</p><p>Metadata is of the form <code>{ metadata, op }</code> where <code>op</code> is the operation value that has the metadata attached.</p><pre><code class="elixir">iex(1)&gt; Yum.Migration.new(%{
+...(1)&gt;     &quot;timestamp&quot; =&gt; &quot;1&quot;,
+...(1)&gt;     &quot;add&quot; =&gt; [{ :my_custom_data, &quot;a&quot; }, &quot;b&quot;],
+...(1)&gt; })
+%Yum.Migration{add: [my_custom_data: &quot;a&quot;, &quot;b&quot;], delete: [], move: [], timestamp: 1,
+ update: []}</code></pre>
+      <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.18.2),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  <script src="dist/app-ad33bc0e7d.js"></script>
+  
+  
+  
+  
+  </body>
+</html>
+
