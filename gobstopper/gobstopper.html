@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.15.1">
+    <meta name="generator" content="ExDoc v0.18.1">
     <title>Gobstopper – Gobstopper vdev</title>
-    <link rel="stylesheet" href="dist/app-af302bfcc4.css" />
+    <link rel="stylesheet" href="dist/app-c922dbe7ef.css" />
     
-    <script src="dist/sidebar_items-836a4f0bab.js"></script>
+    <script src="dist/sidebar_items-bfb5a6d174.js"></script>
+    
+    
+    
+    
   </head>
   <body data-type="extras">
     <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
 
 <div class="main">
 <button class="sidebar-toggle">
-  <i class="icon-menu"></i>
+  <span class="icon-menu" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Sidebar</span>
 </button>
 <section class="sidebar">
 
@@ -32,10 +37,12 @@
     
   </a>
 
-  <div class="sidebar-search">
-    <i class="icon-search"></i>
-    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
-  </div>
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <input name="q" type="text" id="search-list" class="search-input" placeholder="search" aria-label="Search" autocomplete="off" />
+  </form>
 
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
@@ -57,33 +64,53 @@
     <div id="content" class="content-inner">
 
 
-<p><h1> Gobstopper (Identity and Credential Management)</h1></p><p>Manages the identities and credentials used to authorise access to those identities. An identity is a unique ID representing an entity, that can then be used to associate other information with. It is connected to any number of credentials, which are used to prove the entity is who they say they are.</p><h3> Usage</h3><p>The service component (<code>Gobstopper.Service</code>) is an OTP application that should be started prior to making any requests to the service. This component should only be interacted with to configure/control the service explicitly.</p><p>An API (<a href="Gobstopper.API.html"><code>Gobstopper.API</code></a>) is provided to allow for convenient interaction with the service from external applications.</p><h2 id="credentials" class="section-heading">
-  <a href="#credentials" class="hover-link"><i class="icon-link"></i></a>
+<h1> Gobstopper (Identity and Credential Management)</h1><p><a href="https://badge.waffle.io/ZURASTA/gobstopper.png?label=ready&title=Ready">![Stories in Ready</a>](https://waffle.io/ZURASTA/gobstopper?utm_source=badge)<a href="https://circleci.com/gh/ZURASTA/gobstopper.svg?style=svg">![CircleCI</a>](https://circleci.com/gh/ZURASTA/gobstopper)</p><p>Manages the identities and credentials used to authorise access to those identities. An identity is a unique ID representing an entity, that can then be used to associate other information with. It is connected to any number of credentials, which are used to prove the entity is who they say they are.</p><h3 id="usage" class="section-heading">
+  <a href="#usage" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+   Usage
+</h3>
+<p>The service component (<a href="Gobstopper.Service.html"><code>Gobstopper.Service</code></a>) is an OTP application that should be started prior to making any requests to the service. This component should only be interacted with to configure/control the service explicitly.</p><p>An API (<a href="Gobstopper.API.html"><code>Gobstopper.API</code></a>) is provided to allow for convenient interaction with the service from external applications.</p><h2 id="credentials" class="section-heading">
+  <a href="#credentials" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Credentials
 </h2>
-<p>A credential is a means of authentication, to prove an entity is who they say they are. There can be many types of credentials that an identity can be associated with, though an identity may only be associated with one credential for each type. Credentials associated with an identity can be managed by that identity,</p><p>Once an authentication attempt is made, if successful a token is created representing a valid authorisation to access that identity. This token can then be verified to retrieve the identity it represents (in order to expose to other services) or revoked to cause the token to no longer be valid.</p><p>Support for credentials can be added by implementing the behaviours in <a href="Gobstopper.Service.Auth.Identity.Credential.html"><code>Gobstopper.Service.Auth.Identity.Credential</code></a>.</p><h3> Email</h3><p>Support for email based credentials is provided by the <a href="Gobstopper.Service.Auth.Identity.Credential.Email.html"><code>Gobstopper.Service.Auth.Identity.Credential.Email</code></a> implementation.</p><p>This credential depends on the <a href="https://github.com/ScrimpyCat/sherbet"><code>Sherbet</code></a> contact service to manage the emails.</p><p>The credential works by allowing an identity to setup a login credential consisting of an email and password. The email used is the primary email associated with the identity in the <a href="https://github.com/ScrimpyCat/sherbet"><code>Sherbet</code></a> service.</p><h2 id="todo" class="section-heading">
-  <a href="#todo" class="hover-link"><i class="icon-link"></i></a>
-  Todo
+<p>A credential is a means of authentication, to prove an entity is who they say they are. There can be many types of credentials that an identity can be associated with, though an identity may only be associated with one credential for each type. Credentials associated with an identity can be managed by that identity.</p><p>Once an authentication attempt is made, if successful a token is created representing a valid authorisation to access that identity. This token can then be verified to retrieve the identity it represents (in order to expose to other services) or revoked to cause the token to no longer be valid.</p><p>Support for credentials can be added by implementing the behaviours in <a href="Gobstopper.Service.Auth.Identity.Credential.html"><code>Gobstopper.Service.Auth.Identity.Credential</code></a>.</p><h3 id="email" class="section-heading">
+  <a href="#email" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+   Email
+</h3>
+<p>Support for email based credentials is provided by the <a href="Gobstopper.Service.Auth.Identity.Credential.Email.html"><code>Gobstopper.Service.Auth.Identity.Credential.Email</code></a> implementation.</p><p>This credential depends on the <a href="https://github.com/ZURASTA/sherbet"><code>Sherbet</code></a> contact service to manage the emails.</p><p>The credential works by allowing an identity to setup a login credential consisting of an email and password. The email used is the primary email associated with the identity in the <a href="https://github.com/ZURASTA/sherbet"><code>Sherbet</code></a> service.</p><h2 id="configuration" class="section-heading">
+  <a href="#configuration" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Configuration
 </h2>
-<ul><li><input type="checkbox" disabled>Google credential.</li><li><input type="checkbox" disabled>Facebook credential.</li><li><input type="checkbox" disabled>Account recovery.</li><li><input type="checkbox" disabled>PubSub.</li></ul>
+<p>The service may be configured with the following options:</p><h3 id="setup-mode" class="section-heading">
+  <a href="#setup-mode" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+   Setup Mode
+</h3>
+<p>The service has two setup modes: <code>:auto</code> and <code>:manual</code>. When the service is started in <code>:auto</code>, it will automatically handle creating and migrating the database. When the service is started in <code>:manual</code>, the state of the database is left up to the user to manually setup.</p><p>By default the service runs in <code>:auto</code> mode. To change this behaviour, pass in the <code>{ :setup_mode, mode }</code> when starting the application.</p><h3 id="database" class="section-heading">
+  <a href="#database" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+   Database
+</h3>
+<p>The database options can be configured by providing the config for the key <a href="Gobstopper.Service.Repo.html"><code>Gobstopper.Service.Repo</code></a>.</p><p>For details on how to configure an <a href="https://hexdocs.pm/ecto/Ecto.Repo.html">Ecto repo</a>.</p><p><strong>Note:</strong> Relies on PostgreSQL for auto-generating UUIDs (uuid-ossp extension).</p>
       <footer class="footer">
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.15.1),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.18.1),
           </span>
           <span class="line">
             designed by
             <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
             </span>
         </p>
-        <button class="night-mode-toggle" />
+        <button class="night-mode-toggle"><span class="sr-only">Switch theme</span></button>
       </footer>
     </div>
   </div>
 </section>
 </div>
-  <script src="dist/app-e9767fa739.js"></script>
+  <script src="dist/app-778c9ef903.js"></script>
+  
+  
+  
+  
   </body>
 </html>
 

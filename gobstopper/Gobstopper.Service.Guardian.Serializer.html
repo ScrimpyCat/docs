@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>Gobstopper.Service.Auth.Identity.Credential.Email – Gobstopper vdev</title>
+    <title>Gobstopper.Service.Guardian.Serializer – Gobstopper vdev</title>
     <link rel="stylesheet" href="dist/app-c922dbe7ef.css" />
     
     <script src="dist/sidebar_items-bfb5a6d174.js"></script>
@@ -66,19 +66,15 @@
 
       <h1>
         <small class="visible-xs">Gobstopper vdev</small>
-        Gobstopper.Service.Auth.Identity.Credential.Email
+        Gobstopper.Service.Guardian.Serializer
         
-          <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/auth/identity/credential/email.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/guardian/serializer.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
-      
-        <section id="moduledoc">
-          <p>  Support email/password based credentials.</p>
-        </section>
       
 
       
@@ -91,14 +87,26 @@
             Summary
           </h1>
           
-  <div class="summary-types summary">
+
+          
+  <div class="summary-functions summary">
     <h2>
-      <a href="#types">Types</a>
+      <a href="#functions">Functions</a>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#t:uuid/0">uuid()</a>
+    <a href="#for_token/1">for_token(arg1)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Serializes the object into the token. Suggestion: "User:2"</p></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#from_token/1">from_token(arg1)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>De-serializes the object from a token</p></div>
   
 </div>
 
@@ -107,54 +115,66 @@
 
           
 
-          
-
         </section>
       
 
       
-        <section id="types" class="details-list">
+
+      
+        <section id="functions" class="details-list">
           <h1 class="section-heading">
-            <a class="hover-link" href="#types">
+            <a class="hover-link" href="#functions">
               <span class="icon-link" aria-hidden="true"></span>
               <span class="sr-only">Link to this section</span>
             </a>
-            Types
+            Functions
           </h1>
-          <div class="types-list">
-            <div class="detail" id="t:uuid/0">
+          <div class="detail" id="for_token/1">
   
   
   <div class="detail-header">
-    <a href="#t:uuid/0" class="detail-link" title="Link to this type">
+    <a href="#for_token/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this type</span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">uuid()</span>
+    <span class="signature">for_token(arg1)</span>
     
-      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/auth/identity/credential/email.ex#L15" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/guardian/serializer.ex#L5" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
     
-      <div class="specs">
-        
-          <pre>uuid() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()</pre>
-        
-      </div>
+  </div>
+  <section class="docstring">
+    <p>Serializes the object into the token. Suggestion: "User:2"</p><p>Callback implementation for <a href="https://hexdocs.pm/guardian/0.14.5/Guardian.Serializer.html#c:for_token/1"><code>Guardian.Serializer.for_token/1</code></a>.</p>
+  </section>
+</div>
+<div class="detail" id="from_token/1">
+  
+  
+  <div class="detail-header">
+    <a href="#from_token/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">from_token(arg1)</span>
+    
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/guardian/serializer.ex#L8" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
     
   </div>
   <section class="docstring">
-    
+    <p>De-serializes the object from a token</p><p>Callback implementation for <a href="https://hexdocs.pm/guardian/0.14.5/Guardian.Serializer.html#c:from_token/1"><code>Guardian.Serializer.from_token/1</code></a>.</p>
   </section>
 </div>
 
-          </div>
         </section>
-      
-
       
 
       

@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>Gobstopper.Service.Auth.Identity.Credential.Email – Gobstopper vdev</title>
+    <title>Gobstopper.Service – Gobstopper vdev</title>
     <link rel="stylesheet" href="dist/app-c922dbe7ef.css" />
     
     <script src="dist/sidebar_items-bfb5a6d174.js"></script>
@@ -66,9 +66,9 @@
 
       <h1>
         <small class="visible-xs">Gobstopper vdev</small>
-        Gobstopper.Service.Auth.Identity.Credential.Email
+        Gobstopper.Service
         
-          <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/auth/identity/credential/email.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -77,7 +77,7 @@
 
       
         <section id="moduledoc">
-          <p>  Support email/password based credentials.</p>
+          <p>  The service application for identities and credentials.</p>
         </section>
       
 
@@ -91,14 +91,18 @@
             Summary
           </h1>
           
-  <div class="summary-types summary">
+
+          
+  <div class="summary-functions summary">
     <h2>
-      <a href="#types">Types</a>
+      <a href="#functions">Functions</a>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#t:uuid/0">uuid()</a>
+    <a href="#start/2">start(type, args)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Start the service application</p></div>
   
 </div>
 
@@ -107,54 +111,44 @@
 
           
 
-          
-
         </section>
       
 
       
-        <section id="types" class="details-list">
+
+      
+        <section id="functions" class="details-list">
           <h1 class="section-heading">
-            <a class="hover-link" href="#types">
+            <a class="hover-link" href="#functions">
               <span class="icon-link" aria-hidden="true"></span>
               <span class="sr-only">Link to this section</span>
             </a>
-            Types
+            Functions
           </h1>
-          <div class="types-list">
-            <div class="detail" id="t:uuid/0">
+          <div class="detail" id="start/2">
   
   
   <div class="detail-header">
-    <a href="#t:uuid/0" class="detail-link" title="Link to this type">
+    <a href="#start/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this type</span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">uuid()</span>
+    <span class="signature">start(type, args)</span>
     
-      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service/auth/identity/credential/email.ex#L15" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service.ex#L18" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
     
-      <div class="specs">
-        
-          <pre>uuid() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()</pre>
-        
-      </div>
-    
   </div>
   <section class="docstring">
-    
+    <p>  Start the service application.</p><p>  By default the service will run in <code>:auto</code> setup mode, which  will automatically create and migrate the database. To override  this behaviour, the mode can be passed in as an argument for the  <code>:setup_mode</code> key. The supported setup modes are: <code>:auto</code> and  <code>:manual</code>. If using manual mode, the state of the database is  left up to the caller.</p>
   </section>
 </div>
 
-          </div>
         </section>
-      
-
       
 
       
