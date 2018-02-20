@@ -8,7 +8,7 @@
     <title>Fondant.API.Filter – Fondant vdev</title>
     <link rel="stylesheet" href="dist/app-81d381dea4.css" />
     
-    <script src="dist/sidebar_items-b4ab4170ae.js"></script>
+    <script src="dist/sidebar_items-3bb96bd413.js"></script>
     
     
     
@@ -124,7 +124,7 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#clean/1">clean(opts \\ [timeout: 5000])</a>
+    <a href="#clean/1">clean(options \\ [])</a>
   </div>
   
     <div class="summary-synopsis"><p>Clean the database</p></div>
@@ -132,7 +132,7 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#migrate/0">migrate()</a>
+    <a href="#migrate/1">migrate(options \\ [])</a>
   </div>
   
     <div class="summary-synopsis"><p>Migrate the database</p></div>
@@ -148,7 +148,7 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#rollback/0">rollback()</a>
+    <a href="#rollback/1">rollback(options \\ [])</a>
   </div>
   
     <div class="summary-synopsis"><p>Rollback the database</p></div>
@@ -253,31 +253,9 @@
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">clean(opts \\ [timeout: 5000])</span>
+    <span class="signature">clean(options \\ [])</span>
     
-      <a href="https://github.com/ZURASTA/fondant/blob/master/apps/fondant_api/lib/fondant.api/filter.ex#L22" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    <p>  Clean the database.</p><p>  Removes all filters and history of the dataset.</p>
-  </section>
-</div>
-<div class="detail" id="migrate/0">
-  
-  
-  <div class="detail-header">
-    <a href="#migrate/0" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">migrate()</span>
-    
-      <a href="https://github.com/ZURASTA/fondant/blob/master/apps/fondant_api/lib/fondant.api/filter.ex#L46" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/fondant/blob/master/apps/fondant_api/lib/fondant.api/filter.ex#L21" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -286,13 +264,43 @@
     
       <div class="specs">
         
-          <pre>migrate() :: {:ok, <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()} | {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()}</pre>
+          <pre>clean(<a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">keyword</a>(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>())) :: :ok | {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()}</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>  Migrate the database.</p><p>  Migrates the database to the latest version of the dataset.</p><p>  If successful returns <code>:ok</code> and the current timestamp.</p>
+    <p>  Clean the database.</p><p>  Removes all filters and history of the dataset.</p><p>  The options field accepts:</p><ul><li><code>:server</code> - The server to send the request to.</li><li><code>:timeout</code> - The maximum time to wait for a reply.</li></ul><p>  If successful returns <code>:ok</code>. Otherwise returns an error.</p>
+  </section>
+</div>
+<div class="detail" id="migrate/1">
+  
+  
+    <span id="migrate/0"></span>
+  
+  <div class="detail-header">
+    <a href="#migrate/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">migrate(options \\ [])</span>
+    
+      <a href="https://github.com/ZURASTA/fondant/blob/master/apps/fondant_api/lib/fondant.api/filter.ex#L53" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>migrate(<a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">keyword</a>(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>())) :: {:ok, <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()} | {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Migrate the database.</p><p>  Migrates the database to the latest version of the dataset.</p><p>  The options field accepts:</p><ul><li><code>:server</code> - The server to send the request to.</li><li><code>:timeout</code> - The maximum time to wait for a reply.</li></ul><p>  If successful returns <code>:ok</code> and the current timestamp. Otherwise returns  an error.</p>
   </section>
 </div>
 <div class="detail" id="migrations/1">
@@ -307,7 +315,7 @@
     </a>
     <span class="signature">migrations(options \\ [])</span>
     
-      <a href="https://github.com/ZURASTA/fondant/blob/master/apps/fondant_api/lib/fondant.api/filter.ex#L54" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/fondant/blob/master/apps/fondant_api/lib/fondant.api/filter.ex#L73" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -324,20 +332,22 @@
     
   </div>
   <section class="docstring">
-    <p>  Get a paginated list of migration timestamps.</p>
+    <p>  Get a paginated list of migration timestamps.</p><p>  The options field accepts:</p><ul><li><code>:server</code> - The server to send the request to.</li><li><code>:timeout</code> - The maximum time to wait for a reply.</li><li><code>:page</code> - The pagination index to retrieve the results of.</li><li><code>:limit</code> - The max number of entries to retrieve.</li></ul><p>  If successful returns <code>:ok</code> and the list of timestamps for the current  page, and index to the next page.</p><p>  Returns <code>{ :ok, { timestamps, page } }</code> if the operation was successful, where  <code>timestamps</code> is the list of <code>integer</code>, and <code>page</code> is the next pagination  index. Otherwise returns an error.</p>
   </section>
 </div>
-<div class="detail" id="rollback/0">
+<div class="detail" id="rollback/1">
   
+  
+    <span id="rollback/0"></span>
   
   <div class="detail-header">
-    <a href="#rollback/0" class="detail-link" title="Link to this function">
+    <a href="#rollback/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">rollback()</span>
+    <span class="signature">rollback(options \\ [])</span>
     
-      <a href="https://github.com/ZURASTA/fondant/blob/master/apps/fondant_api/lib/fondant.api/filter.ex#L34" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/fondant/blob/master/apps/fondant_api/lib/fondant.api/filter.ex#L37" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -346,13 +356,13 @@
     
       <div class="specs">
         
-          <pre>rollback() :: {:ok, <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()} | {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()}</pre>
+          <pre>rollback(<a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">keyword</a>(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>())) :: {:ok, <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()} | {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()}</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>  Rollback the database.</p><p>  Rollback the database to the previous version of the dataset.</p><p>  If successful returns <code>:ok</code> and the current timestamp.</p>
+    <p>  Rollback the database.</p><p>  Rollback the database to the previous version of the dataset.</p><p>  The options field accepts:</p><ul><li><code>:server</code> - The server to send the request to.</li><li><code>:timeout</code> - The maximum time to wait for a reply.</li></ul><p>  If successful returns <code>:ok</code> and the current timestamp. Otherwise returns  an error.</p>
   </section>
 </div>
 

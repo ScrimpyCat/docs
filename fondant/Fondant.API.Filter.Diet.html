@@ -8,7 +8,7 @@
     <title>Fondant.API.Filter.Diet – Fondant vdev</title>
     <link rel="stylesheet" href="dist/app-81d381dea4.css" />
     
-    <script src="dist/sidebar_items-b4ab4170ae.js"></script>
+    <script src="dist/sidebar_items-3bb96bd413.js"></script>
     
     
     
@@ -113,7 +113,7 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#get/2">get(id, locale)</a>
+    <a href="#get/3">get(id, locale, options \\ [])</a>
   </div>
   
     <div class="summary-synopsis"><p>Retrieve a specific diet filter for the given id</p></div>
@@ -121,7 +121,7 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#queryables/0">queryables()</a>
+    <a href="#queryables/1">queryables(options \\ [])</a>
   </div>
   
     <div class="summary-synopsis"><p>Get the list of queryable parameters that can be used in diet filter queries</p></div>
@@ -159,7 +159,7 @@
     </a>
     <span class="signature">find(query, options \\ [])</span>
     
-      <a href="https://github.com/ZURASTA/fondant/blob/master/apps/fondant_api/lib/fondant.api/filter/diet.ex#L44" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/fondant/blob/master/apps/fondant_api/lib/fondant.api/filter/diet.ex#L46" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -176,20 +176,22 @@
     
   </div>
   <section class="docstring">
-    <p>  Find all diet filters that match the given query.</p><p>  The query field accepts:</p><p>  <ul><li><code>:any</code> - Search all fields</li><li><code>:name</code> - Search all diet names</li></ul></p><p>  The options field accepts:</p><p>  <ul><li><code>:locale</code> - The localisation <a href="Fondant.API.Filter.html#t:locale/0"><code>Fondant.API.Filter.locale/0</code></a>  to be applied for the search (see <a href="Fondant.Service.Locale.html"><code>Fondant.Service.Locale</code></a>).</li><li><code>:page</code> - The pagination index to retrieve the results of.</li><li><code>:limit</code> - The max number of entries to retrieve.</li></ul></p><p>  Returns <code>{ :ok, { diet_filters, page } }</code> if the operation was successful, where  <code>diet_filters</code> is the list of diet filters, and <code>page</code> is the next pagination  index. Otherwise returns an error.</p>
+    <p>  Find all diet filters that match the given query.</p><p>  The query field accepts:</p><p>  <ul><li><code>:any</code> - Search all fields</li><li><code>:name</code> - Search all diet names</li></ul></p><p>  The options field accepts:</p><ul><li><code>:server</code> - The server to send the request to.</li><li><code>:timeout</code> - The maximum time to wait for a reply.</li><li><code>:locale</code> - The localisation <a href="Fondant.API.Filter.html#t:locale/0"><code>Fondant.API.Filter.locale/0</code></a>  to be applied for the search (see <a href="Fondant.Service.Locale.html"><code>Fondant.Service.Locale</code></a>).</li><li><code>:page</code> - The pagination index to retrieve the results of.</li><li><code>:limit</code> - The max number of entries to retrieve.</li></ul><p>  Returns <code>{ :ok, { diet_filters, page } }</code> if the operation was successful, where  <code>diet_filters</code> is the list of diet filters, and <code>page</code> is the next pagination  index. Otherwise returns an error.</p>
   </section>
 </div>
-<div class="detail" id="get/2">
+<div class="detail" id="get/3">
   
+  
+    <span id="get/2"></span>
   
   <div class="detail-header">
-    <a href="#get/2" class="detail-link" title="Link to this function">
+    <a href="#get/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">get(id, locale)</span>
+    <span class="signature">get(id, locale, options \\ [])</span>
     
-      <a href="https://github.com/ZURASTA/fondant/blob/master/apps/fondant_api/lib/fondant.api/filter/diet.ex#L20" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/fondant/blob/master/apps/fondant_api/lib/fondant.api/filter/diet.ex#L22" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -198,7 +200,7 @@
     
       <div class="specs">
         
-          <pre>get(<a href="Fondant.Filter.html#t:id/0">Fondant.Filter.id</a>(), <a href="Fondant.API.Filter.html#t:locale/0">Fondant.API.Filter.locale</a>()) ::
+          <pre>get(<a href="Fondant.Filter.html#t:id/0">Fondant.Filter.id</a>(), <a href="Fondant.API.Filter.html#t:locale/0">Fondant.API.Filter.locale</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">keyword</a>(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>())) ::
   {:ok, <a href="Fondant.Filter.Diet.html#t:t/0">Fondant.Filter.Diet.t</a>()} |
   {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()}</pre>
         
@@ -206,20 +208,22 @@
     
   </div>
   <section class="docstring">
-    <p>  Retrieve a specific diet filter for the given id.</p><p>  If no filter exists with the given id, it will return an error.</p><p>  Returns <code>{ :ok, diet_filter }</code> if the operation was successful, otherwise returns  an error.</p>
+    <p>  Retrieve a specific diet filter for the given id.</p><p>  If no filter exists with the given id, it will return an error.</p><p>  The options field accepts:</p><ul><li><code>:server</code> - The server to send the request to.</li><li><code>:timeout</code> - The maximum time to wait for a reply.</li></ul><p>  Returns <code>{ :ok, diet_filter }</code> if the operation was successful, otherwise returns  an error.</p>
   </section>
 </div>
-<div class="detail" id="queryables/0">
+<div class="detail" id="queryables/1">
   
+  
+    <span id="queryables/0"></span>
   
   <div class="detail-header">
-    <a href="#queryables/0" class="detail-link" title="Link to this function">
+    <a href="#queryables/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">queryables()</span>
+    <span class="signature">queryables(options \\ [])</span>
     
-      <a href="https://github.com/ZURASTA/fondant/blob/master/apps/fondant_api/lib/fondant.api/filter/diet.ex#L52" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/fondant/blob/master/apps/fondant_api/lib/fondant.api/filter/diet.ex#L57" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -228,13 +232,13 @@
     
       <div class="specs">
         
-          <pre>queryables() :: [<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">atom</a>()]</pre>
+          <pre>queryables(<a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">keyword</a>(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>())) :: [<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">atom</a>()]</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>  Get the list of queryable parameters that can be used in diet filter queries.</p>
+    <p>  Get the list of queryable parameters that can be used in diet filter queries.</p><p>  The options field accepts:</p><ul><li><code>:server</code> - The server to send the request to.</li><li><code>:timeout</code> - The maximum time to wait for a reply.</li></ul>
   </section>
 </div>
 

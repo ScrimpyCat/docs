@@ -8,7 +8,7 @@
     <title>Fondant – Fondant vdev</title>
     <link rel="stylesheet" href="dist/app-81d381dea4.css" />
     
-    <script src="dist/sidebar_items-b4ab4170ae.js"></script>
+    <script src="dist/sidebar_items-3bb96bd413.js"></script>
     
     
     
@@ -106,7 +106,23 @@
   <a href="#configuration" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Configuration
 </h2>
-<p>The service may be configured with the following options:</p><h3 id="setup-mode" class="section-heading">
+<p>The service may be configured with the following options:</p><h3 id="server" class="section-heading">
+  <a href="#server" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+   Server
+</h3>
+<p>The service can be made available through various methods customisable using the <code>:server</code> key in the service and API configs. The <code>:server:</code> key expects the value to be a function that accepts a module and returns a value acceptable by the <code>server</code> argument of GenServer requests, or name field of GenServer registration. Some examples of this can be:</p><h4> Local Named Server</h4><pre><code class="elixir">config :fondant_service,
+    server: &amp;(&amp;1)
+
+config :fondant_api,
+    server: &amp;(&amp;1)</code></pre><h4> Distributed Named Server</h4><pre><code class="elixir">config :fondant_service,
+    server: &amp;(&amp;1)
+
+config :fondant_api,
+    server: &amp;({ &amp;1, :&quot;foo@127.0.0.1&quot; })</code></pre><h4> Swarm Registered Server</h4><pre><code class="elixir">config :fondant_service,
+    server: &amp;({ :via, :swarm, &amp;1 })
+
+config :fondant_api,
+    server: &amp;({ :via, :swarm, &amp;1 })</code></pre><h3 id="setup-mode" class="section-heading">
   <a href="#setup-mode" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Setup Mode
 </h3>
