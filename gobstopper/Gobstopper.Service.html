@@ -8,7 +8,7 @@
     <title>Gobstopper.Service – Gobstopper vdev</title>
     <link rel="stylesheet" href="dist/app-c922dbe7ef.css" />
     
-    <script src="dist/sidebar_items-bfb5a6d174.js"></script>
+    <script src="dist/sidebar_items-fe9ecd337c.js"></script>
     
     
     
@@ -77,7 +77,12 @@
 
       
         <section id="moduledoc">
-          <p>  The service application for identities and credentials.</p>
+          <p>  The service application for identities and credentials.</p><p>  <h2 id="module-configurable-options" class="section-heading">
+  <a href="#module-configurable-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+   Configurable Options
+</h2>
+</p><p>  <ul><li><code>:server</code> - The name the server should be registered as. This takes a  function that accepts a module and returns a valid named server.</li></ul></p><p>  An example configuration:</p><pre><code class="elixir">config :gobstopper_service,
+    server: &amp;(&amp;1)</code></pre>
         </section>
       
 
@@ -135,7 +140,7 @@
     </a>
     <span class="signature">start(type, args)</span>
     
-      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service.ex#L18" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_service/lib/gobstopper.service.ex#L28" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>

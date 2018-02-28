@@ -8,7 +8,7 @@
     <title>Gobstopper.API – Gobstopper vdev</title>
     <link rel="stylesheet" href="dist/app-c922dbe7ef.css" />
     
-    <script src="dist/sidebar_items-bfb5a6d174.js"></script>
+    <script src="dist/sidebar_items-fe9ecd337c.js"></script>
     
     
     
@@ -75,6 +75,16 @@
         
       </h1>
 
+      
+        <section id="moduledoc">
+          <p>  The APIs for interfacing with the <a href="Gobstopper.Service.html"><code>Gobstopper.Service</code></a>.</p><p>  <h2 id="module-configurable-options" class="section-heading">
+  <a href="#module-configurable-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+   Configurable Options
+</h2>
+</p><p>  <ul><li><code>:server</code> - The server to send the request to. This takes a function  that accepts a module and returns a valid named server.</li><li><code>:timeout</code> - The maximum time to wait for a reply. This takes an  <code>integer</code>.</li></ul></p><p>  Some options for the API can be configured at the global level, or  overridden per function. An example configuration:</p><pre><code class="elixir">config :gobstopper_api,
+    server: &amp;({ &amp;1, :&quot;foo@127.0.0.1&quot; }),
+    timeout: :infinity</code></pre>
+        </section>
       
 
       

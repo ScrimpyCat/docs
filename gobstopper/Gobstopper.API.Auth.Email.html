@@ -8,7 +8,7 @@
     <title>Gobstopper.API.Auth.Email – Gobstopper vdev</title>
     <link rel="stylesheet" href="dist/app-c922dbe7ef.css" />
     
-    <script src="dist/sidebar_items-bfb5a6d174.js"></script>
+    <script src="dist/sidebar_items-fe9ecd337c.js"></script>
     
     
     
@@ -99,7 +99,7 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#exists?/1">exists?(token)</a>
+    <a href="#exists?/2">exists?(token, options \\ [])</a>
   </div>
   
     <div class="summary-synopsis"><p>Check if an email credential is associated with the identity</p></div>
@@ -107,7 +107,7 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#get/1">get(token)</a>
+    <a href="#get/2">get(token, options \\ [])</a>
   </div>
   
     <div class="summary-synopsis"><p>Get the current email credential associated with the identity</p></div>
@@ -115,7 +115,7 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#login/2">login(email, pass)</a>
+    <a href="#login/3">login(email, pass, options \\ [])</a>
   </div>
   
     <div class="summary-synopsis"><p>Login into an identity using the email credential</p></div>
@@ -123,7 +123,7 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#register/2">register(email, pass)</a>
+    <a href="#register/3">register(email, pass, options \\ [])</a>
   </div>
   
     <div class="summary-synopsis"><p>Create a new identity initially associated with the given email credential</p></div>
@@ -131,7 +131,7 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#remove/1">remove(token)</a>
+    <a href="#remove/2">remove(token, options \\ [])</a>
   </div>
   
     <div class="summary-synopsis"><p>Remove the email credential associated with the identity</p></div>
@@ -139,7 +139,7 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#set/3">set(token, email, pass)</a>
+    <a href="#set/4">set(token, email, pass, options \\ [])</a>
   </div>
   
     <div class="summary-synopsis"><p>Associate an email credential with the identity, replacing the old email  credential</p></div>
@@ -165,17 +165,19 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="exists?/1">
+          <div class="detail" id="exists?/2">
   
+  
+    <span id="exists?/1"></span>
   
   <div class="detail-header">
-    <a href="#exists?/1" class="detail-link" title="Link to this function">
+    <a href="#exists?/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">exists?(token)</span>
+    <span class="signature">exists?(token, options \\ [])</span>
     
-      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth/email.ex#L67" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth/email.ex#L86" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -184,7 +186,7 @@
     
       <div class="specs">
         
-          <pre>exists?(<a href="Gobstopper.API.Auth.html#t:token/0">Gobstopper.API.Auth.token</a>()) ::
+          <pre>exists?(<a href="Gobstopper.API.Auth.html#t:token/0">Gobstopper.API.Auth.token</a>(), keyword(any())) ::
   {:ok, boolean()} |
   {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()}</pre>
         
@@ -192,20 +194,22 @@
     
   </div>
   <section class="docstring">
-    <p>  Check if an email credential is associated with the identity.</p><p>  Returns whether the credential exists or not, if successful. Otherwise returns  an error.</p>
+    <p>  Check if an email credential is associated with the identity.</p><p>  The options field accepts:</p><ul><li><code>:server</code> - The server to send the request to.</li><li><code>:timeout</code> - The maximum time to wait for a reply.</li></ul><p>  Returns whether the credential exists or not, if successful. Otherwise returns  an error.</p>
   </section>
 </div>
-<div class="detail" id="get/1">
+<div class="detail" id="get/2">
   
+  
+    <span id="get/1"></span>
   
   <div class="detail-header">
-    <a href="#get/1" class="detail-link" title="Link to this function">
+    <a href="#get/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">get(token)</span>
+    <span class="signature">get(token, options \\ [])</span>
     
-      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth/email.ex#L27" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth/email.ex#L34" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -214,7 +218,7 @@
     
       <div class="specs">
         
-          <pre>get(<a href="Gobstopper.API.Auth.html#t:token/0">Gobstopper.API.Auth.token</a>()) ::
+          <pre>get(<a href="Gobstopper.API.Auth.html#t:token/0">Gobstopper.API.Auth.token</a>(), keyword(any())) ::
   {:ok, {:unverified | :verified, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()} | {:none, nil}} |
   {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()}</pre>
         
@@ -222,20 +226,22 @@
     
   </div>
   <section class="docstring">
-    <p>  Get the current email credential associated with the identity.</p><p>  Returns the state of the credential if one exists or does not exist. Otherwise  returns an error.</p>
+    <p>  Get the current email credential associated with the identity.</p><p>  The options field accepts:</p><ul><li><code>:server</code> - The server to send the request to.</li><li><code>:timeout</code> - The maximum time to wait for a reply.</li></ul><p>  Returns the state of the credential if one exists or does not exist. Otherwise  returns an error.</p>
   </section>
 </div>
-<div class="detail" id="login/2">
+<div class="detail" id="login/3">
   
+  
+    <span id="login/2"></span>
   
   <div class="detail-header">
-    <a href="#login/2" class="detail-link" title="Link to this function">
+    <a href="#login/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">login(email, pass)</span>
+    <span class="signature">login(email, pass, options \\ [])</span>
     
-      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth/email.ex#L75" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth/email.ex#L99" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -244,7 +250,7 @@
     
       <div class="specs">
         
-          <pre>login(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) ::
+          <pre>login(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), keyword(any())) ::
   {:ok, <a href="Gobstopper.API.Auth.html#t:token/0">Gobstopper.API.Auth.token</a>()} |
   {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()}</pre>
         
@@ -252,20 +258,22 @@
     
   </div>
   <section class="docstring">
-    <p>  Login into an identity using the email credential.</p><p>  Returns the session token on successful login. Otherwise returns an error.</p>
+    <p>  Login into an identity using the email credential.</p><p>  The options field accepts:</p><ul><li><code>:server</code> - The server to send the request to.</li><li><code>:timeout</code> - The maximum time to wait for a reply.</li></ul><p>  Returns the session token on successful login. Otherwise returns an error.</p>
   </section>
 </div>
-<div class="detail" id="register/2">
+<div class="detail" id="register/3">
   
+  
+    <span id="register/2"></span>
   
   <div class="detail-header">
-    <a href="#register/2" class="detail-link" title="Link to this function">
+    <a href="#register/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">register(email, pass)</span>
+    <span class="signature">register(email, pass, options \\ [])</span>
     
-      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth/email.ex#L18" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth/email.ex#L20" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -274,7 +282,7 @@
     
       <div class="specs">
         
-          <pre>register(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) ::
+          <pre>register(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), keyword(any())) ::
   {:ok, <a href="Gobstopper.API.Auth.html#t:token/0">Gobstopper.API.Auth.token</a>()} |
   {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()}</pre>
         
@@ -282,20 +290,22 @@
     
   </div>
   <section class="docstring">
-    <p>  Create a new identity initially associated with the given email credential.</p><p>  Returns the session token on successful creation. Otherwise returns an  error.</p>
+    <p>  Create a new identity initially associated with the given email credential.</p><p>  The options field accepts:</p><ul><li><code>:server</code> - The server to send the request to.</li><li><code>:timeout</code> - The maximum time to wait for a reply.</li></ul><p>  Returns the session token on successful creation. Otherwise returns an  error.</p>
   </section>
 </div>
-<div class="detail" id="remove/1">
+<div class="detail" id="remove/2">
   
+  
+    <span id="remove/1"></span>
   
   <div class="detail-header">
-    <a href="#remove/1" class="detail-link" title="Link to this function">
+    <a href="#remove/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">remove(token)</span>
+    <span class="signature">remove(token, options \\ [])</span>
     
-      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth/email.ex#L58" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth/email.ex#L72" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -304,35 +314,7 @@
     
       <div class="specs">
         
-          <pre>remove(<a href="Gobstopper.API.Auth.html#t:token/0">Gobstopper.API.Auth.token</a>()) :: :ok | {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()}</pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    <p>  Remove the email credential associated with the identity.</p><p>  Returns <code>:ok</code> on successful removal. Otherwise returns an error.</p>
-  </section>
-</div>
-<div class="detail" id="set/3">
-  
-  
-  <div class="detail-header">
-    <a href="#set/3" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">set(token, email, pass)</span>
-    
-      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth/email.ex#L41" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre>set(<a href="Gobstopper.API.Auth.html#t:token/0">Gobstopper.API.Auth.token</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) ::
+          <pre>remove(<a href="Gobstopper.API.Auth.html#t:token/0">Gobstopper.API.Auth.token</a>(), keyword(any())) ::
   :ok |
   {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()}</pre>
         
@@ -340,7 +322,39 @@
     
   </div>
   <section class="docstring">
-    <p>  Associate an email credential with the identity, replacing the old email  credential.</p><p>  Returns <code>:ok</code> on successful creation. Otherwise returns an error.</p>
+    <p>  Remove the email credential associated with the identity.</p><p>  The options field accepts:</p><ul><li><code>:server</code> - The server to send the request to.</li><li><code>:timeout</code> - The maximum time to wait for a reply.</li></ul><p>  Returns <code>:ok</code> on successful removal. Otherwise returns an error.</p>
+  </section>
+</div>
+<div class="detail" id="set/4">
+  
+  
+    <span id="set/3"></span>
+  
+  <div class="detail-header">
+    <a href="#set/4" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">set(token, email, pass, options \\ [])</span>
+    
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth/email.ex#L51" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>set(<a href="Gobstopper.API.Auth.html#t:token/0">Gobstopper.API.Auth.token</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), keyword(any())) ::
+  :ok |
+  {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>  Associate an email credential with the identity, replacing the old email  credential.</p><p>  The options field accepts:</p><ul><li><code>:server</code> - The server to send the request to.</li><li><code>:timeout</code> - The maximum time to wait for a reply.</li></ul><p>  Returns <code>:ok</code> on successful creation. Otherwise returns an error.</p>
   </section>
 </div>
 

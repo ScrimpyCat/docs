@@ -8,7 +8,7 @@
     <title>Gobstopper.API.Auth – Gobstopper vdev</title>
     <link rel="stylesheet" href="dist/app-c922dbe7ef.css" />
     
-    <script src="dist/sidebar_items-bfb5a6d174.js"></script>
+    <script src="dist/sidebar_items-fe9ecd337c.js"></script>
     
     
     
@@ -118,7 +118,7 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#logout/1">logout(token)</a>
+    <a href="#logout/2">logout(token, options \\ [])</a>
   </div>
   
     <div class="summary-synopsis"><p>Logout of an identity's active session</p></div>
@@ -126,7 +126,7 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#refresh/1">refresh(token)</a>
+    <a href="#refresh/2">refresh(token, options \\ [])</a>
   </div>
   
     <div class="summary-synopsis"><p>Refresh an identity's session</p></div>
@@ -134,7 +134,7 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#verify/1">verify(token)</a>
+    <a href="#verify/2">verify(token, options \\ [])</a>
   </div>
   
     <div class="summary-synopsis"><p>Verify an identity's session</p></div>
@@ -229,17 +229,19 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="logout/1">
+          <div class="detail" id="logout/2">
   
+  
+    <span id="logout/1"></span>
   
   <div class="detail-header">
-    <a href="#logout/1" class="detail-link" title="Link to this function">
+    <a href="#logout/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">logout(token)</span>
+    <span class="signature">logout(token, options \\ [])</span>
     
-      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth.ex#L15" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth.ex#L17" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -248,26 +250,28 @@
     
       <div class="specs">
         
-          <pre>logout(<a href="#t:token/0">token</a>()) :: :ok</pre>
+          <pre>logout(<a href="#t:token/0">token</a>(), keyword(any())) :: :ok</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>  Logout of an identity's active session.</p>
+    <p>  Logout of an identity's active session.</p><p>  The options field accepts:</p><ul><li><code>:server</code> - The server to send the request to.</li><li><code>:timeout</code> - The maximum time to wait for a reply.</li></ul>
   </section>
 </div>
-<div class="detail" id="refresh/1">
+<div class="detail" id="refresh/2">
   
+  
+    <span id="refresh/1"></span>
   
   <div class="detail-header">
-    <a href="#refresh/1" class="detail-link" title="Link to this function">
+    <a href="#refresh/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">refresh(token)</span>
+    <span class="signature">refresh(token, options \\ [])</span>
     
-      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth.ex#L36" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth.ex#L46" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -276,26 +280,30 @@
     
       <div class="specs">
         
-          <pre>refresh(<a href="#t:token/0">token</a>()) :: {:ok, <a href="#t:uuid/0">uuid</a>()} | {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()}</pre>
+          <pre>refresh(<a href="#t:token/0">token</a>(), keyword(any())) ::
+  {:ok, <a href="#t:uuid/0">uuid</a>()} |
+  {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()}</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>  Refresh an identity's session.</p><p>  Returns a new session token and disables the previous one. Otherwise returns  an error.</p>
+    <p>  Refresh an identity's session.</p><p>  The options field accepts:</p><ul><li><code>:server</code> - The server to send the request to.</li><li><code>:timeout</code> - The maximum time to wait for a reply.</li></ul><p>  Returns a new session token and disables the previous one. Otherwise returns  an error.</p>
   </section>
 </div>
-<div class="detail" id="verify/1">
+<div class="detail" id="verify/2">
   
+  
+    <span id="verify/1"></span>
   
   <div class="detail-header">
-    <a href="#verify/1" class="detail-link" title="Link to this function">
+    <a href="#verify/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">verify(token)</span>
+    <span class="signature">verify(token, options \\ [])</span>
     
-      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth.ex#L27" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/gobstopper/blob/master/apps/gobstopper_api/lib/gobstopper.api/auth.ex#L32" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -304,13 +312,13 @@
     
       <div class="specs">
         
-          <pre>verify(<a href="#t:token/0">token</a>()) :: <a href="#t:uuid/0">uuid</a>() | nil</pre>
+          <pre>verify(<a href="#t:token/0">token</a>(), keyword(any())) :: <a href="#t:uuid/0">uuid</a>() | nil</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>  Verify an identity's session.</p><p>  Returns the unique ID of the identity if verifying a valid session token.  Otherwise returns <code>nil</code>.</p>
+    <p>  Verify an identity's session.</p><p>  The options field accepts:</p><ul><li><code>:server</code> - The server to send the request to.</li><li><code>:timeout</code> - The maximum time to wait for a reply.</li></ul><p>  Returns the unique ID of the identity if verifying a valid session token.  Otherwise returns <code>nil</code>.</p>
   </section>
 </div>
 

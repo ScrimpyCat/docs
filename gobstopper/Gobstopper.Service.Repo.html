@@ -8,7 +8,7 @@
     <title>Gobstopper.Service.Repo – Gobstopper vdev</title>
     <link rel="stylesheet" href="dist/app-c922dbe7ef.css" />
     
-    <script src="dist/sidebar_items-bfb5a6d174.js"></script>
+    <script src="dist/sidebar_items-fe9ecd337c.js"></script>
     
     
     
@@ -396,7 +396,7 @@
   <a href="#aggregate/4-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Examples
 </h2>
-<pre><code># Returns the number of visits per blog post
+<pre><code class="elixir"># Returns the number of visits per blog post
 Repo.aggregate(Post, :count, :visits)
 # Returns the average number of visits for the top 10
 query = from Post, limit: 10
@@ -428,12 +428,12 @@ Repo.aggregate(query, :avg, :visits)</code></pre><p>Callback implementation for 
   <a href="#all/2-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
-<p>  <ul><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code>in Postgres or the database in MySQL). This overrides the prefix set
+<p>  <ul><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code class="elixir">in Postgres or the database in MySQL). This overrides the prefix set
 in the query.</code></pre></li></ul></p><p>See the "Shared options" section at the module documentation.</p><h2 id="all/2-example" class="section-heading">
   <a href="#all/2-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Example
 </h2>
-<pre><code># Fetch all post titles
+<pre><code class="elixir"># Fetch all post titles
 query = from p in Post,
      select: p.title
 MyRepo.all(query)</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.2.4/Ecto.Repo.html#c:all/2"><code>Ecto.Repo.all/2</code></a>.</p>
@@ -508,12 +508,12 @@ MyRepo.all(query)</code></pre><p>Callback implementation for <a href="https://he
   <a href="#delete/2-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
-<p>  <ul><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code>in Postgres or the database in MySQL). This overrides the prefix set
+<p>  <ul><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code class="elixir">in Postgres or the database in MySQL). This overrides the prefix set
 in the struct.</code></pre></li></ul></p><p>See the "Shared options" section at the module documentation.</p><h2 id="delete/2-example" class="section-heading">
   <a href="#delete/2-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Example
 </h2>
-<pre><code>post = MyRepo.get!(Post, 42)
+<pre><code class="elixir">post = MyRepo.get!(Post, 42)
 case MyRepo.delete post do
   {:ok, struct}       -&gt; # Deleted with success
   {:error, changeset} -&gt; # Something went wrong
@@ -569,15 +569,15 @@ end</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/
   <a href="#delete_all/2-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
-<p>  <ul><li><code>:returning</code> - selects which fields to return. When <code>true</code>,<pre><code>returns all fields in the given struct. May be a list of
+<p>  <ul><li><code>:returning</code> - selects which fields to return. When <code>true</code>,<pre><code class="elixir">returns all fields in the given struct. May be a list of
 fields, where a struct is still returned but only with the
 given fields. Or `false`, where nothing is returned (the default).
-This option is not supported by all databases.</code></pre></li><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code>in Postgres or the database in MySQL). This overrides the prefix set
+This option is not supported by all databases.</code></pre></li><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code class="elixir">in Postgres or the database in MySQL). This overrides the prefix set
 in the query.</code></pre></li></ul></p><p>See the "Shared options" section at the module documentation forremaining options.</p><h2 id="delete_all/2-examples" class="section-heading">
   <a href="#delete_all/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Examples
 </h2>
-<pre><code>MyRepo.delete_all(Post)
+<pre><code class="elixir">MyRepo.delete_all(Post)
 from(p in Post, where: p.id &lt; 10) |&gt; MyRepo.delete_all</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.2.4/Ecto.Repo.html#c:delete_all/2"><code>Ecto.Repo.delete_all/2</code></a>.</p>
   </section>
 </div>
@@ -610,7 +610,7 @@ from(p in Post, where: p.id &lt; 10) |&gt; MyRepo.delete_all</code></pre><p>Call
   <a href="#get/3-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Example
 </h2>
-<pre><code>MyRepo.get(Post, 42)</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.2.4/Ecto.Repo.html#c:get/3"><code>Ecto.Repo.get/3</code></a>.</p>
+<pre><code class="elixir">MyRepo.get(Post, 42)</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.2.4/Ecto.Repo.html#c:get/3"><code>Ecto.Repo.get/3</code></a>.</p>
   </section>
 </div>
 <div class="detail" id="get!/3">
@@ -642,7 +642,7 @@ from(p in Post, where: p.id &lt; 10) |&gt; MyRepo.delete_all</code></pre><p>Call
   <a href="#get!/3-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Example
 </h2>
-<pre><code>MyRepo.get!(Post, 42)</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.2.4/Ecto.Repo.html#c:get!/3"><code>Ecto.Repo.get!/3</code></a>.</p>
+<pre><code class="elixir">MyRepo.get!(Post, 42)</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.2.4/Ecto.Repo.html#c:get!/3"><code>Ecto.Repo.get!/3</code></a>.</p>
   </section>
 </div>
 <div class="detail" id="get_by/3">
@@ -674,7 +674,7 @@ from(p in Post, where: p.id &lt; 10) |&gt; MyRepo.delete_all</code></pre><p>Call
   <a href="#get_by/3-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Example
 </h2>
-<pre><code>MyRepo.get_by(Post, title: &quot;My post&quot;)</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.2.4/Ecto.Repo.html#c:get_by/3"><code>Ecto.Repo.get_by/3</code></a>.</p>
+<pre><code class="elixir">MyRepo.get_by(Post, title: &quot;My post&quot;)</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.2.4/Ecto.Repo.html#c:get_by/3"><code>Ecto.Repo.get_by/3</code></a>.</p>
   </section>
 </div>
 <div class="detail" id="get_by!/3">
@@ -706,7 +706,7 @@ from(p in Post, where: p.id &lt; 10) |&gt; MyRepo.delete_all</code></pre><p>Call
   <a href="#get_by!/3-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Example
 </h2>
-<pre><code>MyRepo.get_by!(Post, title: &quot;My post&quot;)</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.2.4/Ecto.Repo.html#c:get_by!/3"><code>Ecto.Repo.get_by!/3</code></a>.</p>
+<pre><code class="elixir">MyRepo.get_by!(Post, title: &quot;My post&quot;)</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.2.4/Ecto.Repo.html#c:get_by!/3"><code>Ecto.Repo.get_by!/3</code></a>.</p>
   </section>
 </div>
 <div class="detail" id="in_transaction?/0">
@@ -732,7 +732,7 @@ from(p in Post, where: p.id &lt; 10) |&gt; MyRepo.delete_all</code></pre><p>Call
   <a href="#in_transaction?/0-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Examples
 </h2>
-<pre><code>MyRepo.in_transaction?
+<pre><code class="elixir">MyRepo.in_transaction?
 #=&gt; false
 MyRepo.transaction(fn -&gt;
   MyRepo.in_transaction? #=&gt; true
@@ -764,38 +764,38 @@ end)</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto
   <a href="#insert/2-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
-<p>  <ul><li><code>:returning</code> - selects which fields to return. When <code>true</code>, returns<pre><code>all fields in the given struct. May be a list of fields, where a
+<p>  <ul><li><code>:returning</code> - selects which fields to return. When <code>true</code>, returns<pre><code class="elixir">all fields in the given struct. May be a list of fields, where a
 struct is still returned but only with the given fields. In any case,
 it will include fields with `read_after_writes` set to true.
-This option is not supported by all databases.</code></pre></li><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code>in Postgres or the database in MySQL). This overrides the prefix set
-in the struct.</code></pre></li><li><code>:on_conflict</code> - It may be one of <code>:raise</code> (the default), <code>:nothing</code>,<pre><code>`:replace_all`, a keyword list of update instructions or an [`Ecto.Query`](https://hexdocs.pm/ecto/2.2.4/Ecto.Query.html)
-query for updates. See the &quot;Upserts&quot; section for more information.</code></pre></li><li><code>:conflict_target</code> - Which columns to verify for conflicts. If<pre><code>none is specified, the conflict target is left up to the database
+This option is not supported by all databases.</code></pre></li><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code class="elixir">in Postgres or the database in MySQL). This overrides the prefix set
+in the struct.</code></pre></li><li><code>:on_conflict</code> - It may be one of <code>:raise</code> (the default), <code>:nothing</code>,<pre><code class="elixir">`:replace_all`, a keyword list of update instructions or an [`Ecto.Query`](https://hexdocs.pm/ecto/2.2.4/Ecto.Query.html)
+query for updates. See the &quot;Upserts&quot; section for more information.</code></pre></li><li><code>:conflict_target</code> - Which columns to verify for conflicts. If<pre><code class="elixir">none is specified, the conflict target is left up to the database
 and is usually made of primary keys and/or unique/exclusion constraints.
 May also be `{:constraint, constraint_name_as_atom}` in databases
 that support the &quot;ON CONSTRAINT&quot; expression.</code></pre></li></ul></p><p>See the "Shared options" section at the module documentation.</p><h2 id="insert/2-examples" class="section-heading">
   <a href="#insert/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Examples
 </h2>
-<p>A typical example is calling <code>MyRepo.insert/1</code> with a structand acting on the return value:</p><pre><code>case MyRepo.insert %Post{title: &quot;Ecto is great&quot;} do
+<p>A typical example is calling <code>MyRepo.insert/1</code> with a structand acting on the return value:</p><pre><code class="elixir">case MyRepo.insert %Post{title: &quot;Ecto is great&quot;} do
   {:ok, struct}       -&gt; # Inserted with success
   {:error, changeset} -&gt; # Something went wrong
 end</code></pre><h2 id="insert/2-upserts" class="section-heading">
   <a href="#insert/2-upserts" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Upserts
 </h2>
-<p><code>c:insert/2</code> provides upserts (update or inserts) via the <code>:on_conflict</code>option. The <code>:on_conflict</code> option supports the following values:</p><p>  <ul><li><code>:raise</code> - raises if there is a conflicting primary key or unique index</li><li><code>:nothing</code> - ignores the error in case of conflicts</li><li><code>:replace_all</code> - replace all values on the existing row with the values<pre><code>in the excluded row (the record given in the function parameters)</code></pre></li><li>a keyword list of update instructions - such as the one given to<pre><code>`c:update_all/3`, for example: `[set: [title: &quot;new title&quot;]]`</code></pre></li><li>an <a href="https://hexdocs.pm/ecto/2.2.4/Ecto.Query.html"><code>Ecto.Query</code></a> that will act as an <code>UPDATE</code> statement, such as the<pre><code>one given to `c:update_all/3`</code></pre></li></ul></p><p>Upserts map to "ON CONFLICT" on databases like Postgres and "ON DUPLICATE KEY"on databases such as MySQL.</p><p>As an example, imagine <code>:title</code> is marked as a unique column inthe database:</p><pre><code>{:ok, inserted} = MyRepo.insert(%Post{title: &quot;this is unique&quot;})</code></pre><p>Now we can insert with the same title but do nothing on conflicts:</p><pre><code>{:ok, ignored} = MyRepo.insert(%Post{title: &quot;this is unique&quot;}, on_conflict: :nothing)
-assert ignored.id == nil</code></pre><p>Because we used <code>on_conflict: :nothing</code>, instead of getting an error,we got <code>{:ok, struct}</code>. However the returned struct does not reflectthe data in the database. One possible mechanism to detect if aninsert or nothing happened in case of <code>on_conflict: :nothing</code> is bychecking the <code>id</code> field. <code>id</code> will be nil if the field is autogeneratedby the database and no insert happened.</p><p>For actual upserts, where an insert or update may happen, the situationis slightly more complex, as the database does not actually inform usif an insert or update happened. Let's insert a post with the same titlebut use a query to update the body column in case of conflicts:</p><pre><code># In Postgres (it requires the conflict target for updates):
+<p><code>c:insert/2</code> provides upserts (update or inserts) via the <code>:on_conflict</code>option. The <code>:on_conflict</code> option supports the following values:</p><p>  <ul><li><code>:raise</code> - raises if there is a conflicting primary key or unique index</li><li><code>:nothing</code> - ignores the error in case of conflicts</li><li><code>:replace_all</code> - replace all values on the existing row with the values<pre><code class="elixir">in the excluded row (the record given in the function parameters)</code></pre></li><li>a keyword list of update instructions - such as the one given to<pre><code class="elixir">`c:update_all/3`, for example: `[set: [title: &quot;new title&quot;]]`</code></pre></li><li>an <a href="https://hexdocs.pm/ecto/2.2.4/Ecto.Query.html"><code>Ecto.Query</code></a> that will act as an <code>UPDATE</code> statement, such as the<pre><code class="elixir">one given to `c:update_all/3`</code></pre></li></ul></p><p>Upserts map to "ON CONFLICT" on databases like Postgres and "ON DUPLICATE KEY"on databases such as MySQL.</p><p>As an example, imagine <code>:title</code> is marked as a unique column inthe database:</p><pre><code class="elixir">{:ok, inserted} = MyRepo.insert(%Post{title: &quot;this is unique&quot;})</code></pre><p>Now we can insert with the same title but do nothing on conflicts:</p><pre><code class="elixir">{:ok, ignored} = MyRepo.insert(%Post{title: &quot;this is unique&quot;}, on_conflict: :nothing)
+assert ignored.id == nil</code></pre><p>Because we used <code>on_conflict: :nothing</code>, instead of getting an error,we got <code>{:ok, struct}</code>. However the returned struct does not reflectthe data in the database. One possible mechanism to detect if aninsert or nothing happened in case of <code>on_conflict: :nothing</code> is bychecking the <code>id</code> field. <code>id</code> will be nil if the field is autogeneratedby the database and no insert happened.</p><p>For actual upserts, where an insert or update may happen, the situationis slightly more complex, as the database does not actually inform usif an insert or update happened. Let's insert a post with the same titlebut use a query to update the body column in case of conflicts:</p><pre><code class="elixir"># In Postgres (it requires the conflict target for updates):
 on_conflict = [set: [body: &quot;updated&quot;]]
 {:ok, updated} = MyRepo.insert(%Post{title: &quot;this is unique&quot;},
                                on_conflict: on_conflict, conflict_target: :title)
 # In MySQL (conflict target is not supported):
 on_conflict = [set: [title: &quot;updated&quot;]]
 {:ok, updated} = MyRepo.insert(%Post{id: inserted.id, title: &quot;updated&quot;},
-                               on_conflict: on_conflict)</code></pre><p>In the examples above, even though it returned <code>:ok</code>, we do not knowif we inserted new data or if we updated only the <code>:on_conflict</code> fields.In case an update happened, the data in the struct most likely doesnot match the data in the database. For example, autogenerated fieldssuch as <code>inserted_at</code> will point to now rather than the time thestruct was actually inserted.</p><p>If you need to guarantee the data in the returned struct mirrors thedatabase, you have three options:</p><p>  <ul><li>Use <code>on_conflict: :replace_all</code>, although that will replace all<pre><code>fields in the database with current ones:</code></pre></li></ul></p><pre><code>    MyRepo.insert(%Post{title: &quot;this is unique&quot;},
-                  on_conflict: :replace_all, conflict_target: :title)</code></pre><p>  <ul><li>Specify <code>read_after_writes: true</code> in your schema for choosing<pre><code>fields that are read from the database after every operation.
-Or pass `returning: true` to `insert` to read all fields back:</code></pre></li></ul></p><pre><code>    MyRepo.insert(%Post{title: &quot;this is unique&quot;}, returning: true,
-                  on_conflict: on_conflict, conflict_target: :title)</code></pre><p>  <ul><li>Alternatively, read the data again from the database in a separate<pre><code>query. This option requires the primary key to be generated by the
-database:</code></pre></li></ul></p><pre><code>    {:ok, updated} = MyRepo.insert(%Post{title: &quot;this is unique&quot;}, on_conflict: on_conflict)
+                               on_conflict: on_conflict)</code></pre><p>In the examples above, even though it returned <code>:ok</code>, we do not knowif we inserted new data or if we updated only the <code>:on_conflict</code> fields.In case an update happened, the data in the struct most likely doesnot match the data in the database. For example, autogenerated fieldssuch as <code>inserted_at</code> will point to now rather than the time thestruct was actually inserted.</p><p>If you need to guarantee the data in the returned struct mirrors thedatabase, you have three options:</p><p>  <ul><li>Use <code>on_conflict: :replace_all</code>, although that will replace all<pre><code class="elixir">fields in the database with current ones:</code></pre></li></ul></p><pre><code class="elixir">    MyRepo.insert(%Post{title: &quot;this is unique&quot;},
+                  on_conflict: :replace_all, conflict_target: :title)</code></pre><p>  <ul><li>Specify <code>read_after_writes: true</code> in your schema for choosing<pre><code class="elixir">fields that are read from the database after every operation.
+Or pass `returning: true` to `insert` to read all fields back:</code></pre></li></ul></p><pre><code class="elixir">    MyRepo.insert(%Post{title: &quot;this is unique&quot;}, returning: true,
+                  on_conflict: on_conflict, conflict_target: :title)</code></pre><p>  <ul><li>Alternatively, read the data again from the database in a separate<pre><code class="elixir">query. This option requires the primary key to be generated by the
+database:</code></pre></li></ul></p><pre><code class="elixir">    {:ok, updated} = MyRepo.insert(%Post{title: &quot;this is unique&quot;}, on_conflict: on_conflict)
     Repo.get(Post, updated.id)</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.2.4/Ecto.Repo.html#c:insert/2"><code>Ecto.Repo.insert/2</code></a>.</p>
   </section>
 </div>
@@ -848,24 +848,24 @@ database:</code></pre></li></ul></p><pre><code>    {:ok, updated} = MyRepo.inser
   <a href="#insert_all/3-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
-<p>  <ul><li><code>:returning</code> - selects which fields to return. When <code>true</code>,<pre><code>returns all fields in the given struct. May be a list of
+<p>  <ul><li><code>:returning</code> - selects which fields to return. When <code>true</code>,<pre><code class="elixir">returns all fields in the given struct. May be a list of
 fields, where a struct is still returned but only with the
 given fields. Or `false`, where nothing is returned (the default).
-This option is not supported by all databases.</code></pre></li><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code>in Postgres or the database in MySQL).</code></pre></li><li><code>:on_conflict</code> - It may be one of <code>:raise</code> (the default), <code>:nothing</code>,<pre><code>`:replace_all`, a keyword list of update instructions or an [`Ecto.Query`](https://hexdocs.pm/ecto/2.2.4/Ecto.Query.html)
-query for updates. See the &quot;Upserts&quot; section for more information.</code></pre></li><li><code>:conflict_target</code> - Which columns to verify for conflicts. If<pre><code>none is specified, the conflict target is left up to the database
+This option is not supported by all databases.</code></pre></li><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code class="elixir">in Postgres or the database in MySQL).</code></pre></li><li><code>:on_conflict</code> - It may be one of <code>:raise</code> (the default), <code>:nothing</code>,<pre><code class="elixir">`:replace_all`, a keyword list of update instructions or an [`Ecto.Query`](https://hexdocs.pm/ecto/2.2.4/Ecto.Query.html)
+query for updates. See the &quot;Upserts&quot; section for more information.</code></pre></li><li><code>:conflict_target</code> - Which columns to verify for conflicts. If<pre><code class="elixir">none is specified, the conflict target is left up to the database
 and is usually made of primary keys and/or unique/exclusion constraints.
 May also be `{:constraint, constraint_name_as_atom}` in databases
 that support the &quot;ON CONSTRAINT&quot; expression.</code></pre></li></ul></p><p>See the "Shared options" section at the module documentation forremaining options.</p><h2 id="insert_all/3-examples" class="section-heading">
   <a href="#insert_all/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Examples
 </h2>
-<pre><code>MyRepo.insert_all(Post, [[title: &quot;My first post&quot;], [title: &quot;My second post&quot;]])
+<pre><code class="elixir">MyRepo.insert_all(Post, [[title: &quot;My first post&quot;], [title: &quot;My second post&quot;]])
 MyRepo.insert_all(Post, [%{title: &quot;My first post&quot;}, %{title: &quot;My second post&quot;}])</code></pre><h2 id="insert_all/3-upserts" class="section-heading">
   <a href="#insert_all/3-upserts" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Upserts
 </h2>
-<p><code>c:insert_all/3</code> provides upserts (update or inserts) via the <code>:on_conflict</code>option. The <code>:on_conflict</code> option supports the following values:</p><p>  <ul><li><code>:raise</code> - raises if there is a conflicting primary key or unique index</li><li><code>:nothing</code> - ignores the error in case of conflicts</li><li><code>:replace_all</code> - replace all values on the existing row with the values<pre><code>in the excluded row (the corresponding record given in the function
-parameters)</code></pre></li><li>a keyword list of update instructions - such as the one given to<pre><code>`c:update_all/3`, for example: `[set: [title: &quot;new title&quot;]]`</code></pre></li><li>an <a href="https://hexdocs.pm/ecto/2.2.4/Ecto.Query.html"><code>Ecto.Query</code></a> that will act as an <code>UPDATE</code> statement, such as the<pre><code>one given to `c:update_all/3`</code></pre></li></ul></p><p>Upserts map to "ON CONFLICT" on databases like Postgres and "ON DUPLICATE KEY"on databases such as MySQL.</p><h2 id="insert_all/3-return-values" class="section-heading">
+<p><code>c:insert_all/3</code> provides upserts (update or inserts) via the <code>:on_conflict</code>option. The <code>:on_conflict</code> option supports the following values:</p><p>  <ul><li><code>:raise</code> - raises if there is a conflicting primary key or unique index</li><li><code>:nothing</code> - ignores the error in case of conflicts</li><li><code>:replace_all</code> - replace all values on the existing row with the values<pre><code class="elixir">in the excluded row (the corresponding record given in the function
+parameters)</code></pre></li><li>a keyword list of update instructions - such as the one given to<pre><code class="elixir">`c:update_all/3`, for example: `[set: [title: &quot;new title&quot;]]`</code></pre></li><li>an <a href="https://hexdocs.pm/ecto/2.2.4/Ecto.Query.html"><code>Ecto.Query</code></a> that will act as an <code>UPDATE</code> statement, such as the<pre><code class="elixir">one given to `c:update_all/3`</code></pre></li></ul></p><p>Upserts map to "ON CONFLICT" on databases like Postgres and "ON DUPLICATE KEY"on databases such as MySQL.</p><h2 id="insert_all/3-return-values" class="section-heading">
   <a href="#insert_all/3-return-values" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Return values
 </h2>
@@ -893,18 +893,18 @@ parameters)</code></pre></li><li>a keyword list of update instructions - such as
     
   </div>
   <section class="docstring">
-    <p>Inserts or updates a changeset depending on whether the struct is persistedor not.</p><p>The distinction whether to insert or update will be made on the<a href="https://hexdocs.pm/ecto/2.2.4/Ecto.Schema.Metadata.html"><code>Ecto.Schema.Metadata</code></a> field <code>:state</code>. The <code>:state</code> is automatically set byEcto when loading or building a schema.</p><p>Please note that for this to work, you will have to load existing structs fromthe database. So even if the struct exists, this won't work:</p><pre><code>struct = %Post{id: &quot;existing_id&quot;, ...}
+    <p>Inserts or updates a changeset depending on whether the struct is persistedor not.</p><p>The distinction whether to insert or update will be made on the<a href="https://hexdocs.pm/ecto/2.2.4/Ecto.Schema.Metadata.html"><code>Ecto.Schema.Metadata</code></a> field <code>:state</code>. The <code>:state</code> is automatically set byEcto when loading or building a schema.</p><p>Please note that for this to work, you will have to load existing structs fromthe database. So even if the struct exists, this won't work:</p><pre><code class="elixir">struct = %Post{id: &quot;existing_id&quot;, ...}
 MyRepo.insert_or_update changeset
 # =&gt; {:error, changeset} # id already exists</code></pre><h2 id="insert_or_update/2-options" class="section-heading">
   <a href="#insert_or_update/2-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
-<p>  <ul><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code>in Postgres or the database in MySQL). This overrides the prefix set
+<p>  <ul><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code class="elixir">in Postgres or the database in MySQL). This overrides the prefix set
 in the struct.</code></pre></li></ul></p><p>See the "Shared options" section at the module documentation.</p><h2 id="insert_or_update/2-example" class="section-heading">
   <a href="#insert_or_update/2-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Example
 </h2>
-<pre><code>result =
+<pre><code class="elixir">result =
   case MyRepo.get(Post, id) do
     nil  -&gt; %Post{id: id} # Post not found, we build one
     post -&gt; post          # Post exists, let&apos;s use it
@@ -964,13 +964,13 @@ end</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/
   <a href="#load/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Examples
 </h2>
-<pre><code>iex&gt; MyRepo.load(User, %{name: &quot;Alice&quot;, age: 25})
+<pre><code class="iex elixir">iex&gt; MyRepo.load(User, %{name: &quot;Alice&quot;, age: 25})
 %User{name: &quot;Alice&quot;, age: 25}
 iex&gt; MyRepo.load(User, [name: &quot;Alice&quot;, age: 25])
-%User{name: &quot;Alice&quot;, age: 25}</code></pre><p><code>data</code> can also take form of <code>{fields, values}</code>:</p><pre><code>iex&gt; MyRepo.load(User, {[:name, :age], [&quot;Alice&quot;, 25]})
-%User{name: &quot;Alice&quot;, age: 25, ...}</code></pre><p>The first argument can also be a <code>types</code> map:</p><pre><code>iex&gt; types = %{name: :string, age: :integer}
+%User{name: &quot;Alice&quot;, age: 25}</code></pre><p><code>data</code> can also take form of <code>{fields, values}</code>:</p><pre><code class="iex elixir">iex&gt; MyRepo.load(User, {[:name, :age], [&quot;Alice&quot;, 25]})
+%User{name: &quot;Alice&quot;, age: 25, ...}</code></pre><p>The first argument can also be a <code>types</code> map:</p><pre><code class="iex elixir">iex&gt; types = %{name: :string, age: :integer}
 iex&gt; MyRepo.load(types, %{name: &quot;Alice&quot;, age: 25})
-%{name: &quot;Alice&quot;, age: 25}</code></pre><p>This function is especially useful when parsing raw query results:</p><pre><code>iex&gt; result = Ecto.Adapters.SQL.query!(MyRepo, &quot;SELECT * FROM users&quot;, [])
+%{name: &quot;Alice&quot;, age: 25}</code></pre><p>This function is especially useful when parsing raw query results:</p><pre><code class="iex elixir">iex&gt; result = Ecto.Adapters.SQL.query!(MyRepo, &quot;SELECT * FROM users&quot;, [])
 iex&gt; Enum.map(result.rows, &amp;MyRepo.load(User, {result.columns, &amp;1}))
 [%User{...}, ...]</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.2.4/Ecto.Repo.html#c:load/2"><code>Ecto.Repo.load/2</code></a>.</p>
   </section>
@@ -1056,14 +1056,14 @@ iex&gt; Enum.map(result.rows, &amp;MyRepo.load(User, {result.columns, &amp;1}))
   <a href="#preload/3-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
-<p>Besides the "Shared options" section at the module documentation,it accepts:</p><p>  <ul><li><code>:force</code> - By default, Ecto won't preload associations that<pre><code>are already loaded. By setting this option to true, any existing
-association will be discarded and reloaded.</code></pre></li><li><code>:in_parallel</code> - If the preloads must be done in parallel. It can<pre><code>only be performed when we have more than one preload and the
-repository is not in a transaction. Defaults to `true`.</code></pre></li><li><code>:prefix</code> - the prefix to fetch preloads from. By default, queries<pre><code>will use the same prefix as the one in the given collection. This
+<p>Besides the "Shared options" section at the module documentation,it accepts:</p><p>  <ul><li><code>:force</code> - By default, Ecto won't preload associations that<pre><code class="elixir">are already loaded. By setting this option to true, any existing
+association will be discarded and reloaded.</code></pre></li><li><code>:in_parallel</code> - If the preloads must be done in parallel. It can<pre><code class="elixir">only be performed when we have more than one preload and the
+repository is not in a transaction. Defaults to `true`.</code></pre></li><li><code>:prefix</code> - the prefix to fetch preloads from. By default, queries<pre><code class="elixir">will use the same prefix as the one in the given collection. This
 option allows the prefix to be changed.</code></pre></li></ul></p><h2 id="preload/3-examples" class="section-heading">
   <a href="#preload/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Examples
 </h2>
-<pre><code># Use a single atom to preload an association
+<pre><code class="elixir"># Use a single atom to preload an association
 posts = Repo.preload posts, :comments
 # Use a list of atoms to preload multiple associations
 posts = Repo.preload posts, [:comments, :authors]
@@ -1233,12 +1233,12 @@ posts = Repo.preload posts, [comments: {query, [:replies, :likes]}]</code></pre>
   <a href="#stream/2-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
-<p>  <ul><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code>in Postgres or the database in MySQL). This overrides the prefix set
-in the query</code></pre></li></ul></p><p>  <ul><li><code>:max_rows</code> - The number of rows to load from the database as we stream.<pre><code>It is supported at least by Postgres and MySQL and defaults to 500.</code></pre></li></ul></p><p>See the "Shared options" section at the module documentation.</p><h2 id="stream/2-example" class="section-heading">
+<p>  <ul><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code class="elixir">in Postgres or the database in MySQL). This overrides the prefix set
+in the query</code></pre></li></ul></p><p>  <ul><li><code>:max_rows</code> - The number of rows to load from the database as we stream.<pre><code class="elixir">It is supported at least by Postgres and MySQL and defaults to 500.</code></pre></li></ul></p><p>See the "Shared options" section at the module documentation.</p><h2 id="stream/2-example" class="section-heading">
   <a href="#stream/2-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Example
 </h2>
-<pre><code># Fetch all post titles
+<pre><code class="elixir"># Fetch all post titles
 query = from p in Post,
      select: p.title
 stream = MyRepo.stream(query)
@@ -1306,7 +1306,7 @@ end)</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto
   <a href="#transaction/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Examples
 </h2>
-<pre><code>import Ecto.Changeset, only: [change: 2]
+<pre><code class="elixir">import Ecto.Changeset, only: [change: 2]
 MyRepo.transaction(fn -&gt;
   MyRepo.update!(change(alice, balance: alice.balance - 10))
   MyRepo.update!(change(bob, balance: bob.balance + 10))
@@ -1349,14 +1349,14 @@ Ecto.Multi.new
   <a href="#update/2-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
-<p>Besides the "Shared options" section at the module documentation,it accepts:</p><p>  <ul><li><code>:force</code> - By default, if there are no changes in the changeset,<pre><code>`c:update/2` is a no-op. By setting this option to true, update
+<p>Besides the "Shared options" section at the module documentation,it accepts:</p><p>  <ul><li><code>:force</code> - By default, if there are no changes in the changeset,<pre><code class="elixir">`c:update/2` is a no-op. By setting this option to true, update
 callbacks will always be executed, even if there are no changes
-(including timestamps).</code></pre></li><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code>in Postgres or the database in MySQL). This overrides the prefix set
+(including timestamps).</code></pre></li><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code class="elixir">in Postgres or the database in MySQL). This overrides the prefix set
 in the struct.</code></pre></li></ul></p><h2 id="update/2-example" class="section-heading">
   <a href="#update/2-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Example
 </h2>
-<pre><code>post = MyRepo.get!(Post, 42)
+<pre><code class="elixir">post = MyRepo.get!(Post, 42)
 post = Ecto.Changeset.change post, title: &quot;New title&quot;
 case MyRepo.update post do
   {:ok, struct}       -&gt; # Updated with success
@@ -1413,15 +1413,15 @@ end</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/
   <a href="#update_all/3-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
-<p>  <ul><li><code>:returning</code> - selects which fields to return. When <code>true</code>,<pre><code>returns all fields in the given struct. May be a list of
+<p>  <ul><li><code>:returning</code> - selects which fields to return. When <code>true</code>,<pre><code class="elixir">returns all fields in the given struct. May be a list of
 fields, where a struct is still returned but only with the
 given fields. Or `false`, where nothing is returned (the default).
-This option is not supported by all databases.</code></pre></li><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code>in Postgres or the database in MySQL). This overrides the prefix set
+This option is not supported by all databases.</code></pre></li><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code class="elixir">in Postgres or the database in MySQL). This overrides the prefix set
 in the query.</code></pre></li></ul></p><p>See the "Shared options" section at the module documentation forremaining options.</p><h2 id="update_all/3-examples" class="section-heading">
   <a href="#update_all/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Examples
 </h2>
-<pre><code>MyRepo.update_all(Post, set: [title: &quot;New title&quot;])
+<pre><code class="elixir">MyRepo.update_all(Post, set: [title: &quot;New title&quot;])
 MyRepo.update_all(Post, inc: [visits: 1])
 from(p in Post, where: p.id &lt; 10)
 |&gt; MyRepo.update_all(set: [title: &quot;New title&quot;])
