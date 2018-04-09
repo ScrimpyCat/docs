@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.3">
-    <title>Cake.Email.Template – Cake vdev</title>
+    <title>Cake.Service – Cake vdev</title>
     <link rel="stylesheet" href="dist/app-480ffdc169.css" />
     
     <script src="dist/sidebar_items-8d895e6c25.js"></script>
@@ -70,9 +70,9 @@
 
       <h1>
         <small class="visible-xs">Cake vdev</small>
-        Cake.Email.Template
+        Cake.Service
         
-          <a href="https://github.com/ZURASTA/cake/blob/master/apps/cake_email/lib/cake.email/template.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/ZURASTA/cake/blob/master/apps/cake_service/lib/cake.service.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -81,34 +81,12 @@
 
       
         <section id="moduledoc">
-          <p>  A simple generic email template to build emails from.</p><p>  <h2 id="module-fields" class="section-heading">
-  <a href="#module-fields" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
-  Fields
+          <p>  The service application for sending emails.</p><p>  <h2 id="module-configurable-options" class="section-heading">
+  <a href="#module-configurable-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+   Configurable Options
 </h2>
-</p><p>  <h3 id="module-formatter" class="section-heading">
-  <a href="#module-formatter" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
-  :formatter
-</h3>
-  A function that will accept the template and return an email.</p><p>  <h3 id="module-data" class="section-heading">
-  <a href="#module-data" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
-  :data
-</h3>
-  Any additional data you want to access from the formatter function.</p><p>  <h2 id="module-example" class="section-heading">
-  <a href="#module-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
-  Example
-</h2>
-</p><pre><code class="elixir">Cake.Email.compose(%Cake.Email.Template{
-    formatter: fn %{ data: name } -&gt;
-        %Cake.Email{
-            subject: &quot;A message to #{name}&quot;,
-            body: %Cake.Email.Body{
-                text: &quot;Hello #{name}!&quot;
-            }
-        }
-    end,
-    data: &quot;Blah&quot;
-})
-#=&gt; %Cake.Email{attachments: nil, bcc: nil, body: %Cake.Email.Body{html: nil, text: &quot;Hello Blah!&quot;}, cc: nil, from: nil, headers: nil, reply_to: nil, subject: &quot;A message to Blah&quot;, to: nil}</code></pre>
+</p><p>  <ul><li><code>:server</code> - The name the server should be registered as. This takes a  function that accepts a module and returns a valid named server.</li></ul></p><p>  An example configuration:</p><pre><code class="elixir">config :cake_service,
+    server: &amp;(&amp;1)</code></pre>
         </section>
       
 
@@ -122,14 +100,18 @@
             Summary
           </h1>
           
-  <div class="summary-types summary">
+
+          
+  <div class="summary-functions summary">
     <h2>
-      <a href="#types">Types</a>
+      <a href="#functions">Functions</a>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#t:t/0">t()</a>
+    <a href="#start/2">start(type, args)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Start the service application</p></div>
   
 </div>
 
@@ -138,54 +120,44 @@
 
           
 
-          
-
         </section>
       
 
       
-        <section id="types" class="details-list">
+
+      
+        <section id="functions" class="details-list">
           <h1 class="section-heading">
-            <a class="hover-link" href="#types">
+            <a class="hover-link" href="#functions">
               <span class="icon-link" aria-hidden="true"></span>
               <span class="sr-only">Link to this section</span>
             </a>
-            Types
+            Functions
           </h1>
-          <div class="types-list">
-            <div class="detail" id="t:t/0">
+          <div class="detail" id="start/2">
   
   
   <div class="detail-header">
-    <a href="#t:t/0" class="detail-link" title="Link to this type">
+    <a href="#start/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this type</span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">t()</span>
+    <span class="signature">start(type, args)</span>
     
-      <a href="https://github.com/ZURASTA/cake/blob/master/apps/cake_email/lib/cake.email/template.ex#L31" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/cake/blob/master/apps/cake_service/lib/cake.service.ex#L21" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
     
-      <div class="specs">
-        
-          <pre>t() :: %Cake.Email.Template{data: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(), formatter: (<a href="#t:t/0">t</a>() -> <a href="Cake.Email.html#t:t/0">Cake.Email.t</a>())}</pre>
-        
-      </div>
-    
   </div>
   <section class="docstring">
-    
+    <p>  Start the service application.</p>
   </section>
 </div>
 
-          </div>
         </section>
-      
-
       
 
       

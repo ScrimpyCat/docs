@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.18.3">
+    <title>Overview – Cake vdev</title>
+    <link rel="stylesheet" href="dist/app-480ffdc169.css" />
+    
+    <script src="dist/sidebar_items-8d895e6c25.js"></script>
+    
+    
+    
+    
+  </head>
+  <body data-type="extras">
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
+
+<div class="main">
+<button class="sidebar-button sidebar-toggle">
+  <span class="icon-menu" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Sidebar</span>
+</button>
+<button class="sidebar-button night-mode-toggle">
+  <span class="icon-theme" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Theme</span>
+</button>
+<section class="sidebar">
+
+  
+  <a href="cake.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Cake
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        vdev
+      </h2>
+    </div>
+    
+  </a>
+
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <input name="q" type="text" id="search-list" class="search-input" placeholder="Search" aria-label="Search" autocomplete="off" />
+  </form>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+
+    
+  </ul>
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+
+<h1> Overview</h1><p>Overview of the service.</p><h2 id="applications" class="section-heading">
+  <a href="#applications" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+   Applications
+</h2>
+<pre><code class="bash">blueprint plot app --colour --messages --servers .servers.exs --path _build/prod/lib</code></pre><p><svg width="100%" height="100%"
+ viewBox="0.00 0.00 604.11 404.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 400)">
+<title>G</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-400 600.1118,-400 600.1118,4 -4,4"/>
+<!-- node_1 -->
+<g id="node1" class="node">
+<title>node_1</title>
+<ellipse fill="none" stroke="#ff9d00" cx="399.7344" cy="-378" rx="41.5593" ry="18"/>
+<text text-anchor="middle" x="399.7344" y="-373.8" font-family="Times,serif" font-size="14.00" fill="#000000">cake_api</text>
+</g>
+<!-- node_1&#45;&gt;node_1 -->
+<g id="edge4" class="edge">
+<title>node_1&#45;&gt;node_1</title>
+<path fill="none" stroke="#ff9d00" d="M428.831,-390.8993C444.7153,-393.1982 459.264,-388.8984 459.264,-378 459.264,-369.4856 450.3842,-364.9987 438.925,-364.5393"/>
+<polygon fill="#ff9d00" stroke="#ff9d00" points="438.6212,-361.0507 428.831,-365.1007 439.0099,-368.0399 438.6212,-361.0507"/>
+</g>
+<!-- node_2 -->
+<g id="node2" class="node">
+<title>node_2</title>
+<ellipse fill="none" stroke="#ff9d00" cx="399.7344" cy="-306" rx="55.5338" ry="18"/>
+<text text-anchor="middle" x="399.7344" y="-301.8" font-family="Times,serif" font-size="14.00" fill="#000000">cake_service</text>
+</g>
+<!-- node_1&#45;&gt;node_2 -->
+<g id="edge1" class="edge">
+<title>node_1&#45;&gt;node_2</title>
+<path fill="none" stroke="#ff9d00" stroke-dasharray="5,2" d="M399.7344,-359.8314C399.7344,-352.131 399.7344,-342.9743 399.7344,-334.4166"/>
+<polygon fill="#ff9d00" stroke="#ff9d00" points="403.2345,-334.4132 399.7344,-324.4133 396.2345,-334.4133 403.2345,-334.4132"/>
+</g>
+<!-- node_2&#45;&gt;node_2 -->
+<g id="edge7" class="edge">
+<title>node_2&#45;&gt;node_2</title>
+<path fill="none" stroke="#ff9d00" d="M438.067,-319.1366C456.8414,-320.8554 473.5008,-316.4766 473.5008,-306 473.5008,-297.4878 462.503,-293.001 448.3086,-292.5397"/>
+<polygon fill="#ff9d00" stroke="#ff9d00" points="447.9514,-289.0491 438.067,-292.8634 448.1726,-296.0456 447.9514,-289.0491"/>
+</g>
+<!-- node_6 -->
+<g id="node4" class="node">
+<title>node_6</title>
+<ellipse fill="none" stroke="#1500ff" cx="329.7344" cy="-234" rx="36.7836" ry="18"/>
+<text text-anchor="middle" x="329.7344" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">swoosh</text>
+</g>
+<!-- node_2&#45;&gt;node_6 -->
+<g id="edge8" class="edge">
+<title>node_2&#45;&gt;node_6</title>
+<path fill="none" stroke="#ff9d00" d="M382.7893,-288.5708C373.7612,-279.2847 362.5259,-267.7285 352.7218,-257.6442"/>
+<polygon fill="#ff9d00" stroke="#ff9d00" points="355.0441,-255.0119 345.5638,-250.2817 350.0251,-259.8914 355.0441,-255.0119"/>
+</g>
+<!-- node_9 -->
+<g id="node5" class="node">
+<title>node_9</title>
+<ellipse fill="none" stroke="#ff9d00" cx="470.7344" cy="-234" rx="50.2379" ry="18"/>
+<text text-anchor="middle" x="470.7344" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">cake_email</text>
+</g>
+<!-- node_2&#45;&gt;node_9 -->
+<g id="edge6" class="edge">
+<title>node_2&#45;&gt;node_9</title>
+<path fill="none" stroke="#ff9d00" d="M416.9215,-288.5708C425.817,-279.55 436.825,-268.387 446.5627,-258.5121"/>
+<polygon fill="#ff9d00" stroke="#ff9d00" points="449.1762,-260.8466 453.7055,-251.2687 444.1919,-255.9315 449.1762,-260.8466"/>
+</g>
+<!-- node_4 -->
+<g id="node3" class="node">
+<title>node_4</title>
+<ellipse fill="none" stroke="#59ff00" cx="205.7344" cy="-162" rx="39.6385" ry="18"/>
+<text text-anchor="middle" x="205.7344" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">hackney</text>
+</g>
+<!-- node_4&#45;&gt;node_4 -->
+<g id="edge2" class="edge">
+<title>node_4&#45;&gt;node_4</title>
+<path fill="none" stroke="#59ff00" stroke-dasharray="5,2" d="M242.5544,-168.7463C254.1532,-168.6433 263.3036,-166.3945 263.3036,-162 263.3036,-159.0474 259.173,-157.0635 252.9444,-156.0482"/>
+<polygon fill="#59ff00" stroke="#59ff00" points="252.7922,-152.5264 242.5544,-155.2537 252.2584,-159.506 252.7922,-152.5264"/>
+</g>
+<!-- node_4&#45;&gt;node_4 -->
+<g id="edge10" class="edge">
+<title>node_4&#45;&gt;node_4</title>
+<path fill="none" stroke="#59ff00" d="M235.6035,-173.8315C258.2963,-178.1079 281.3036,-174.1641 281.3036,-162 281.3036,-151.6415 264.6196,-147.2441 245.6534,-148.8076"/>
+<polygon fill="#59ff00" stroke="#59ff00" points="245.0433,-145.3581 235.6035,-150.1685 245.9828,-152.2948 245.0433,-145.3581"/>
+</g>
+<!-- node_14 -->
+<g id="node6" class="node">
+<title>node_14</title>
+<ellipse fill="none" stroke="#ffa600" cx="30.7344" cy="-90" rx="30.9706" ry="18"/>
+<text text-anchor="middle" x="30.7344" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">certifi</text>
+</g>
+<!-- node_4&#45;&gt;node_14 -->
+<g id="edge9" class="edge">
+<title>node_4&#45;&gt;node_14</title>
+<path fill="none" stroke="#59ff00" d="M175.5584,-150.3518C148.1,-139.6526 106.5144,-123.1984 70.7344,-108 68.6842,-107.1291 66.5804,-106.2223 64.4619,-105.2991"/>
+<polygon fill="#59ff00" stroke="#59ff00" points="65.7623,-102.0473 55.2009,-101.2072 62.9333,-108.4502 65.7623,-102.0473"/>
+</g>
+<!-- node_17 -->
+<g id="node7" class="node">
+<title>node_17</title>
+<ellipse fill="none" stroke="#1eff00" cx="106.7344" cy="-90" rx="27" ry="18"/>
+<text text-anchor="middle" x="106.7344" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">idna</text>
+</g>
+<!-- node_4&#45;&gt;node_17 -->
+<g id="edge11" class="edge">
+<title>node_4&#45;&gt;node_17</title>
+<path fill="none" stroke="#59ff00" d="M184.739,-146.7307C169.7972,-135.8639 149.599,-121.1743 133.4997,-109.4657"/>
+<polygon fill="#59ff00" stroke="#59ff00" points="135.1828,-106.362 125.0368,-103.3108 131.0655,-112.0232 135.1828,-106.362"/>
+</g>
+<!-- node_19 -->
+<g id="node8" class="node">
+<title>node_19</title>
+<ellipse fill="none" stroke="#00ffb3" cx="205.7344" cy="-90" rx="36.2732" ry="18"/>
+<text text-anchor="middle" x="205.7344" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">metrics</text>
+</g>
+<!-- node_4&#45;&gt;node_19 -->
+<g id="edge12" class="edge">
+<title>node_4&#45;&gt;node_19</title>
+<path fill="none" stroke="#59ff00" d="M205.7344,-143.8314C205.7344,-136.131 205.7344,-126.9743 205.7344,-118.4166"/>
+<polygon fill="#59ff00" stroke="#59ff00" points="209.2345,-118.4132 205.7344,-108.4133 202.2345,-118.4133 209.2345,-118.4132"/>
+</g>
+<!-- node_21 -->
+<g id="node9" class="node">
+<title>node_21</title>
+<ellipse fill="none" stroke="#00ffbb" cx="313.7344" cy="-90" rx="35.7974" ry="18"/>
+<text text-anchor="middle" x="313.7344" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">mimerl</text>
+</g>
+<!-- node_4&#45;&gt;node_21 -->
+<g id="edge13" class="edge">
+<title>node_4&#45;&gt;node_21</title>
+<path fill="none" stroke="#59ff00" d="M228.112,-147.0816C244.1066,-136.4185 265.8161,-121.9455 283.3724,-110.2413"/>
+<polygon fill="#59ff00" stroke="#59ff00" points="285.7433,-112.8672 292.1223,-104.408 281.8604,-107.0429 285.7433,-112.8672"/>
+</g>
+<!-- node_23 -->
+<g id="node10" class="node">
+<title>node_23</title>
+<ellipse fill="none" stroke="#0d00ff" cx="446.7344" cy="-90" rx="61.3891" ry="18"/>
+<text text-anchor="middle" x="446.7344" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">ssl_verify_fun</text>
+</g>
+<!-- node_4&#45;&gt;node_23 -->
+<g id="edge14" class="edge">
+<title>node_4&#45;&gt;node_23</title>
+<path fill="none" stroke="#59ff00" d="M238.9914,-152.0643C279.0144,-140.1072 346.7134,-119.8818 393.9118,-105.781"/>
+<polygon fill="#59ff00" stroke="#59ff00" points="395.0753,-109.0864 403.6549,-102.8702 393.0715,-102.3793 395.0753,-109.0864"/>
+</g>
+<!-- node_6&#45;&gt;node_4 -->
+<g id="edge23" class="edge">
+<title>node_6&#45;&gt;node_4</title>
+<path fill="none" stroke="#1500ff" d="M305.8259,-220.1177C286.944,-209.154 260.3665,-193.7219 239.3434,-181.5149"/>
+<polygon fill="#1500ff" stroke="#1500ff" points="240.8235,-178.3272 230.4182,-176.3325 237.3086,-184.3807 240.8235,-178.3272"/>
+</g>
+<!-- node_6&#45;&gt;node_6 -->
+<g id="edge3" class="edge">
+<title>node_6&#45;&gt;node_6</title>
+<path fill="none" stroke="#1500ff" stroke-dasharray="5,2" d="M363.8853,-240.75C375.269,-240.75 384.3759,-238.5 384.3759,-234 384.3759,-230.9766 380.2649,-228.9688 374.1144,-227.9767"/>
+<polygon fill="#1500ff" stroke="#1500ff" points="374.1083,-224.4676 363.8853,-227.25 373.6121,-231.45 374.1083,-224.4676"/>
+</g>
+<!-- node_6&#45;&gt;node_6 -->
+<g id="edge26" class="edge">
+<title>node_6&#45;&gt;node_6</title>
+<path fill="none" stroke="#1500ff" d="M357.6899,-245.6798C379.7456,-250.198 402.3759,-246.3047 402.3759,-234 402.3759,-223.5699 386.1156,-219.1835 367.728,-220.8409"/>
+<polygon fill="#1500ff" stroke="#1500ff" points="367.0728,-217.3996 357.6899,-222.3202 368.0934,-224.3248 367.0728,-217.3996"/>
+</g>
+<!-- node_29 -->
+<g id="node12" class="node">
+<title>node_29</title>
+<ellipse fill="none" stroke="#00ffbb" cx="329.7344" cy="-162" rx="30.4949" ry="18"/>
+<text text-anchor="middle" x="329.7344" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">mime</text>
+</g>
+<!-- node_6&#45;&gt;node_29 -->
+<g id="edge24" class="edge">
+<title>node_6&#45;&gt;node_29</title>
+<path fill="none" stroke="#1500ff" d="M329.7344,-215.8314C329.7344,-208.131 329.7344,-198.9743 329.7344,-190.4166"/>
+<polygon fill="#1500ff" stroke="#1500ff" points="333.2345,-190.4132 329.7344,-180.4133 326.2345,-190.4133 333.2345,-190.4132"/>
+</g>
+<!-- node_34 -->
+<g id="node14" class="node">
+<title>node_34</title>
+<ellipse fill="none" stroke="#0099ff" cx="429.7344" cy="-162" rx="33.8857" ry="18"/>
+<text text-anchor="middle" x="429.7344" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">poison</text>
+</g>
+<!-- node_6&#45;&gt;node_34 -->
+<g id="edge25" class="edge">
+<title>node_6&#45;&gt;node_34</title>
+<path fill="none" stroke="#1500ff" d="M350.4544,-219.0816C365.0318,-208.5858 384.736,-194.3989 400.8533,-182.7944"/>
+<polygon fill="#1500ff" stroke="#1500ff" points="403.3127,-185.3365 409.383,-176.653 399.2226,-179.6557 403.3127,-185.3365"/>
+</g>
+<!-- node_9&#45;&gt;node_9 -->
+<g id="edge5" class="edge">
+<title>node_9&#45;&gt;node_9</title>
+<path fill="none" stroke="#ff9d00" d="M505.5604,-247.0641C523.2454,-248.9719 539.1031,-244.6172 539.1031,-234 539.1031,-225.4565 528.8349,-220.9681 515.6091,-220.5347"/>
+<polygon fill="#ff9d00" stroke="#ff9d00" points="515.4128,-217.0397 505.5604,-220.9359 515.6921,-224.0341 515.4128,-217.0397"/>
+</g>
+<!-- node_17&#45;&gt;node_17 -->
+<g id="edge15" class="edge">
+<title>node_17&#45;&gt;node_17</title>
+<path fill="none" stroke="#1eff00" d="M126.6294,-102.4321C139.4224,-105.6753 151.7344,-101.5313 151.7344,-90 151.7344,-81.6218 145.235,-77.1433 136.7739,-76.5644"/>
+<polygon fill="#1eff00" stroke="#1eff00" points="136.2363,-73.1004 126.6294,-77.5679 136.9254,-80.0665 136.2363,-73.1004"/>
+</g>
+<!-- node_26 -->
+<g id="node11" class="node">
+<title>node_26</title>
+<ellipse fill="none" stroke="#6a00ff" cx="106.7344" cy="-18" rx="84.5341" ry="18"/>
+<text text-anchor="middle" x="106.7344" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">unicode_util_compat</text>
+</g>
+<!-- node_17&#45;&gt;node_26 -->
+<g id="edge16" class="edge">
+<title>node_17&#45;&gt;node_26</title>
+<path fill="none" stroke="#1eff00" d="M106.7344,-71.8314C106.7344,-64.131 106.7344,-54.9743 106.7344,-46.4166"/>
+<polygon fill="#1eff00" stroke="#1eff00" points="110.2345,-46.4132 106.7344,-36.4133 103.2345,-46.4133 110.2345,-46.4132"/>
+</g>
+<!-- node_19&#45;&gt;node_19 -->
+<g id="edge17" class="edge">
+<title>node_19&#45;&gt;node_19</title>
+<path fill="none" stroke="#00ffb3" d="M231.3548,-102.7584C246.1229,-105.3622 259.8707,-101.1094 259.8707,-90 259.8707,-81.4944 251.812,-77.008 241.4067,-76.5407"/>
+<polygon fill="#00ffb3" stroke="#00ffb3" points="241.0872,-73.0544 231.3548,-77.2416 241.5741,-80.0375 241.0872,-73.0544"/>
+</g>
+<!-- node_21&#45;&gt;node_21 -->
+<g id="edge19" class="edge">
+<title>node_21&#45;&gt;node_21</title>
+<path fill="none" stroke="#00ffbb" d="M339.1239,-102.7584C353.7589,-105.3622 367.3827,-101.1094 367.3827,-90 367.3827,-81.5812 359.5589,-77.0999 349.4001,-76.5563"/>
+<polygon fill="#00ffbb" stroke="#00ffbb" points="348.8688,-73.0839 339.1239,-77.2416 349.3347,-80.0683 348.8688,-73.0839"/>
+</g>
+<!-- node_23&#45;&gt;node_23 -->
+<g id="edge22" class="edge">
+<title>node_23&#45;&gt;node_23</title>
+<path fill="none" stroke="#0d00ff" d="M488.6979,-103.2025C508.5203,-104.7368 525.9286,-100.3359 525.9286,-90 525.9286,-81.5213 514.2143,-77.0364 499.0626,-76.5453"/>
+<polygon fill="#0d00ff" stroke="#0d00ff" points="498.6098,-73.0552 488.6979,-76.7975 498.7801,-80.0531 498.6098,-73.0552"/>
+</g>
+<!-- node_29&#45;&gt;node_29 -->
+<g id="edge18" class="edge">
+<title>node_29&#45;&gt;node_29</title>
+<path fill="none" stroke="#00ffbb" d="M351.5662,-174.5475C365.1006,-177.5731 377.9808,-173.3906 377.9808,-162 377.9808,-153.546 370.8858,-149.0626 361.6943,-148.5497"/>
+<polygon fill="#00ffbb" stroke="#00ffbb" points="361.216,-145.0784 351.5662,-149.4525 361.8375,-152.0507 361.216,-145.0784"/>
+</g>
+<!-- node_32 -->
+<g id="node13" class="node">
+<title>node_32</title>
+<ellipse fill="none" stroke="#00b7ff" cx="527.7344" cy="-378" rx="50.2551" ry="18"/>
+<text text-anchor="middle" x="527.7344" y="-373.8" font-family="Times,serif" font-size="14.00" fill="#000000">parse_trans</text>
+</g>
+<!-- node_32&#45;&gt;node_32 -->
+<g id="edge20" class="edge">
+<title>node_32&#45;&gt;node_32</title>
+<path fill="none" stroke="#00b7ff" d="M562.5648,-391.0641C580.2521,-392.9719 596.1118,-388.6172 596.1118,-378 596.1118,-369.4565 585.8423,-364.9681 572.6147,-364.5347"/>
+<polygon fill="#00b7ff" stroke="#00b7ff" points="572.4172,-361.0397 562.5648,-364.9359 572.6964,-368.0342 572.4172,-361.0397"/>
+</g>
+<!-- node_34&#45;&gt;node_34 -->
+<g id="edge21" class="edge">
+<title>node_34&#45;&gt;node_34</title>
+<path fill="none" stroke="#0099ff" d="M453.9303,-174.7082C468.1329,-177.4157 481.4267,-173.1797 481.4267,-162 481.4267,-153.5279 473.7923,-149.0434 463.9135,-148.5464"/>
+<polygon fill="#0099ff" stroke="#0099ff" points="463.6419,-145.0569 453.9303,-149.2918 464.1632,-152.0375 463.6419,-145.0569"/>
+</g>
+</g>
+</svg></p><h2 id="modules" class="section-heading">
+  <a href="#modules" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+   Modules
+</h2>
+<pre><code class="bash">blueprint plot mod --colour --messages --simple --servers .servers.exs --path _build/prod/lib/cake_api --path _build/prod/lib/cake_service</code></pre><p><iframe srcdoc='<svg width="50%" height="50%"
+ viewBox="0.00 0.00 314.69 188.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 184)">
+<title>G</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-184 310.69,-184 310.69,4 -4,4"/>
+<!-- node_41 -->
+<g id="node1" class="node">
+<title>node_41</title>
+<ellipse fill="none" stroke="#ff9d00" cx="188.9521" cy="-162" rx="70.5427" ry="18"/>
+<text text-anchor="middle" x="188.9521" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">Cake.API.Mailer</text>
+</g>
+<!-- node_41&#45;&gt;node_41 -->
+<g id="edge3" class="edge">
+<title>node_41&#45;&gt;node_41</title>
+<path fill="none" stroke="#ff9d00" d="M236.7607,-175.2619C258.5407,-176.6159 277.4734,-172.1953 277.4734,-162 277.4734,-153.4774 264.2434,-148.99 247.1796,-148.538"/>
+<polygon fill="#ff9d00" stroke="#ff9d00" points="246.6916,-145.0466 236.7607,-148.7381 246.8261,-152.0453 246.6916,-145.0466"/>
+</g>
+<!-- node_42 -->
+<g id="node2" class="node">
+<title>node_42</title>
+<ellipse fill="none" stroke="#ff9d00" cx="115.9521" cy="-90" rx="82.5787" ry="18"/>
+<text text-anchor="middle" x="115.9521" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">Cake.Service.Mailer</text>
+</g>
+<!-- node_41&#45;&gt;node_42 -->
+<g id="edge1" class="edge">
+<title>node_41&#45;&gt;node_42</title>
+<path fill="none" stroke="#ff9d00" stroke-dasharray="5,2" d="M171.2808,-144.5708C162.2692,-135.6827 151.149,-124.7148 141.2472,-114.9486"/>
+<polygon fill="#ff9d00" stroke="#ff9d00" points="143.5452,-112.2992 133.9677,-107.7689 138.6297,-117.2829 143.5452,-112.2992"/>
+</g>
+<!-- node_44 -->
+<g id="node3" class="node">
+<title>node_44</title>
+<ellipse fill="none" stroke="#ff9d00" cx="261.9521" cy="-90" rx="44.9772" ry="18"/>
+<text text-anchor="middle" x="261.9521" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">Cake.API</text>
+</g>
+<!-- node_41&#45;&gt;node_44 -->
+<g id="edge2" class="edge">
+<title>node_41&#45;&gt;node_44</title>
+<path fill="none" stroke="#ff9d00" d="M206.6233,-144.5708C215.9039,-135.4174 227.4209,-124.0582 237.5403,-114.0773"/>
+<polygon fill="#ff9d00" stroke="#ff9d00" points="240.2843,-116.287 244.9462,-106.7729 235.3687,-111.3032 240.2843,-116.287"/>
+</g>
+<!-- node_47 -->
+<g id="node4" class="node">
+<title>node_47</title>
+<ellipse fill="none" stroke="#ff9d00" cx="115.9521" cy="-18" rx="115.9041" ry="18"/>
+<text text-anchor="middle" x="115.9521" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">Cake.Service.Mailer.Dispatch</text>
+</g>
+<!-- node_42&#45;&gt;node_47 -->
+<g id="edge4" class="edge">
+<title>node_42&#45;&gt;node_47</title>
+<path fill="none" stroke="#ff9d00" d="M115.9521,-71.8314C115.9521,-64.131 115.9521,-54.9743 115.9521,-46.4166"/>
+<polygon fill="#ff9d00" stroke="#ff9d00" points="119.4522,-46.4132 115.9521,-36.4133 112.4522,-46.4133 119.4522,-46.4132"/>
+</g>
+<!-- node_47&#45;&gt;node_47 -->
+<g id="edge5" class="edge">
+<title>node_47&#45;&gt;node_47</title>
+<path fill="none" stroke="#ff9d00" d="M193.3731,-31.4256C224.1419,-32.1432 249.9041,-27.668 249.9041,-18 249.9041,-9.4272 229.648,-4.9374 203.6068,-4.5304"/>
+<polygon fill="#ff9d00" stroke="#ff9d00" points="203.358,-1.0314 193.3731,-4.5744 203.3881,-8.0313 203.358,-1.0314"/>
+</g>
+</g>
+</svg>' width='100%' height='480px'></iframe></p><h2 id="functions" class="section-heading">
+  <a href="#functions" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+   Functions
+</h2>
+<pre><code class="bash">blueprint plot fun --colour --simple --path _build/prod/lib/cake_api --path _build/prod/lib/cake_service</code></pre><p><iframe srcdoc='<svg width="200%" height="200%"
+ viewBox="0.00 0.00 1270.41 332.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 328)">
+<title>G</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-328 1266.4086,-328 1266.4086,4 -4,4"/>
+<!-- node_50 -->
+<g id="node1" class="node">
+<title>node_50</title>
+<ellipse fill="none" stroke="#ff9d00" cx="93.8693" cy="-306" rx="93.7388" ry="18"/>
+<text text-anchor="middle" x="93.8693" y="-301.8" font-family="Times,serif" font-size="14.00" fill="#000000">Cake.API.Mailer.post/1</text>
+</g>
+<!-- node_51 -->
+<g id="node2" class="node">
+<title>node_51</title>
+<ellipse fill="none" stroke="#ff9d00" cx="225.8693" cy="-234" rx="93.7388" ry="18"/>
+<text text-anchor="middle" x="225.8693" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">Cake.API.Mailer.post/3</text>
+</g>
+<!-- node_50&#45;&gt;node_51 -->
+<g id="edge1" class="edge">
+<title>node_50&#45;&gt;node_51</title>
+<path fill="none" stroke="#ff9d00" d="M125.1515,-288.937C143.1849,-279.1006 166.0525,-266.6274 185.4386,-256.0531"/>
+<polygon fill="#ff9d00" stroke="#ff9d00" points="187.2513,-259.0512 194.3542,-251.19 183.8993,-252.906 187.2513,-259.0512"/>
+</g>
+<!-- node_55 -->
+<g id="node4" class="node">
+<title>node_55</title>
+<ellipse fill="none" stroke="#ff9d00" cx="225.8693" cy="-162" rx="81.644" ry="18"/>
+<text text-anchor="middle" x="225.8693" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">Cake.API.defaults/1</text>
+</g>
+<!-- node_51&#45;&gt;node_55 -->
+<g id="edge3" class="edge">
+<title>node_51&#45;&gt;node_55</title>
+<path fill="none" stroke="#ff9d00" d="M225.8693,-215.8314C225.8693,-208.131 225.8693,-198.9743 225.8693,-190.4166"/>
+<polygon fill="#ff9d00" stroke="#ff9d00" points="229.3694,-190.4132 225.8693,-180.4133 222.3694,-190.4133 229.3694,-190.4132"/>
+</g>
+<!-- node_53 -->
+<g id="node3" class="node">
+<title>node_53</title>
+<ellipse fill="none" stroke="#ff9d00" cx="299.8693" cy="-306" rx="93.7388" ry="18"/>
+<text text-anchor="middle" x="299.8693" y="-301.8" font-family="Times,serif" font-size="14.00" fill="#000000">Cake.API.Mailer.post/2</text>
+</g>
+<!-- node_53&#45;&gt;node_51 -->
+<g id="edge2" class="edge">
+<title>node_53&#45;&gt;node_51</title>
+<path fill="none" stroke="#ff9d00" d="M281.5772,-288.2022C272.5049,-279.3752 261.3964,-268.5669 251.4925,-258.9307"/>
+<polygon fill="#ff9d00" stroke="#ff9d00" points="253.8155,-256.3076 244.2075,-251.8425 248.934,-261.3247 253.8155,-256.3076"/>
+</g>
+<!-- node_57 -->
+<g id="node5" class="node">
+<title>node_57</title>
+<ellipse fill="none" stroke="#ff9d00" cx="631.8693" cy="-306" rx="132.3073" ry="18"/>
+<text text-anchor="middle" x="631.8693" y="-301.8" font-family="Times,serif" font-size="14.00" fill="#000000">Cake.Service.Mailer.handle_call/3</text>
+</g>
+<!-- node_58 -->
+<g id="node6" class="node">
+<title>node_58</title>
+<ellipse fill="none" stroke="#ff9d00" cx="536.8693" cy="-234" rx="139.5676" ry="18"/>
+<text text-anchor="middle" x="536.8693" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">Cake.Service.Mailer.Dispatch.post/1</text>
+</g>
+<!-- node_57&#45;&gt;node_58 -->
+<g id="edge4" class="edge">
+<title>node_57&#45;&gt;node_58</title>
+<path fill="none" stroke="#ff9d00" d="M608.3861,-288.2022C596.3968,-279.1156 581.6372,-267.9294 568.6462,-258.0836"/>
+<polygon fill="#ff9d00" stroke="#ff9d00" points="570.4953,-255.0934 560.4115,-251.8425 566.2672,-260.6722 570.4953,-255.0934"/>
+</g>
+<!-- node_60 -->
+<g id="node7" class="node">
+<title>node_60</title>
+<ellipse fill="none" stroke="#ff9d00" cx="620.8693" cy="-162" rx="139.5676" ry="18"/>
+<text text-anchor="middle" x="620.8693" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">Cake.Service.Mailer.Dispatch.post/2</text>
+</g>
+<!-- node_57&#45;&gt;node_60 -->
+<g id="edge5" class="edge">
+<title>node_57&#45;&gt;node_60</title>
+<path fill="none" stroke="#ff9d00" d="M657.0909,-288.2034C668.1435,-278.8424 679.9331,-266.3314 685.8693,-252 691.9922,-237.2179 692.6668,-230.4843 685.8693,-216 680.3119,-204.158 670.7405,-194.0143 660.6255,-185.8224"/>
+<polygon fill="#ff9d00" stroke="#ff9d00" points="662.557,-182.8956 652.4632,-179.676 658.3461,-188.4874 662.557,-182.8956"/>
+</g>
+<!-- node_58&#45;&gt;node_60 -->
+<g id="edge11" class="edge">
+<title>node_58&#45;&gt;node_60</title>
+<path fill="none" stroke="#ff9d00" d="M558.066,-215.8314C568.391,-206.9814 580.9599,-196.2081 592.1332,-186.631"/>
+<polygon fill="#ff9d00" stroke="#ff9d00" points="594.6555,-189.0788 599.9703,-179.9134 590.0999,-183.764 594.6555,-189.0788"/>
+</g>
+<!-- node_62 -->
+<g id="node8" class="node">
+<title>node_62</title>
+<ellipse fill="none" stroke="#ff9d00" cx="451.8693" cy="-90" rx="170.4182" ry="18"/>
+<text text-anchor="middle" x="451.8693" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">Cake.Service.Mailer.Dispatch.create_email/1</text>
+</g>
+<!-- node_60&#45;&gt;node_62 -->
+<g id="edge12" class="edge">
+<title>node_60&#45;&gt;node_62</title>
+<path fill="none" stroke="#ff9d00" d="M580.3896,-144.7542C556.9241,-134.7571 527.1749,-122.0829 502.2093,-111.4466"/>
+<polygon fill="#ff9d00" stroke="#ff9d00" points="503.47,-108.1794 492.8983,-107.4798 500.7263,-114.6193 503.47,-108.1794"/>
+</g>
+<!-- node_66 -->
+<g id="node10" class="node">
+<title>node_66</title>
+<ellipse fill="none" stroke="#ff9d00" cx="789.8693" cy="-90" rx="149.6888" ry="18"/>
+<text text-anchor="middle" x="789.8693" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">Cake.Service.Mailer.Dispatch.deliver/1</text>
+</g>
+<!-- node_60&#45;&gt;node_66 -->
+<g id="edge13" class="edge">
+<title>node_60&#45;&gt;node_66</title>
+<path fill="none" stroke="#ff9d00" d="M661.349,-144.7542C684.9011,-134.7202 714.7834,-121.9893 739.8055,-111.329"/>
+<polygon fill="#ff9d00" stroke="#ff9d00" points="741.3061,-114.4941 749.1342,-107.3546 738.5624,-108.0542 741.3061,-114.4941"/>
+</g>
+<!-- node_63 -->
+<g id="node9" class="node">
+<title>node_63</title>
+<ellipse fill="none" stroke="#ff9d00" cx="451.8693" cy="-18" rx="170.4182" ry="18"/>
+<text text-anchor="middle" x="451.8693" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">Cake.Service.Mailer.Dispatch.create_email/2</text>
+</g>
+<!-- node_62&#45;&gt;node_63 -->
+<g id="edge6" class="edge">
+<title>node_62&#45;&gt;node_63</title>
+<path fill="none" stroke="#ff9d00" d="M451.8693,-71.8314C451.8693,-64.131 451.8693,-54.9743 451.8693,-46.4166"/>
+<polygon fill="#ff9d00" stroke="#ff9d00" points="455.3694,-46.4132 451.8693,-36.4133 448.3694,-46.4133 455.3694,-46.4132"/>
+</g>
+<!-- node_63&#45;&gt;node_63 -->
+<g id="edge7" class="edge">
+<title>node_63&#45;&gt;node_63</title>
+<path fill="none" stroke="#ff9d00" d="M564.8705,-31.4794C606.2116,-31.8447 640.0783,-27.3516 640.0783,-18 640.0783,-9.4156 611.54,-4.9252 574.8788,-4.5288"/>
+<polygon fill="#ff9d00" stroke="#ff9d00" points="574.8734,-1.0289 564.8705,-4.5206 574.8676,-8.0289 574.8734,-1.0289"/>
+</g>
+<!-- node_67 -->
+<g id="node11" class="node">
+<title>node_67</title>
+<ellipse fill="none" stroke="#ff9d00" cx="958.8693" cy="-18" rx="149.6888" ry="18"/>
+<text text-anchor="middle" x="958.8693" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">Cake.Service.Mailer.Dispatch.deliver/2</text>
+</g>
+<!-- node_66&#45;&gt;node_67 -->
+<g id="edge8" class="edge">
+<title>node_66&#45;&gt;node_67</title>
+<path fill="none" stroke="#ff9d00" d="M830.7795,-72.5708C854.2539,-62.5699 883.9088,-49.9358 908.7718,-39.3433"/>
+<polygon fill="#ff9d00" stroke="#ff9d00" points="910.2153,-42.5328 918.0433,-35.3933 907.4716,-36.0929 910.2153,-42.5328"/>
+</g>
+<!-- node_69 -->
+<g id="node12" class="node">
+<title>node_69</title>
+<ellipse fill="none" stroke="#ff9d00" cx="1109.8693" cy="-162" rx="152.5786" ry="18"/>
+<text text-anchor="middle" x="1109.8693" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">Cake.Service.Mailer.Dispatch.deliver!/1</text>
+</g>
+<!-- node_70 -->
+<g id="node13" class="node">
+<title>node_70</title>
+<ellipse fill="none" stroke="#ff9d00" cx="1109.8693" cy="-90" rx="152.5786" ry="18"/>
+<text text-anchor="middle" x="1109.8693" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">Cake.Service.Mailer.Dispatch.deliver!/2</text>
+</g>
+<!-- node_69&#45;&gt;node_70 -->
+<g id="edge9" class="edge">
+<title>node_69&#45;&gt;node_70</title>
+<path fill="none" stroke="#ff9d00" d="M1109.8693,-143.8314C1109.8693,-136.131 1109.8693,-126.9743 1109.8693,-118.4166"/>
+<polygon fill="#ff9d00" stroke="#ff9d00" points="1113.3694,-118.4132 1109.8693,-108.4133 1106.3694,-118.4133 1113.3694,-118.4132"/>
+</g>
+<!-- node_70&#45;&gt;node_67 -->
+<g id="edge10" class="edge">
+<title>node_70&#45;&gt;node_67</title>
+<path fill="none" stroke="#ff9d00" d="M1072.9305,-72.3868C1052.3797,-62.5877 1026.6183,-50.3042 1004.7804,-39.8914"/>
+<polygon fill="#ff9d00" stroke="#ff9d00" points="1006.2209,-36.7008 995.6881,-35.556 1003.2081,-43.0193 1006.2209,-36.7008"/>
+</g>
+</g>
+</svg>' width='100%' height='480px'></iframe></p>
+      <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.18.3),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  <script src="dist/app-9bd040e5e5.js"></script>
+  
+  
+  
+  
+  </body>
+</html>
+
