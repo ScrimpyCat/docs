@@ -1,21 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.15.1">
+    <meta name="generator" content="ExDoc v0.18.3">
     <title>Sherbet – Sherbet vdev</title>
-    <link rel="stylesheet" href="dist/app-af302bfcc4.css" />
+    <link rel="stylesheet" href="dist/app-480ffdc169.css" />
     
-    <script src="dist/sidebar_items-57206545be.js"></script>
+    <script src="dist/sidebar_items-0b4886b15b.js"></script>
+    
+    
+    
+    
   </head>
   <body data-type="extras">
     <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
 
 <div class="main">
-<button class="sidebar-toggle">
-  <i class="icon-menu"></i>
+<button class="sidebar-button sidebar-toggle">
+  <span class="icon-menu" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Sidebar</span>
+</button>
+<button class="sidebar-button night-mode-toggle">
+  <span class="icon-theme" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Theme</span>
 </button>
 <section class="sidebar">
 
@@ -32,10 +41,12 @@
     
   </a>
 
-  <div class="sidebar-search">
-    <i class="icon-search"></i>
-    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
-  </div>
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <input name="q" type="text" id="search-list" class="search-input" placeholder="Search" aria-label="Search" autocomplete="off" />
+  </form>
 
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
@@ -57,37 +68,84 @@
     <div id="content" class="content-inner">
 
 
-<p><h1> Sherbet (Contact Management)</h1></p><p>Manages the contacts belonging to different identities. A contact may be any kind of communication method between the service and the identity, where that identity is the owner of that communication method.</p><h3> Usage</h3><p>The service component (<code>Sherbet.Service</code>) is an OTP application that should be started prior to making any requests to the service. This component should only be interacted with to configure/control the service explicitly.</p><p>An API (<a href="Sherbet.API.html"><code>Sherbet.API</code></a>) is provided to allow for convenient interaction with the service from external applications.</p><h3> Verification/Reclamation</h3><p>A contact is uniquely associated with an identity. When first associated, the contact will be in an unverified state (cannot confirm whether the identity is the actual owner of the contact). During this state, the contact can remain associated with the identity, and used by the identity (<strong>however care should be taken when deciding on how and what to communicate to a contact in this state</strong>), but it can also be reclaimed by the actual owner (disassociated on request by the owner). While a verified contact (confirmed the identity is the owner of the contact) cannot be reclaimed, the owning identity must remove this contact to disassociate it.</p><p>Whilst a contact is unverified, a reclamation (removal) request can be made by an external user. This request will cause a temporary key to be sent to the contact in question, where the owner of the contact can then reclaim it. Once a contact has been reclaimed, it is disassociated from its previous identity. It can then be associated with a new identity.</p><p>A contact can be verified by making a verification request, which will cause a key to be sent to the contact. The owner can then follow through and verify the given contact. <strong>Note: verification (submitting the verification key) should be treated as an unsafe process, in order to prevent someone else verifying a contact associated with someone else's identity, the verification prompt (finalisation) should also require the user to prove their identity (they are that identity; e.g. an active login session).</strong> Once verified no one can make a reclamation request on that contact.</p><h3> Priority</h3><p>An identity can choose a priority (<strong>primary</strong> or <strong>secondary</strong>) to associate with a contact. Only one contact (of the same type; e.g. email) may be made primary. The primary priority should be used to specify the contact that is the preferred option for that identity/user.</p><h2 id="safety" class="section-heading">
-  <a href="#safety" class="hover-link"><i class="icon-link"></i></a>
+<h1> Sherbet (Contact Management)</h1><p><a href="https://waffle.io/ZURASTA/sherbet?utm_source=badge"><img src="https://badge.waffle.io/ZURASTA/sherbet.png?label=ready&title=Ready" alt="Stories in Ready"></a><a href="https://circleci.com/gh/ZURASTA/sherbet"><img src="https://circleci.com/gh/ZURASTA/sherbet.svg?style=svg" alt="CircleCI"></a></p><p>Manages the contacts belonging to different identities. A contact may be any kind of communication method between the service and the identity, where that identity is the owner of that communication method.</p><h3 id="usage" class="section-heading">
+  <a href="#usage" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+   Usage
+</h3>
+<p>The service component (<a href="Sherbet.Service.html"><code>Sherbet.Service</code></a>) is an OTP application that should be started prior to making any requests to the service. This component should only be interacted with to configure/control the service explicitly.</p><p>An API (<a href="Sherbet.API.html"><code>Sherbet.API</code></a>) is provided to allow for convenient interaction with the service from external applications.</p><h3 id="verification-reclamation" class="section-heading">
+  <a href="#verification-reclamation" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+   Verification/Reclamation
+</h3>
+<p>A contact is uniquely associated with an identity. When first associated, the contact will be in an unverified state (cannot confirm whether the identity is the actual owner of the contact). During this state, the contact can remain associated with the identity, and used by the identity (<strong>however care should be taken when deciding on how and what to communicate to a contact in this state</strong>), but it can also be reclaimed by the actual owner (disassociated on request by the owner). While a verified contact (confirmed the identity is the owner of the contact) cannot be reclaimed, the owning identity must remove this contact to disassociate it.</p><p>Whilst a contact is unverified, a reclamation (removal) request can be made by an external user. This request will cause a temporary key to be sent to the contact in question, where the owner of the contact can then reclaim it. Once a contact has been reclaimed, it is disassociated from its previous identity. It can then be associated with a new identity.</p><p>A contact can be verified by making a verification request, which will cause a key to be sent to the contact. The owner can then follow through and verify the given contact. <strong>Note: verification (submitting the verification key) should be treated as an unsafe process, in order to prevent someone else verifying a contact associated with someone else's identity, the verification prompt (finalisation) should also require the user to prove their identity (they are that identity; e.g. an active login session).</strong> Once verified no one can make a reclamation request on that contact.</p><h3 id="priority" class="section-heading">
+  <a href="#priority" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+   Priority
+</h3>
+<p>An identity can choose a priority (<strong>primary</strong> or <strong>secondary</strong>) to associate with a contact. Only one contact (of the same type; e.g. email) may be made primary. The primary priority should be used to specify the contact that is the preferred option for that identity/user.</p><h2 id="safety" class="section-heading">
+  <a href="#safety" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Safety
 </h2>
-<p>Due to the fact that an identity could associate with a contact that they don't own, or the owner of the contact could attempt to verify the contact that is associated with some other identity, care must be taken when interacting with this service and the contacts being managed.</p><p>For any functions that require an identity ID, the best practice is to treat those operations as insecure. And so the identity should be correctly authenticated before performing the operation (e.g. an active login session/trusted party). Functions that do not require an identity ID can be treated as secure, however access to them should be kept within reason (determine it on a per function basis; e.g. <code>request_removal/1</code> should be accessible to anyone, while <code>owner/1</code> should probably be kept private/accessed by only trusted parties).</p><p>The next thing is to keep in mind that unverified contacts may not be owned by the identity and therefore care must be taken when communicating with then. Ideally only verification or reclamation requests should be sent to it, while any sensitive information should not.</p><h2 id="contacts" class="section-heading">
-  <a href="#contacts" class="hover-link"><i class="icon-link"></i></a>
+<p>Due to the fact that an identity could associate with a contact that they don't own, or the owner of the contact could attempt to verify the contact that is associated with some other identity, care must be taken when interacting with this service and the contacts being managed.</p><p>For any functions that require an identity ID, the best practice is to treat those operations as insecure. And so the identity should be correctly authenticated before performing the operation (e.g. an active login session/trusted party). Functions that do not require an identity ID can be treated as secure, however access to them should be kept within reason (determine it on a per function basis; e.g. <code>request_removal/1</code> should be accessible to anyone, while <code>owner/1</code> should probably be kept private/accessed by only trusted parties).</p><p>The next thing is to keep in mind that unverified contacts may not be owned by the identity and therefore care must be taken when communicating with them. Ideally only verification or reclamation requests should be sent to it, while any sensitive information should not.</p><h2 id="contacts" class="section-heading">
+  <a href="#contacts" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Contacts
 </h2>
-<p>Support for contacts can be added by implementing the behaviours in <a href="Sherbet.Service.Contact.Communication.Method.html"><code>Sherbet.Service.Contact.Communication.Method</code></a>.</p><h3> Email</h3><p>Support for email based contacts is provided by the <a href="Sherbet.Service.Contact.Communication.Method.Email.html"><code>Sherbet.Service.Contact.Communication.Method.Email</code></a> implementation.</p><p>Email verification/removal requests are delivered using the <code>Cake</code> service. The templates for those emails can be customised in the config file, more information on how to customise them can be found in <a href="Sherbet.Service.Contact.Communication.Method.Email.VerificationKey.Template.html"><code>Sherbet.Service.Contact.Communication.Method.Email.VerificationKey.Template</code></a> and <a href="Sherbet.Service.Contact.Communication.Method.Email.RemovalKey.Template.html"><code>Sherbet.Service.Contact.Communication.Method.Email.RemovalKey.Template</code></a>.</p><h3> Mobile</h3><p>Support for mobile based contacts is provided by the <a href="Sherbet.Service.Contact.Communication.Method.Mobile.html"><code>Sherbet.Service.Contact.Communication.Method.Mobile</code></a> implementation.</p><p>Mobile verification/removal requests are delivered by <strong>todo: sms service</strong>.</p><h2 id="todo" class="section-heading">
-  <a href="#todo" class="hover-link"><i class="icon-link"></i></a>
-  Todo
+<p>Support for contacts can be added by implementing the behaviours in <a href="Sherbet.Service.Contact.Communication.Method.html"><code>Sherbet.Service.Contact.Communication.Method</code></a>.</p><h3 id="email" class="section-heading">
+  <a href="#email" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+   Email
+</h3>
+<p>Support for email based contacts is provided by the <a href="Sherbet.Service.Contact.Communication.Method.Email.html"><code>Sherbet.Service.Contact.Communication.Method.Email</code></a> implementation.</p><p>Email verification/removal requests are delivered using the <a href="https://github.com/ZURASTA/cake"><code>Cake</code></a> service. The templates for those emails can be customised in the config file, more information on how to customise them can be found in <a href="Sherbet.Service.Contact.Communication.Method.Email.VerificationKey.Template.html"><code>Sherbet.Service.Contact.Communication.Method.Email.VerificationKey.Template</code></a> and <a href="Sherbet.Service.Contact.Communication.Method.Email.RemovalKey.Template.html"><code>Sherbet.Service.Contact.Communication.Method.Email.RemovalKey.Template</code></a>.</p><h3 id="mobile" class="section-heading">
+  <a href="#mobile" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+   Mobile
+</h3>
+<p>Support for mobile based contacts is provided by the <a href="Sherbet.Service.Contact.Communication.Method.Mobile.html"><code>Sherbet.Service.Contact.Communication.Method.Mobile</code></a> implementation.</p><p>Mobile verification/removal requests are delivered by <strong>todo: sms service</strong>.</p><h2 id="configuration" class="section-heading">
+  <a href="#configuration" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Configuration
 </h2>
-<ul><li><input type="checkbox" disabled>Verification/removal request key timeout for <a href="Sherbet.Service.Contact.Communication.Method.Email.html"><code>Sherbet.Service.Contact.Communication.Method.Email</code></a>.</li><li><input type="checkbox" disabled>Limit amount of active verification/removal request keys for <a href="Sherbet.Service.Contact.Communication.Method.Email.html"><code>Sherbet.Service.Contact.Communication.Method.Email</code></a>.</li><li><input type="checkbox" disabled>Deliver verification/removal requests for <a href="Sherbet.Service.Contact.Communication.Method.Mobile.html"><code>Sherbet.Service.Contact.Communication.Method.Mobile</code></a>.</li><li><input type="checkbox" disabled>Verification/removal request key timeout for <a href="Sherbet.Service.Contact.Communication.Method.Mobile.html"><code>Sherbet.Service.Contact.Communication.Method.Mobile</code></a>.</li><li><input type="checkbox" disabled>Limit amount of active verification/removal request keys for <a href="Sherbet.Service.Contact.Communication.Method.Mobile.html"><code>Sherbet.Service.Contact.Communication.Method.Mobile</code></a>.</li><li><input type="checkbox" disabled>Expose some attributes (key sizes, timeout times, etc.) to config.</li><li><input type="checkbox" disabled>PubSub.</li></ul>
+<p>The service may be configured with the following options:</p><h3 id="server" class="section-heading">
+  <a href="#server" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+   Server
+</h3>
+<p>The service can be made available through various methods customisable using the <code>:server</code> key in the service and API configs. The <code>:server:</code> key expects the value to be a function that accepts a module and returns a value acceptable by the <code>server</code> argument of GenServer requests, or name field of GenServer registration. Some examples of this can be:</p><h4> Local Named Server</h4><pre><code class="elixir">config :sherbet_service,
+    server: &amp;(&amp;1)
+
+config :sherbet_api,
+    server: &amp;(&amp;1)</code></pre><h4> Distributed Named Server</h4><pre><code class="elixir">config :sherbet_service,
+    server: &amp;(&amp;1)
+
+config :sherbet_api,
+    server: &amp;({ &amp;1, :&quot;foo@127.0.0.1&quot; })</code></pre><h4> Swarm Registered Server</h4><pre><code class="elixir">config :sherbet_service,
+    server: &amp;({ :via, :swarm, &amp;1 })
+
+config :sherbet_api,
+    server: &amp;({ :via, :swarm, &amp;1 })</code></pre><h3 id="setup-mode" class="section-heading">
+  <a href="#setup-mode" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+   Setup Mode
+</h3>
+<p>The service has two setup modes: <code>:auto</code> and <code>:manual</code>. When the service is started in <code>:auto</code>, it will automatically handle creating and migrating the database. When the service is started in <code>:manual</code>, the state of the database is left up to the user to manually setup.</p><p>By default the service runs in <code>:auto</code> mode. To change this behaviour, pass in the <code>{ :setup_mode, mode }</code> when starting the application.</p><h3 id="database" class="section-heading">
+  <a href="#database" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+   Database
+</h3>
+<p>The database options can be configured by providing the config for the key <a href="Sherbet.Service.Repo.html"><code>Sherbet.Service.Repo</code></a>.</p><p>For details on how to configure an <a href="https://hexdocs.pm/ecto/Ecto.Repo.html">Ecto repo</a>.</p>
       <footer class="footer">
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.15.1),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.18.3),
           </span>
           <span class="line">
             designed by
             <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
             </span>
         </p>
-        <button class="night-mode-toggle" />
       </footer>
     </div>
   </div>
 </section>
 </div>
-  <script src="dist/app-e9767fa739.js"></script>
+  <script src="dist/app-9bd040e5e5.js"></script>
+  
+  
+  
+  
   </body>
 </html>
 

@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.3">
-    <title>Sherbet.Service.Contact.Communication.Method.Email.RemovalKey.Template – Sherbet vdev</title>
+    <title>Sherbet.Service.Repo.DB – Sherbet vdev</title>
     <link rel="stylesheet" href="dist/app-480ffdc169.css" />
     
     <script src="dist/sidebar_items-0b4886b15b.js"></script>
@@ -70,42 +70,15 @@
 
       <h1>
         <small class="visible-xs">Sherbet vdev</small>
-        Sherbet.Service.Contact.Communication.Method.Email.RemovalKey.Template
+        Sherbet.Service.Repo.DB
         
-          <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/contact/communication/method/email/removal_key/template.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo/db.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
-      
-        <section id="moduledoc">
-          <p>  Template used to create the email for remove email requests.</p><p>  <h2 id="module-configuration" class="section-heading">
-  <a href="#module-configuration" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
-   Configuration
-</h2>
-</p><p>  There are two configuration options for this template. The first is customising  the fields (sender, subject, link formats) used in the default template. The  second is overriding the default template and replacing it with a completely  custom one.</p><p>  The configuration falls under <code>:email</code>, <code>:removal</code>. e.g. <code>[email: [removal: ...]]</code>.</p><p>  <h3 id="module-customising-fields" class="section-heading">
-  <a href="#module-customising-fields" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
-   Customising Fields
-</h3>
-</p><p>  Expects a keyword list configuring each field.</p><p>  <ul><li><code>:sender</code> - The from address of the email, can take the form of <code>email :: String.t</code>  or <code>{ name :: String.t, email :: String.t }</code>.</li></ul></p><p>  <ul><li><code>:subject</code> - The subject of the email, takes the form of <code>String.t</code>.</li></ul></p><p>  <ul><li><code>:remove_link</code> - The removal link, takes the form of <code>((email, key) -&gt; String.t)</code>.</li></ul></p><pre><code class="elixir">config :sherbet_service,
-    email: [removal: [
-        sender: { &quot;Foo&quot;, &quot;foo@bar&quot; },
-        subject: &quot;Approve Email Removal&quot;,
-        remove_link: &amp;(&quot;https://example.com/remove/email/#{&amp;1}?key=#{&amp;2}&quot;)
-    ]]</code></pre><p>  <h3 id="module-custom-formatter" class="section-heading">
-  <a href="#module-custom-formatter" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
-   Custom Formatter
-</h3>
-</p><p>  Expects a function returning the email. The function should be of the type  <code>((email, key) -&gt; Cake.Email)</code>.</p><pre><code class="elixir">config :sherbet_service,
-    email: [removal: fn email, key -&gt;
-        struct Cake.Email,
-            from: &quot;foo@bar&quot;,
-            to: email
-            #...
-    end]</code></pre>
-        </section>
       
 
       
@@ -126,7 +99,19 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#format/1">format(map)</a>
+    <a href="#create/0">create()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#drop/0">drop()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#migrate/0">migrate()</a>
   </div>
   
 </div>
@@ -150,17 +135,61 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="format/1">
+          <div class="detail" id="create/0">
   
   
   <div class="detail-header">
-    <a href="#format/1" class="detail-link" title="Link to this function">
+    <a href="#create/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">format(map)</span>
+    <span class="signature">create()</span>
     
-      <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/contact/communication/method/email/removal_key/template.ex#L54" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo/db.ex#L4" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="drop/0">
+  
+  
+  <div class="detail-header">
+    <a href="#drop/0" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">drop()</span>
+    
+      <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo/db.ex#L13" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="migrate/0">
+  
+  
+  <div class="detail-header">
+    <a href="#migrate/0" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">migrate()</span>
+    
+      <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo/db.ex#L8" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>

@@ -1,21 +1,30 @@
     <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.15.1">
+    <meta name="generator" content="ExDoc v0.18.3">
     <title>Sherbet.Service.Repo – Sherbet vdev</title>
-    <link rel="stylesheet" href="dist/app-af302bfcc4.css" />
+    <link rel="stylesheet" href="dist/app-480ffdc169.css" />
     
-    <script src="dist/sidebar_items-57206545be.js"></script>
+    <script src="dist/sidebar_items-0b4886b15b.js"></script>
+    
+    
+    
+    
   </head>
   <body data-type="modules">
     <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
 
     <div class="main">
-<button class="sidebar-toggle">
-  <i class="icon-menu"></i>
+<button class="sidebar-button sidebar-toggle">
+  <span class="icon-menu" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Sidebar</span>
+</button>
+<button class="sidebar-button night-mode-toggle">
+  <span class="icon-theme" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Theme</span>
 </button>
 <section class="sidebar">
 
@@ -32,10 +41,12 @@
     
   </a>
 
-  <div class="sidebar-search">
-    <i class="icon-search"></i>
-    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
-  </div>
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <input name="q" type="text" id="search-list" class="search-input" placeholder="Search" aria-label="Search" autocomplete="off" />
+  </form>
 
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
@@ -61,9 +72,9 @@
         <small class="visible-xs">Sherbet vdev</small>
         Sherbet.Service.Repo
         
-        
           <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L1" title="View Source" class="view-source" rel="help">
-            <i class="icon-code"></i>
+            <span class="icon-code" aria-hidden="true"></span>
+            <span class="sr-only">View Source</span>
           </a>
         
       </h1>
@@ -74,7 +85,8 @@
         <section id="summary" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#summary">
-              <i class="icon-link"></i>
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
             </a>
             Summary
           </h1>
@@ -346,22 +358,26 @@
         <section id="functions" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#functions">
-              <i class="icon-link"></i>
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
             </a>
             Functions
           </h1>
           <div class="detail" id="aggregate/4">
   
-    <span id="aggregate/3" />
+  
+    <span id="aggregate/3"></span>
   
   <div class="detail-header">
     <a href="#aggregate/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">aggregate(queryable, aggregate, field, opts \\ [])</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -369,11 +385,11 @@
   </div>
   <section class="docstring">
     <p>Calculate the given <code>aggregate</code> over the given <code>field</code>.</p><p>If the query has a limit, offset or distinct set, it will beautomatically wrapped in a subquery in order to return theproper result.</p><p>Any preload or select in the query will be ignored in favor ofthe column being aggregated.</p><p>The aggregation will fail if any <code>group_by</code> field is set.</p><h2 id="aggregate/4-options" class="section-heading">
-  <a href="#aggregate/4-options" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#aggregate/4-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
 <p>See the "Shared options" section at the module documentation.</p><h2 id="aggregate/4-examples" class="section-heading">
-  <a href="#aggregate/4-examples" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#aggregate/4-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Examples
 </h2>
 <pre><code class="elixir"># Returns the number of visits per blog post
@@ -385,16 +401,19 @@ Repo.aggregate(query, :avg, :visits)</code></pre><p>Callback implementation for 
 </div>
 <div class="detail" id="all/2">
   
-    <span id="all/1" />
+  
+    <span id="all/1"></span>
   
   <div class="detail-header">
     <a href="#all/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">all(queryable, opts \\ [])</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -402,12 +421,12 @@ Repo.aggregate(query, :avg, :visits)</code></pre><p>Callback implementation for 
   </div>
   <section class="docstring">
     <p>Fetches all entries from the data store matching the given query.</p><p>May raise <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.QueryError.html"><code>Ecto.QueryError</code></a> if query validation fails.</p><h2 id="all/2-options" class="section-heading">
-  <a href="#all/2-options" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#all/2-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
-<p>  <ul><li><code>:prefix</code> - The prefix to run the query on (such as the schema path</li><pre><code class="elixir">in Postgres or the database in MySQL). This overrides the prefix set
-in the query.</code></pre></ul></p><p>See the "Shared options" section at the module documentation.</p><h2 id="all/2-example" class="section-heading">
-  <a href="#all/2-example" class="hover-link"><i class="icon-link"></i></a>
+<p>  <ul><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code class="elixir">in Postgres or the database in MySQL). This overrides the prefix set
+in the query.</code></pre></li></ul></p><p>See the "Shared options" section at the module documentation.</p><h2 id="all/2-example" class="section-heading">
+  <a href="#all/2-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Example
 </h2>
 <pre><code class="elixir"># Fetch all post titles
@@ -418,14 +437,17 @@ MyRepo.all(query)</code></pre><p>Callback implementation for <a href="https://he
 </div>
 <div class="detail" id="child_spec/1">
   
+  
   <div class="detail-header">
     <a href="#child_spec/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">child_spec(args)</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L4" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -437,14 +459,17 @@ MyRepo.all(query)</code></pre><p>Callback implementation for <a href="https://he
 </div>
 <div class="detail" id="config/0">
   
+  
   <div class="detail-header">
     <a href="#config/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">config()</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -456,16 +481,19 @@ MyRepo.all(query)</code></pre><p>Callback implementation for <a href="https://he
 </div>
 <div class="detail" id="delete/2">
   
-    <span id="delete/1" />
+  
+    <span id="delete/1"></span>
   
   <div class="detail-header">
     <a href="#delete/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">delete(struct, opts \\ [])</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -473,12 +501,12 @@ MyRepo.all(query)</code></pre><p>Callback implementation for <a href="https://he
   </div>
   <section class="docstring">
     <p>Deletes a struct using its primary key.</p><p>If the struct has no primary key, <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.NoPrimaryKeyFieldError.html"><code>Ecto.NoPrimaryKeyFieldError</code></a>will be raised.</p><p>It returns <code>{:ok, struct}</code> if the struct has been successfullydeleted or <code>{:error, changeset}</code> if there was a validationor a known constraint error.</p><h2 id="delete/2-options" class="section-heading">
-  <a href="#delete/2-options" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#delete/2-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
-<p>  <ul><li><code>:prefix</code> - The prefix to run the query on (such as the schema path</li><pre><code class="elixir">in Postgres or the database in MySQL). This overrides the prefix set
-in the struct.</code></pre></ul></p><p>See the "Shared options" section at the module documentation.</p><h2 id="delete/2-example" class="section-heading">
-  <a href="#delete/2-example" class="hover-link"><i class="icon-link"></i></a>
+<p>  <ul><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code class="elixir">in Postgres or the database in MySQL). This overrides the prefix set
+in the struct.</code></pre></li></ul></p><p>See the "Shared options" section at the module documentation.</p><h2 id="delete/2-example" class="section-heading">
+  <a href="#delete/2-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Example
 </h2>
 <pre><code class="elixir">post = MyRepo.get!(Post, 42)
@@ -490,16 +518,19 @@ end</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/
 </div>
 <div class="detail" id="delete!/2">
   
-    <span id="delete!/1" />
+  
+    <span id="delete!/1"></span>
   
   <div class="detail-header">
     <a href="#delete!/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">delete!(struct, opts \\ [])</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -511,16 +542,19 @@ end</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/
 </div>
 <div class="detail" id="delete_all/2">
   
-    <span id="delete_all/1" />
+  
+    <span id="delete_all/1"></span>
   
   <div class="detail-header">
     <a href="#delete_all/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">delete_all(queryable, opts \\ [])</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -528,12 +562,15 @@ end</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/
   </div>
   <section class="docstring">
     <p>Deletes all entries matching the given query.</p><p>It returns a tuple containing the number of entriesand any returned result as second element. If the databasedoes not support RETURNING in DELETE statements or noreturn result was selected, the second element will be <code>nil</code>.</p><h2 id="delete_all/2-options" class="section-heading">
-  <a href="#delete_all/2-options" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#delete_all/2-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
-<p>  <ul><li><code>:returning</code> - selects which fields to return. When <code>true</code>,</li><li><code>:prefix</code> - The prefix to run the query on (such as the schema path</li><pre><code class="elixir">in Postgres or the database in MySQL). This overrides the prefix set
-in the query.</code></pre></ul></p><p>See the "Shared options" section at the module documentation forremaining options.</p><h2 id="delete_all/2-examples" class="section-heading">
-  <a href="#delete_all/2-examples" class="hover-link"><i class="icon-link"></i></a>
+<p>  <ul><li><code>:returning</code> - selects which fields to return. When <code>true</code>,<pre><code class="elixir">returns all fields in the given struct. May be a list of
+fields, where a struct is still returned but only with the
+given fields. Or `false`, where nothing is returned (the default).
+This option is not supported by all databases.</code></pre></li><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code class="elixir">in Postgres or the database in MySQL). This overrides the prefix set
+in the query.</code></pre></li></ul></p><p>See the "Shared options" section at the module documentation forremaining options.</p><h2 id="delete_all/2-examples" class="section-heading">
+  <a href="#delete_all/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Examples
 </h2>
 <pre><code class="elixir">MyRepo.delete_all(Post)
@@ -542,16 +579,19 @@ from(p in Post, where: p.id &lt; 10) |&gt; MyRepo.delete_all</code></pre><p>Call
 </div>
 <div class="detail" id="get/3">
   
-    <span id="get/2" />
+  
+    <span id="get/2"></span>
   
   <div class="detail-header">
     <a href="#get/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">get(queryable, id, opts \\ [])</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -559,11 +599,11 @@ from(p in Post, where: p.id &lt; 10) |&gt; MyRepo.delete_all</code></pre><p>Call
   </div>
   <section class="docstring">
     <p>Fetches a single struct from the data store where the primary key matches thegiven id.</p><p>Returns <code>nil</code> if no result was found. If the struct in the queryablehas no or more than one primary key, it will raise an argument error.</p><h2 id="get/3-options" class="section-heading">
-  <a href="#get/3-options" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#get/3-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
 <p>See the "Shared options" section at the module documentation.</p><h2 id="get/3-example" class="section-heading">
-  <a href="#get/3-example" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#get/3-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Example
 </h2>
 <pre><code class="elixir">MyRepo.get(Post, 42)</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Repo.html#c:get/3"><code>Ecto.Repo.get/3</code></a>.</p>
@@ -571,16 +611,19 @@ from(p in Post, where: p.id &lt; 10) |&gt; MyRepo.delete_all</code></pre><p>Call
 </div>
 <div class="detail" id="get!/3">
   
-    <span id="get!/2" />
+  
+    <span id="get!/2"></span>
   
   <div class="detail-header">
     <a href="#get!/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">get!(queryable, id, opts \\ [])</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -588,11 +631,11 @@ from(p in Post, where: p.id &lt; 10) |&gt; MyRepo.delete_all</code></pre><p>Call
   </div>
   <section class="docstring">
     <p>Similar to <a href="#get/3"><code>get/3</code></a> but raises <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.NoResultsError.html"><code>Ecto.NoResultsError</code></a> if no record was found.</p><h2 id="get!/3-options" class="section-heading">
-  <a href="#get!/3-options" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#get!/3-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
 <p>See the "Shared options" section at the module documentation.</p><h2 id="get!/3-example" class="section-heading">
-  <a href="#get!/3-example" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#get!/3-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Example
 </h2>
 <pre><code class="elixir">MyRepo.get!(Post, 42)</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Repo.html#c:get!/3"><code>Ecto.Repo.get!/3</code></a>.</p>
@@ -600,16 +643,19 @@ from(p in Post, where: p.id &lt; 10) |&gt; MyRepo.delete_all</code></pre><p>Call
 </div>
 <div class="detail" id="get_by/3">
   
-    <span id="get_by/2" />
+  
+    <span id="get_by/2"></span>
   
   <div class="detail-header">
     <a href="#get_by/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">get_by(queryable, clauses, opts \\ [])</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -617,11 +663,11 @@ from(p in Post, where: p.id &lt; 10) |&gt; MyRepo.delete_all</code></pre><p>Call
   </div>
   <section class="docstring">
     <p>Fetches a single result from the query.</p><p>Returns <code>nil</code> if no result was found.</p><h2 id="get_by/3-options" class="section-heading">
-  <a href="#get_by/3-options" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#get_by/3-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
 <p>See the "Shared options" section at the module documentation.</p><h2 id="get_by/3-example" class="section-heading">
-  <a href="#get_by/3-example" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#get_by/3-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Example
 </h2>
 <pre><code class="elixir">MyRepo.get_by(Post, title: &quot;My post&quot;)</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Repo.html#c:get_by/3"><code>Ecto.Repo.get_by/3</code></a>.</p>
@@ -629,16 +675,19 @@ from(p in Post, where: p.id &lt; 10) |&gt; MyRepo.delete_all</code></pre><p>Call
 </div>
 <div class="detail" id="get_by!/3">
   
-    <span id="get_by!/2" />
+  
+    <span id="get_by!/2"></span>
   
   <div class="detail-header">
     <a href="#get_by!/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">get_by!(queryable, clauses, opts \\ [])</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -646,11 +695,11 @@ from(p in Post, where: p.id &lt; 10) |&gt; MyRepo.delete_all</code></pre><p>Call
   </div>
   <section class="docstring">
     <p>Similar to <a href="#get_by/3"><code>get_by/3</code></a> but raises <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.NoResultsError.html"><code>Ecto.NoResultsError</code></a> if no record was found.</p><h2 id="get_by!/3-options" class="section-heading">
-  <a href="#get_by!/3-options" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#get_by!/3-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
 <p>See the "Shared options" section at the module documentation.</p><h2 id="get_by!/3-example" class="section-heading">
-  <a href="#get_by!/3-example" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#get_by!/3-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Example
 </h2>
 <pre><code class="elixir">MyRepo.get_by!(Post, title: &quot;My post&quot;)</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Repo.html#c:get_by!/3"><code>Ecto.Repo.get_by!/3</code></a>.</p>
@@ -658,14 +707,17 @@ from(p in Post, where: p.id &lt; 10) |&gt; MyRepo.delete_all</code></pre><p>Call
 </div>
 <div class="detail" id="in_transaction?/0">
   
+  
   <div class="detail-header">
     <a href="#in_transaction?/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">in_transaction?()</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -673,7 +725,7 @@ from(p in Post, where: p.id &lt; 10) |&gt; MyRepo.delete_all</code></pre><p>Call
   </div>
   <section class="docstring">
     <p>Returns true if the current process is inside a transaction.</p><h2 id="in_transaction?/0-examples" class="section-heading">
-  <a href="#in_transaction?/0-examples" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#in_transaction?/0-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Examples
 </h2>
 <pre><code class="elixir">MyRepo.in_transaction?
@@ -685,16 +737,19 @@ end)</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto
 </div>
 <div class="detail" id="insert/2">
   
-    <span id="insert/1" />
+  
+    <span id="insert/1"></span>
   
   <div class="detail-header">
     <a href="#insert/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">insert(struct, opts \\ [])</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -702,22 +757,24 @@ end)</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto
   </div>
   <section class="docstring">
     <p>Inserts a struct or a changeset.</p><p>In case a struct is given, the struct is converted into a changesetwith all non-nil fields as part of the changeset.</p><p>In case a changeset is given, the changes in the changeset aremerged with the struct fields, and all of them are sent to thedatabase.</p><p>It returns <code>{:ok, struct}</code> if the struct has been successfullyinserted or <code>{:error, changeset}</code> if there was a validationor a known constraint error.</p><h2 id="insert/2-options" class="section-heading">
-  <a href="#insert/2-options" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#insert/2-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
-<p>  <ul><li><code>:prefix</code> - The prefix to run the query on (such as the schema path</li><li><code>:on_conflict</code> - It may be one of <code>:raise</code> (the default), <code>:nothing</code>,</li><li><code>:conflict_target</code> - Which columns to verify for conflicts. If</li><pre><code class="elixir">none is specified, the conflict target is left up to the database
-and is usually made of primary keys and/or unique/exclusion constraints.</code></pre></ul></p><p>See the "Shared options" section at the module documentation.</p><h2 id="insert/2-examples" class="section-heading">
-  <a href="#insert/2-examples" class="hover-link"><i class="icon-link"></i></a>
+<p>  <ul><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code class="elixir">in Postgres or the database in MySQL). This overrides the prefix set
+in the struct.</code></pre></li><li><code>:on_conflict</code> - It may be one of <code>:raise</code> (the default), <code>:nothing</code>,<pre><code class="elixir">`:replace_all`, a keyword list of update instructions or an [`Ecto.Query`](https://hexdocs.pm/ecto/2.1.4/Ecto.Query.html)
+query for updates. See the &quot;Upserts&quot; section for more information.</code></pre></li><li><code>:conflict_target</code> - Which columns to verify for conflicts. If<pre><code class="elixir">none is specified, the conflict target is left up to the database
+and is usually made of primary keys and/or unique/exclusion constraints.</code></pre></li></ul></p><p>See the "Shared options" section at the module documentation.</p><h2 id="insert/2-examples" class="section-heading">
+  <a href="#insert/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Examples
 </h2>
 <p>A typical example is calling <code>MyRepo.insert/1</code> with a structand acting on the return value:</p><pre><code class="elixir">case MyRepo.insert %Post{title: &quot;Ecto is great&quot;} do
   {:ok, struct}       -&gt; # Inserted with success
   {:error, changeset} -&gt; # Something went wrong
 end</code></pre><h2 id="insert/2-upserts" class="section-heading">
-  <a href="#insert/2-upserts" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#insert/2-upserts" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Upserts
 </h2>
-<p><code>insert_all</code> provides upserts (update or inserts) via the <code>:on_conflict</code>option. The <code>:on_conflict</code> option supports the following values:</p><p>  <ul><li><code>:raise</code> - raises if there is a conflicting primary key or unique index</li><li><code>:nothing</code> - ignores the error in case of conflicts</li><li><code>:replace_all</code> - replace all entries in the database by the one being</li><li>a keyword list of update instructions - such as the one given to</li><li>an <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Query.html"><code>Ecto.Query</code></a> that will act as an <code>UPDATE</code> statement, such as the</li><pre><code class="elixir">one given to `c:update_all/3`</code></pre></ul></p><p>Upserts map to "ON CONFLICT" on databases like Postgres and "ON DUPLICATE KEY"on databases such as MySQL.</p><p>As an example, imagine <code>:title</code> is marked as a unique column inthe database:</p><pre><code class="elixir"># Insert it once
+<p><code>insert_all</code> provides upserts (update or inserts) via the <code>:on_conflict</code>option. The <code>:on_conflict</code> option supports the following values:</p><p>  <ul><li><code>:raise</code> - raises if there is a conflicting primary key or unique index</li><li><code>:nothing</code> - ignores the error in case of conflicts</li><li><code>:replace_all</code> - replace all entries in the database by the one being<pre><code class="elixir">currently attempted</code></pre></li><li>a keyword list of update instructions - such as the one given to<pre><code class="elixir">`c:update_all/3`, for example: `[set: [title: &quot;new title&quot;]]`</code></pre></li><li>an <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Query.html"><code>Ecto.Query</code></a> that will act as an <code>UPDATE</code> statement, such as the<pre><code class="elixir">one given to `c:update_all/3`</code></pre></li></ul></p><p>Upserts map to "ON CONFLICT" on databases like Postgres and "ON DUPLICATE KEY"on databases such as MySQL.</p><p>As an example, imagine <code>:title</code> is marked as a unique column inthe database:</p><pre><code class="elixir"># Insert it once
 {:ok, inserted} = MyRepo.insert(%Post{title: &quot;this is unique&quot;})
 # Insert with the same title but do nothing on conflicts.
 # Keep in mind that, although this returns :ok, the returned
@@ -743,16 +800,19 @@ on_conflict = [set: [title: &quot;updated&quot;]]
 </div>
 <div class="detail" id="insert!/2">
   
-    <span id="insert!/1" />
+  
+    <span id="insert!/1"></span>
   
   <div class="detail-header">
     <a href="#insert!/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">insert!(struct, opts \\ [])</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -764,16 +824,19 @@ on_conflict = [set: [title: &quot;updated&quot;]]
 </div>
 <div class="detail" id="insert_all/3">
   
-    <span id="insert_all/2" />
+  
+    <span id="insert_all/2"></span>
   
   <div class="detail-header">
     <a href="#insert_all/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">insert_all(schema_or_source, entries, opts \\ [])</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -781,21 +844,25 @@ on_conflict = [set: [title: &quot;updated&quot;]]
   </div>
   <section class="docstring">
     <p>Inserts all entries into the repository.</p><p>It expects a schema (<code>MyApp.User</code>) or a source (<code>&quot;users&quot;</code>) orboth (<code>{&quot;users&quot;, MyApp.User}</code>) as the first argument. The secondargument is a list of entries to be inserted, either as keywordlists or as maps.</p><p>It returns a tuple containing the number of entriesand any returned result as second element. If the databasedoes not support RETURNING in UPDATE statements or noreturn result was selected, the second element will be <code>nil</code>.</p><p>When a schema is given, the values given will be properly dumpedbefore being sent to the database. If the schema contains anautogenerated ID field, it will be handled either at the adapteror the storage layer. However any other autogenerated value, liketimestamps, won't be autogenerated when using <code>c:insert_all/3</code>.This is by design as this function aims to be a more direct wayto insert data into the database without the conveniences of<code>c:insert/2</code>. This is also consistent with <code>c:update_all/3</code> thatdoes not handle timestamps as well.</p><p>If a source is given, without a schema, the given fields are passedas is to the adapter.</p><h2 id="insert_all/3-options" class="section-heading">
-  <a href="#insert_all/3-options" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#insert_all/3-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
-<p>  <ul><li><code>:returning</code> - selects which fields to return. When <code>true</code>,</li><li><code>:prefix</code> - The prefix to run the query on (such as the schema path</li><li><code>:on_conflict</code> - It may be one of <code>:raise</code> (the default), <code>:nothing</code>,</li><li><code>:conflict_target</code> - Which columns to verify for conflicts. If</li><pre><code class="elixir">none is specified, the conflict target is left up to the database
-and is usually made of primary keys and/or unique/exclusion constraints.</code></pre></ul></p><p>See the "Shared options" section at the module documentation forremaining options.</p><h2 id="insert_all/3-examples" class="section-heading">
-  <a href="#insert_all/3-examples" class="hover-link"><i class="icon-link"></i></a>
+<p>  <ul><li><code>:returning</code> - selects which fields to return. When <code>true</code>,<pre><code class="elixir">returns all fields in the given struct. May be a list of
+fields, where a struct is still returned but only with the
+given fields. Or `false`, where nothing is returned (the default).
+This option is not supported by all databases.</code></pre></li><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code class="elixir">in Postgres or the database in MySQL).</code></pre></li><li><code>:on_conflict</code> - It may be one of <code>:raise</code> (the default), <code>:nothing</code>,<pre><code class="elixir">`:replace_all`, a keyword list of update instructions or an [`Ecto.Query`](https://hexdocs.pm/ecto/2.1.4/Ecto.Query.html)
+query for updates. See the &quot;Upserts&quot; section for more information.</code></pre></li><li><code>:conflict_target</code> - Which columns to verify for conflicts. If<pre><code class="elixir">none is specified, the conflict target is left up to the database
+and is usually made of primary keys and/or unique/exclusion constraints.</code></pre></li></ul></p><p>See the "Shared options" section at the module documentation forremaining options.</p><h2 id="insert_all/3-examples" class="section-heading">
+  <a href="#insert_all/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Examples
 </h2>
 <pre><code class="elixir">MyRepo.insert_all(Post, [[title: &quot;My first post&quot;], [title: &quot;My second post&quot;]])
 MyRepo.insert_all(Post, [%{title: &quot;My first post&quot;}, %{title: &quot;My second post&quot;}])</code></pre><h2 id="insert_all/3-upserts" class="section-heading">
-  <a href="#insert_all/3-upserts" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#insert_all/3-upserts" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Upserts
 </h2>
-<p><code>insert_all</code> provides upserts (update or inserts) via the <code>:on_conflict</code>option. The <code>:on_conflict</code> option supports the following values:</p><p>  <ul><li><code>:raise</code> - raises if there is a conflicting primary key or unique index</li><li><code>:nothing</code> - ignores the error in case of conflicts</li><li><code>:replace_all</code> - replace all entries in the database by the one being</li><li>a keyword list of update instructions - such as the one given to</li><li>an <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Query.html"><code>Ecto.Query</code></a> that will act as an <code>UPDATE</code> statement, such as the</li><pre><code class="elixir">one given to `c:update_all/3`</code></pre></ul></p><p>Upserts map to "ON CONFLICT" on databases like Postgres and "ON DUPLICATE KEY"on databases such as MySQL.</p><h2 id="insert_all/3-return-values" class="section-heading">
-  <a href="#insert_all/3-return-values" class="hover-link"><i class="icon-link"></i></a>
+<p><code>insert_all</code> provides upserts (update or inserts) via the <code>:on_conflict</code>option. The <code>:on_conflict</code> option supports the following values:</p><p>  <ul><li><code>:raise</code> - raises if there is a conflicting primary key or unique index</li><li><code>:nothing</code> - ignores the error in case of conflicts</li><li><code>:replace_all</code> - replace all entries in the database by the one being<pre><code class="elixir">currently attempted</code></pre></li><li>a keyword list of update instructions - such as the one given to<pre><code class="elixir">`c:update_all/3`, for example: `[set: [title: &quot;new title&quot;]]`</code></pre></li><li>an <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Query.html"><code>Ecto.Query</code></a> that will act as an <code>UPDATE</code> statement, such as the<pre><code class="elixir">one given to `c:update_all/3`</code></pre></li></ul></p><p>Upserts map to "ON CONFLICT" on databases like Postgres and "ON DUPLICATE KEY"on databases such as MySQL.</p><h2 id="insert_all/3-return-values" class="section-heading">
+  <a href="#insert_all/3-return-values" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Return values
 </h2>
 <p>By default, both Postgres and MySQL return the amount of entriesinserted on <code>insert_all</code>. However, when the <code>:on_conflict</code> optionis specified, Postgres will only return a row if it was affectedwhile MySQL returns at least the number of entries attempted.</p><p>For example, if <code>:on_conflict</code> is set to <code>:nothing</code>, Postgres willreturn 0 if no new entry was added while MySQL will still returnthe amount of entries attempted to be inserted, even if no entrywas added. Even worse, if <code>:on_conflict</code> is query, MySQL will returnthe number of attempted entries plus the number of entries modifiedby the UPDATE query.</p><p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Repo.html#c:insert_all/3"><code>Ecto.Repo.insert_all/3</code></a>.</p>
@@ -803,16 +870,19 @@ MyRepo.insert_all(Post, [%{title: &quot;My first post&quot;}, %{title: &quot;My 
 </div>
 <div class="detail" id="insert_or_update/2">
   
-    <span id="insert_or_update/1" />
+  
+    <span id="insert_or_update/1"></span>
   
   <div class="detail-header">
     <a href="#insert_or_update/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">insert_or_update(changeset, opts \\ [])</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -822,12 +892,12 @@ MyRepo.insert_all(Post, [%{title: &quot;My first post&quot;}, %{title: &quot;My 
     <p>Inserts or updates a changeset depending on whether the struct is persistedor not.</p><p>The distinction whether to insert or update will be made on the<a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Schema.Metadata.html"><code>Ecto.Schema.Metadata</code></a> field <code>:state</code>. The <code>:state</code> is automatically set byEcto when loading or building a schema.</p><p>Please note that for this to work, you will have to load existing structs fromthe database. So even if the struct exists, this won't work:</p><pre><code class="elixir">struct = %Post{id: &apos;existing_id&apos;, ...}
 MyRepo.insert_or_update changeset
 # =&gt; {:error, &quot;id already exists&quot;}</code></pre><h2 id="insert_or_update/2-options" class="section-heading">
-  <a href="#insert_or_update/2-options" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#insert_or_update/2-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
-<p>  <ul><li><code>:prefix</code> - The prefix to run the query on (such as the schema path</li><pre><code class="elixir">in Postgres or the database in MySQL). This overrides the prefix set
-in the struct.</code></pre></ul></p><p>See the "Shared options" section at the module documentation.</p><h2 id="insert_or_update/2-example" class="section-heading">
-  <a href="#insert_or_update/2-example" class="hover-link"><i class="icon-link"></i></a>
+<p>  <ul><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code class="elixir">in Postgres or the database in MySQL). This overrides the prefix set
+in the struct.</code></pre></li></ul></p><p>See the "Shared options" section at the module documentation.</p><h2 id="insert_or_update/2-example" class="section-heading">
+  <a href="#insert_or_update/2-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Example
 </h2>
 <pre><code class="elixir">result =
@@ -845,16 +915,19 @@ end</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/
 </div>
 <div class="detail" id="insert_or_update!/2">
   
-    <span id="insert_or_update!/1" />
+  
+    <span id="insert_or_update!/1"></span>
   
   <div class="detail-header">
     <a href="#insert_or_update!/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">insert_or_update!(changeset, opts \\ [])</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -866,14 +939,17 @@ end</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/
 </div>
 <div class="detail" id="load/2">
   
+  
   <div class="detail-header">
     <a href="#load/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">load(schema_or_types, data)</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -881,7 +957,7 @@ end</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/
   </div>
   <section class="docstring">
     <p>Loads <code>data</code> into a struct or a map.</p><p>The first argument can be a schema, or a map (of types) and determines the return value:a struct or a map, respectively.</p><p>The second argument <code>data</code> specifies fields and values that are to be loaded.It can be a map, a keyword list, or a <code>{fields, values}</code> tuple.Fields can be atoms or strings.</p><p>Fields that are not present in the schema (or <code>types</code> map) are ignored.If any of the values has invalid type, an error is raised.</p><h2 id="load/2-examples" class="section-heading">
-  <a href="#load/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#load/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Examples
 </h2>
 <pre><code class="iex elixir">iex&gt; MyRepo.load(User, %{name: &quot;Alice&quot;, age: 25})
@@ -897,16 +973,19 @@ iex&gt; Enum.map(result.rows, &amp;MyRepo.load(User, {result.columns, &amp;1}))
 </div>
 <div class="detail" id="one/2">
   
-    <span id="one/1" />
+  
+    <span id="one/1"></span>
   
   <div class="detail-header">
     <a href="#one/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">one(queryable, opts \\ [])</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -914,7 +993,7 @@ iex&gt; Enum.map(result.rows, &amp;MyRepo.load(User, {result.columns, &amp;1}))
   </div>
   <section class="docstring">
     <p>Fetches a single result from the query.</p><p>Returns <code>nil</code> if no result was found. Raises if more than one entry.</p><h2 id="one/2-options" class="section-heading">
-  <a href="#one/2-options" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#one/2-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
 <p>See the "Shared options" section at the module documentation.</p><p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Repo.html#c:one/2"><code>Ecto.Repo.one/2</code></a>.</p>
@@ -922,16 +1001,19 @@ iex&gt; Enum.map(result.rows, &amp;MyRepo.load(User, {result.columns, &amp;1}))
 </div>
 <div class="detail" id="one!/2">
   
-    <span id="one!/1" />
+  
+    <span id="one!/1"></span>
   
   <div class="detail-header">
     <a href="#one!/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">one!(queryable, opts \\ [])</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -939,7 +1021,7 @@ iex&gt; Enum.map(result.rows, &amp;MyRepo.load(User, {result.columns, &amp;1}))
   </div>
   <section class="docstring">
     <p>Similar to <a href="#one/2"><code>one/2</code></a> but raises <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.NoResultsError.html"><code>Ecto.NoResultsError</code></a> if no record was found.</p><p>Raises if more than one entry.</p><h2 id="one!/2-options" class="section-heading">
-  <a href="#one!/2-options" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#one!/2-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
 <p>See the "Shared options" section at the module documentation.</p><p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Repo.html#c:one!/2"><code>Ecto.Repo.one!/2</code></a>.</p>
@@ -947,16 +1029,19 @@ iex&gt; Enum.map(result.rows, &amp;MyRepo.load(User, {result.columns, &amp;1}))
 </div>
 <div class="detail" id="preload/3">
   
-    <span id="preload/2" />
+  
+    <span id="preload/2"></span>
   
   <div class="detail-header">
     <a href="#preload/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">preload(struct_or_structs, preloads, opts \\ [])</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -964,12 +1049,14 @@ iex&gt; Enum.map(result.rows, &amp;MyRepo.load(User, {result.columns, &amp;1}))
   </div>
   <section class="docstring">
     <p>Preloads all associations on the given struct or structs.</p><p>This is similar to <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Query.html#preload/3"><code>Ecto.Query.preload/3</code></a> except it allowsyou to preload structs after they have been fetched from thedatabase.</p><p>In case the association was already loaded, preload won't attemptto reload it.</p><h2 id="preload/3-options" class="section-heading">
-  <a href="#preload/3-options" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#preload/3-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
-<p>Besides the "Shared options" section at the module documentation,it accepts:</p><p>  <ul><li><code>:force</code> - By default, Ecto won't preload associations that</li><li><code>:in_parallel</code> - If the preloads must be done in parallel. It can</li><li><code>:prefix</code> - the prefix to fetch preloads from. By default, queries</li><pre><code class="elixir">will use the same prefix as the one in the given collection. This
-option allows the prefix to be changed.</code></pre></ul></p><h2 id="preload/3-examples" class="section-heading">
-  <a href="#preload/3-examples" class="hover-link"><i class="icon-link"></i></a>
+<p>Besides the "Shared options" section at the module documentation,it accepts:</p><p>  <ul><li><code>:force</code> - By default, Ecto won't preload associations that<pre><code class="elixir">are already loaded. By setting this option to true, any existing
+association will be discarded and reloaded.</code></pre></li><li><code>:in_parallel</code> - If the preloads must be done in parallel. It can<pre><code class="elixir">only be performed when we have more than one preload and the
+repository is not in a transaction. Defaults to `true`.</code></pre></li><li><code>:prefix</code> - the prefix to fetch preloads from. By default, queries<pre><code class="elixir">will use the same prefix as the one in the given collection. This
+option allows the prefix to be changed.</code></pre></li></ul></p><h2 id="preload/3-examples" class="section-heading">
+  <a href="#preload/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Examples
 </h2>
 <pre><code class="elixir">posts = Repo.preload posts, :comments
@@ -979,18 +1066,21 @@ posts = Repo.preload posts, comments: from(c in Comment, order_by: c.published_a
 </div>
 <div class="detail" id="query/3">
   
-    <span id="query/1" />
   
-    <span id="query/2" />
+    <span id="query/1"></span>
+  
+    <span id="query/2"></span>
   
   <div class="detail-header">
     <a href="#query/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">query(sql, params \\ [], opts \\ [])</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1002,18 +1092,21 @@ posts = Repo.preload posts, comments: from(c in Comment, order_by: c.published_a
 </div>
 <div class="detail" id="query!/3">
   
-    <span id="query!/1" />
   
-    <span id="query!/2" />
+    <span id="query!/1"></span>
+  
+    <span id="query!/2"></span>
   
   <div class="detail-header">
     <a href="#query!/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">query!(sql, params \\ [], opts \\ [])</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1025,21 +1118,24 @@ posts = Repo.preload posts, comments: from(c in Comment, order_by: c.published_a
 </div>
 <div class="detail" id="rollback/1">
   
+  
   <div class="detail-header">
     <a href="#rollback/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">rollback(value)</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
     
       <div class="specs">
         
-          <pre>rollback(term) :: no_return</pre>
+          <pre>rollback(<a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">no_return</a>()</pre>
         
       </div>
     
@@ -1050,16 +1146,19 @@ posts = Repo.preload posts, comments: from(c in Comment, order_by: c.published_a
 </div>
 <div class="detail" id="start_link/1">
   
-    <span id="start_link/0" />
+  
+    <span id="start_link/0"></span>
   
   <div class="detail-header">
     <a href="#start_link/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">start_link(opts \\ [])</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1067,7 +1166,7 @@ posts = Repo.preload posts, comments: from(c in Comment, order_by: c.published_a
   </div>
   <section class="docstring">
     <p>Starts any connection pooling or supervision and return <code>{:ok, pid}</code>or just <code>:ok</code> if nothing needs to be done.</p><p>Returns <code>{:error, {:already_started, pid}}</code> if the repo is alreadystarted or <code>{:error, term}</code> in case anything else goes wrong.</p><h2 id="start_link/1-options" class="section-heading">
-  <a href="#start_link/1-options" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#start_link/1-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
 <p>See the configuration in the moduledoc for options shared between adapters,for adapter-specific configuration see the adapter's documentation.</p><p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Repo.html#c:start_link/1"><code>Ecto.Repo.start_link/1</code></a>.</p>
@@ -1075,16 +1174,19 @@ posts = Repo.preload posts, comments: from(c in Comment, order_by: c.published_a
 </div>
 <div class="detail" id="stop/2">
   
-    <span id="stop/1" />
+  
+    <span id="stop/1"></span>
   
   <div class="detail-header">
     <a href="#stop/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stop(pid, timeout \\ 5000)</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1096,16 +1198,19 @@ posts = Repo.preload posts, comments: from(c in Comment, order_by: c.published_a
 </div>
 <div class="detail" id="stream/2">
   
-    <span id="stream/1" />
+  
+    <span id="stream/1"></span>
   
   <div class="detail-header">
     <a href="#stream/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stream(queryable, opts \\ [])</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1113,12 +1218,12 @@ posts = Repo.preload posts, comments: from(c in Comment, order_by: c.published_a
   </div>
   <section class="docstring">
     <p>Returns a lazy enumerable that emits all entries from the data storematching the given query. SQL adapters, such as Postgres and MySQL, can onlyenumerate a stream inside a transaction.</p><p>May raise <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.QueryError.html"><code>Ecto.QueryError</code></a> if query validation fails.</p><h2 id="stream/2-options" class="section-heading">
-  <a href="#stream/2-options" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#stream/2-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
-<p>  <ul><li><code>:prefix</code> - The prefix to run the query on (such as the schema path</li><pre><code class="elixir">in Postgres or the database in MySQL). This overrides the prefix set
-in the query</code></pre></ul></p><p>  <ul><li><code>:max_rows</code> - The number of rows to load from the database as we stream.</li><pre><code class="elixir">It is supported at least by Postgres and MySQL and defaults to 500.</code></pre></ul></p><p>See the "Shared options" section at the module documentation.</p><h2 id="stream/2-example" class="section-heading">
-  <a href="#stream/2-example" class="hover-link"><i class="icon-link"></i></a>
+<p>  <ul><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code class="elixir">in Postgres or the database in MySQL). This overrides the prefix set
+in the query</code></pre></li></ul></p><p>  <ul><li><code>:max_rows</code> - The number of rows to load from the database as we stream.<pre><code class="elixir">It is supported at least by Postgres and MySQL and defaults to 500.</code></pre></li></ul></p><p>See the "Shared options" section at the module documentation.</p><h2 id="stream/2-example" class="section-heading">
+  <a href="#stream/2-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Example
 </h2>
 <pre><code class="elixir"># Fetch all post titles
@@ -1132,16 +1237,19 @@ end)</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto
 </div>
 <div class="detail" id="transaction/2">
   
-    <span id="transaction/1" />
+  
+    <span id="transaction/1"></span>
   
   <div class="detail-header">
     <a href="#transaction/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">transaction(fun_or_multi, opts \\ [])</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1149,19 +1257,19 @@ end)</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto
   </div>
   <section class="docstring">
     <p>Runs the given function or <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Multi.html"><code>Ecto.Multi</code></a> inside a transaction.</p><h2 id="transaction/2-use-with-function" class="section-heading">
-  <a href="#transaction/2-use-with-function" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#transaction/2-use-with-function" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Use with function
 </h2>
 <p>If an unhandled error occurs the transaction will be rolled backand the error will bubble up from the transaction function.If no error occurred the transaction will be committed when thefunction returns. A transaction can be explicitly rolled backby calling <a href="#rollback/1"><code>rollback/1</code></a>, this will immediately leave the functionand return the value given to <code>rollback</code> as <code>{:error, value}</code>.</p><p>A successful transaction returns the value returned by the functionwrapped in a tuple as <code>{:ok, value}</code>.</p><p>If <a href="#transaction/2"><code>transaction/2</code></a> is called inside another transaction, the functionis simply executed, without wrapping the new transaction call in anyway. If there is an error in the inner transaction and the error isrescued, or the inner transaction is rolled back, the whole outertransaction is marked as tainted, guaranteeing nothing will be committed.</p><h2 id="transaction/2-use-with-ecto-multi" class="section-heading">
-  <a href="#transaction/2-use-with-ecto-multi" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#transaction/2-use-with-ecto-multi" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Use with Ecto.Multi
 </h2>
 <p>Besides functions transaction can be used with an Ecto.Multi struct.Transaction will be started, all operations applied and in case ofsuccess committed returning <code>{:ok, changes}</code>. In case of any errorsthe transaction will be rolled back and<code>{:error, failed_operation, failed_value, changes_so_far}</code> will bereturned.</p><p>You can read more about using transactions with <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Multi.html"><code>Ecto.Multi</code></a> as well assee some examples in the <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Multi.html"><code>Ecto.Multi</code></a> documentation.</p><h2 id="transaction/2-options" class="section-heading">
-  <a href="#transaction/2-options" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#transaction/2-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
 <p>See the "Shared options" section at the module documentation.</p><h2 id="transaction/2-examples" class="section-heading">
-  <a href="#transaction/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#transaction/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Examples
 </h2>
 <pre><code class="elixir">MyRepo.transaction(fn -&gt;
@@ -1183,16 +1291,19 @@ Ecto.Multi.new
 </div>
 <div class="detail" id="update/2">
   
-    <span id="update/1" />
+  
+    <span id="update/1"></span>
   
   <div class="detail-header">
     <a href="#update/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">update(struct, opts \\ [])</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1200,12 +1311,14 @@ Ecto.Multi.new
   </div>
   <section class="docstring">
     <p>Updates a changeset using its primary key.</p><p>A changeset is required as it is the only mechanism fortracking dirty changes. Only the fields present in the <code>changes</code> partof the changeset are sent to the database. Any other, in-memorychanges done to the schema are ignored.</p><p>If the struct has no primary key, <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.NoPrimaryKeyFieldError.html"><code>Ecto.NoPrimaryKeyFieldError</code></a>will be raised.</p><p>It returns <code>{:ok, struct}</code> if the struct has been successfullyupdated or <code>{:error, changeset}</code> if there was a validationor a known constraint error.</p><h2 id="update/2-options" class="section-heading">
-  <a href="#update/2-options" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#update/2-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
-<p>Besides the "Shared options" section at the module documentation,it accepts:</p><p>  <ul><li><code>:force</code> - By default, if there are no changes in the changeset,</li><li><code>:prefix</code> - The prefix to run the query on (such as the schema path</li><pre><code class="elixir">in Postgres or the database in MySQL). This overrides the prefix set
-in the struct.</code></pre></ul></p><h2 id="update/2-example" class="section-heading">
-  <a href="#update/2-example" class="hover-link"><i class="icon-link"></i></a>
+<p>Besides the "Shared options" section at the module documentation,it accepts:</p><p>  <ul><li><code>:force</code> - By default, if there are no changes in the changeset,<pre><code class="elixir">[`update!/2`](#update!/2) is a no-op. By setting this option to true, update
+callbacks will always be executed, even if there are no changes
+(including timestamps).</code></pre></li><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code class="elixir">in Postgres or the database in MySQL). This overrides the prefix set
+in the struct.</code></pre></li></ul></p><h2 id="update/2-example" class="section-heading">
+  <a href="#update/2-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Example
 </h2>
 <pre><code class="elixir">post = MyRepo.get!(Post, 42)
@@ -1218,16 +1331,19 @@ end</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/
 </div>
 <div class="detail" id="update!/2">
   
-    <span id="update!/1" />
+  
+    <span id="update!/1"></span>
   
   <div class="detail-header">
     <a href="#update!/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">update!(struct, opts \\ [])</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1239,16 +1355,19 @@ end</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/
 </div>
 <div class="detail" id="update_all/3">
   
-    <span id="update_all/2" />
+  
+    <span id="update_all/2"></span>
   
   <div class="detail-header">
     <a href="#update_all/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">update_all(queryable, updates, opts \\ [])</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/repo.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1256,12 +1375,15 @@ end</code></pre><p>Callback implementation for <a href="https://hexdocs.pm/ecto/
   </div>
   <section class="docstring">
     <p>Updates all entries matching the given query with the given values.</p><p>It returns a tuple containing the number of entriesand any returned result as second element. If the databasedoes not support RETURNING in UPDATE statements or noreturn result was selected, the second element will be <code>nil</code>.</p><p>Keep in mind this <code>update_all</code> will not update autogeneratedfields like the <code>updated_at</code> columns.</p><p>See <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Query.html#update/3"><code>Ecto.Query.update/3</code></a> for update operations that can beperformed on fields.</p><h2 id="update_all/3-options" class="section-heading">
-  <a href="#update_all/3-options" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#update_all/3-options" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Options
 </h2>
-<p>  <ul><li><code>:returning</code> - selects which fields to return. When <code>true</code>,</li><li><code>:prefix</code> - The prefix to run the query on (such as the schema path</li><pre><code class="elixir">in Postgres or the database in MySQL). This overrides the prefix set
-in the query.</code></pre></ul></p><p>See the "Shared options" section at the module documentation forremaining options.</p><h2 id="update_all/3-examples" class="section-heading">
-  <a href="#update_all/3-examples" class="hover-link"><i class="icon-link"></i></a>
+<p>  <ul><li><code>:returning</code> - selects which fields to return. When <code>true</code>,<pre><code class="elixir">returns all fields in the given struct. May be a list of
+fields, where a struct is still returned but only with the
+given fields. Or `false`, where nothing is returned (the default).
+This option is not supported by all databases.</code></pre></li><li><code>:prefix</code> - The prefix to run the query on (such as the schema path<pre><code class="elixir">in Postgres or the database in MySQL). This overrides the prefix set
+in the query.</code></pre></li></ul></p><p>See the "Shared options" section at the module documentation forremaining options.</p><h2 id="update_all/3-examples" class="section-heading">
+  <a href="#update_all/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Examples
 </h2>
 <pre><code class="elixir">MyRepo.update_all(Post, set: [title: &quot;New title&quot;])
@@ -1283,20 +1405,23 @@ from(p in Post, where: p.id &lt; 10, update: [set: [title: fragment(&quot;?&quot
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.15.1),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.18.3),
           </span>
           <span class="line">
             designed by
             <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
             </span>
         </p>
-        <button class="night-mode-toggle" />
       </footer>
     </div>
   </div>
 </section>
 </div>
-  <script src="dist/app-e9767fa739.js"></script>
+  <script src="dist/app-9bd040e5e5.js"></script>
+  
+  
+  
+  
   </body>
 </html>
 

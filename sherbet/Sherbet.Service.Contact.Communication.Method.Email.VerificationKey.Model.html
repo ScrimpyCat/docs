@@ -1,21 +1,30 @@
     <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.15.1">
+    <meta name="generator" content="ExDoc v0.18.3">
     <title>Sherbet.Service.Contact.Communication.Method.Email.VerificationKey.Model – Sherbet vdev</title>
-    <link rel="stylesheet" href="dist/app-af302bfcc4.css" />
+    <link rel="stylesheet" href="dist/app-480ffdc169.css" />
     
-    <script src="dist/sidebar_items-57206545be.js"></script>
+    <script src="dist/sidebar_items-0b4886b15b.js"></script>
+    
+    
+    
+    
   </head>
   <body data-type="modules">
     <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
 
     <div class="main">
-<button class="sidebar-toggle">
-  <i class="icon-menu"></i>
+<button class="sidebar-button sidebar-toggle">
+  <span class="icon-menu" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Sidebar</span>
+</button>
+<button class="sidebar-button night-mode-toggle">
+  <span class="icon-theme" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Theme</span>
 </button>
 <section class="sidebar">
 
@@ -32,10 +41,12 @@
     
   </a>
 
-  <div class="sidebar-search">
-    <i class="icon-search"></i>
-    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
-  </div>
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <input name="q" type="text" id="search-list" class="search-input" placeholder="Search" aria-label="Search" autocomplete="off" />
+  </form>
 
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
@@ -61,9 +72,9 @@
         <small class="visible-xs">Sherbet vdev</small>
         Sherbet.Service.Contact.Communication.Method.Email.VerificationKey.Model
         
-        
           <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/contact/communication/method/email/verification_key/model.ex#L1" title="View Source" class="view-source" rel="help">
-            <i class="icon-code"></i>
+            <span class="icon-code" aria-hidden="true"></span>
+            <span class="sr-only">View Source</span>
           </a>
         
       </h1>
@@ -71,10 +82,22 @@
       
         <section id="moduledoc">
           <p>  A model representing the different email verification keys.</p><p>  <h2 id="module-fields" class="section-heading">
-  <a href="#module-fields" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#module-fields" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Fields
 </h2>
-</p><p>  <h3>:id</h3>  Is the unique reference to the verification key entry. Is an <code>integer</code>.</p><p>  <h3>:email_id</h3>  Is the reference to the email the verification key belongs to. Is an  <code>integer</code> to <a href="Sherbet.Service.Contact.Communication.Method.Email.Model.html"><code>Sherbet.Service.Contact.Communication.Method.Email.Model</code></a>.</p><p>  <h3>:key</h3>  Is the verification key needed to verify this entry. Is a <code>string</code>.</p>
+</p><p>  <h3 id="module-id" class="section-heading">
+  <a href="#module-id" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  :id
+</h3>
+  Is the unique reference to the verification key entry. Is an <code>integer</code>.</p><p>  <h3 id="module-email_id" class="section-heading">
+  <a href="#module-email_id" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  :email_id
+</h3>
+  Is the reference to the email the verification key belongs to. Is an  <code>integer</code> to <a href="Sherbet.Service.Contact.Communication.Method.Email.Model.html"><code>Sherbet.Service.Contact.Communication.Method.Email.Model</code></a>.</p><p>  <h3 id="module-key" class="section-heading">
+  <a href="#module-key" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  :key
+</h3>
+  Is the verification key needed to verify this entry. Is a <code>string</code>.</p>
         </section>
       
 
@@ -82,7 +105,8 @@
         <section id="summary" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#summary">
-              <i class="icon-link"></i>
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
             </a>
             Summary
           </h1>
@@ -116,22 +140,26 @@
         <section id="functions" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#functions">
-              <i class="icon-link"></i>
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
             </a>
             Functions
           </h1>
           <div class="detail" id="changeset/2">
   
-    <span id="changeset/1" />
+  
+    <span id="changeset/1"></span>
   
   <div class="detail-header">
     <a href="#changeset/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">changeset(struct, params \\ %{})</span>
     
       <a href="https://github.com/ZURASTA/sherbet/blob/master/apps/sherbet_service/lib/sherbet.service/contact/communication/method/email/verification_key/model.ex#L36" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -150,20 +178,23 @@
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.15.1),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.18.3),
           </span>
           <span class="line">
             designed by
             <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
             </span>
         </p>
-        <button class="night-mode-toggle" />
       </footer>
     </div>
   </div>
 </section>
 </div>
-  <script src="dist/app-e9767fa739.js"></script>
+  <script src="dist/app-9bd040e5e5.js"></script>
+  
+  
+  
+  
   </body>
 </html>
 
