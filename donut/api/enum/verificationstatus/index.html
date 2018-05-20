@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="VerificationStatus GraphQL documentation">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>VerificationStatus</title>
+    <link rel="stylesheet" href="/donut/api/assets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.2/anchor.min.js"></script>
+    <script>
+
+    // Add anchors on DOMContentLoaded
+    document.addEventListener("DOMContentLoaded", function(event) {
+      anchors.options = {
+        placement: 'left',
+        visible: 'hover',
+        icon: '¶'
+      };
+      anchors.add('h2, h3, h4, h5, h6, .anchored');
+    });
+
+    </script>
+  </head>
+  <body>
+
+    <div id="wrap">
+      <div id="header">
+      </div>
+      <div id="sidebar">
+        <ul class="categories">
+  <li>
+    <ul class="menu-root">
+      <li>
+        <a href="/donut/api">GraphQL Reference</a>
+    </ul>
+  </li>
+
+  <li>
+    <p>Queries</p>
+    <ul class="menu-root">
+      <li>
+        <a href="/donut/api/operation/query/" class="sidebar-link">
+          Query
+        </a>
+      </li>
+      <li>
+        <a href="/donut/api/operation/mutation/" class="sidebar-link">
+          Mutation
+        </a>
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <p><a href="/donut/api/object">Objects</a></p>
+    <ul class="menu-root">
+      
+        
+      <li>
+        <a href="/donut/api/object/credential/" class="sidebar-link">
+          Credential
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/emailcontact/" class="sidebar-link">
+          EmailContact
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/error/" class="sidebar-link">
+          Error
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/identity/" class="sidebar-link">
+          Identity
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/internalerror/" class="sidebar-link">
+          InternalError
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/mobilecontact/" class="sidebar-link">
+          MobileContact
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/rootmutationtype/" class="sidebar-link">
+          RootMutationType
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/rootquerytype/" class="sidebar-link">
+          RootQueryType
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/session/" class="sidebar-link">
+          Session
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/__directive/" class="sidebar-link">
+          __Directive
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/__enumvalue/" class="sidebar-link">
+          __EnumValue
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/__field/" class="sidebar-link">
+          __Field
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/__inputvalue/" class="sidebar-link">
+          __InputValue
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/__schema/" class="sidebar-link">
+          __Schema
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/__type/" class="sidebar-link">
+          __Type
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+
+  <li>
+    <p><a href="/donut/api/operation/mutation">Mutations</a></p>
+    <ul class="menu-root">
+      
+    </ul>
+  </li>
+
+  <li>
+    <p><a href="/donut/api/interface">Interfaces</a></p>
+    <ul class="menu-root">
+      
+        
+        <li>
+          <a href="/donut/api/interface/contact/" class="sidebar-link">
+            Contact
+          </a>
+        </li>
+      
+        
+        <li>
+          <a href="/donut/api/interface/genericerror/" class="sidebar-link">
+            GenericError
+          </a>
+        </li>
+      
+    </ul>
+  </li>
+
+  <li>
+    <p><a href="/donut/api/enum">Enums</a></p>
+    <ul class="menu-root">
+      
+      
+      <li>
+        <a href="/donut/api/enum/contactpriority/" class="sidebar-link">
+          ContactPriority
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/enum/credentialtype/" class="sidebar-link">
+          CredentialType
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/enum/verificationstatus/" class="sidebar-link">
+          VerificationStatus
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/enum/__directivelocation/" class="sidebar-link">
+          __DirectiveLocation
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/enum/__typekind/" class="sidebar-link">
+          __TypeKind
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+
+  <li>
+    <p><a href="/donut/api/union">Unions</a></p>
+    <ul class="menu-root">
+      
+      
+      <li>
+        <a href="/donut/api/union/contactresult/" class="sidebar-link">
+          ContactResult
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/union/credentialresult/" class="sidebar-link">
+          CredentialResult
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/union/identityresult/" class="sidebar-link">
+          IdentityResult
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/union/loginresult/" class="sidebar-link">
+          LoginResult
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/union/logoutresult/" class="sidebar-link">
+          LogoutResult
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/union/refreshresult/" class="sidebar-link">
+          RefreshResult
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/union/registerresult/" class="sidebar-link">
+          RegisterResult
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+
+  <li>
+    <p><a href="/donut/api/input_object">Input Objects</a></p>
+    <ul class="menu-root">
+      
+      
+      <li>
+        <a href="/donut/api/input_object/emailcredential/" class="sidebar-link">
+          EmailCredential
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/input_object/inputsession/" class="sidebar-link">
+          InputSession
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+
+  <li>
+    <p><a href="/donut/api/scalar">Scalars</a></p>
+    <ul class="menu-root">
+      
+      
+      <li>
+        <a href="/donut/api/scalar/boolean/" class="sidebar-link">
+          Boolean
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/scalar/float/" class="sidebar-link">
+          Float
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/scalar/id/" class="sidebar-link">
+          ID
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/scalar/int/" class="sidebar-link">
+          Int
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/scalar/string/" class="sidebar-link">
+          String
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+</ul>
+
+      </div>
+      <div id="content">
+
+        <h1>
+<a id="verificationstatus" class="anchor" href="#verificationstatus" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>VerificationStatus</h1>
+<p>The verification status</p>
+<h3 id="fields">
+<a id="values" class="anchor" href="#values" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Values</h3>
+  <h4 id="unverified" class="name anchored">
+<a id="unverified" class="anchor" href="#unverified" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>UNVERIFIED</h4>
+  <div class="description-wrapper">
+   <p></p>
+  </div>
+  <h4 id="verified" class="name anchored">
+<a id="verified" class="anchor" href="#verified" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>VERIFIED</h4>
+  <div class="description-wrapper">
+   <p></p>
+  </div>
+
+      </div>
+
+      <!-- mobile only -->
+      <div id="mobile-header">
+        <a class="menu-button"></a>
+        <a class="logo" href="/donut/api">
+
+        </a>
+      </div>
+      <div id="mobile-shade"></div>
+
+    </div>
+
+  </body>
+</html>
