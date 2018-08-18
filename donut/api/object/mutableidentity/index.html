@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="MutableIdentity GraphQL documentation">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>MutableIdentity</title>
+    <link rel="stylesheet" href="/donut/api/assets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.2/anchor.min.js"></script>
+    <script>
+
+    // Add anchors on DOMContentLoaded
+    document.addEventListener("DOMContentLoaded", function(event) {
+      anchors.options = {
+        placement: 'left',
+        visible: 'hover',
+        icon: '¶'
+      };
+      anchors.add('h2, h3, h4, h5, h6, .anchored');
+    });
+
+    </script>
+  </head>
+  <body>
+
+    <div id="wrap">
+      <div id="header">
+      </div>
+      <div id="sidebar">
+        <ul class="categories">
+  <li>
+    <ul class="menu-root">
+      <li>
+        <a href="/donut/api">GraphQL Reference</a>
+    </ul>
+  </li>
+
+  <li>
+    <p>Queries</p>
+    <ul class="menu-root">
+      <li>
+        <a href="/donut/api/operation/query/" class="sidebar-link">
+          Query
+        </a>
+      </li>
+      <li>
+        <a href="/donut/api/operation/mutation/" class="sidebar-link">
+          Mutation
+        </a>
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <p><a href="/donut/api/object">Objects</a></p>
+    <ul class="menu-root">
+      
+        
+      <li>
+        <a href="/donut/api/object/credential/" class="sidebar-link">
+          Credential
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/emailcontact/" class="sidebar-link">
+          EmailContact
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/error/" class="sidebar-link">
+          Error
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/identity/" class="sidebar-link">
+          Identity
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/internalerror/" class="sidebar-link">
+          InternalError
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/mobilecontact/" class="sidebar-link">
+          MobileContact
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/mutablecredential/" class="sidebar-link">
+          MutableCredential
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/mutableemailcontact/" class="sidebar-link">
+          MutableEmailContact
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/mutableidentity/" class="sidebar-link">
+          MutableIdentity
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/mutablemobilecontact/" class="sidebar-link">
+          MutableMobileContact
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/rootmutationtype/" class="sidebar-link">
+          RootMutationType
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/rootquerytype/" class="sidebar-link">
+          RootQueryType
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/session/" class="sidebar-link">
+          Session
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/__directive/" class="sidebar-link">
+          __Directive
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/__enumvalue/" class="sidebar-link">
+          __EnumValue
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/__field/" class="sidebar-link">
+          __Field
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/__inputvalue/" class="sidebar-link">
+          __InputValue
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/__schema/" class="sidebar-link">
+          __Schema
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/__type/" class="sidebar-link">
+          __Type
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+
+  <li>
+    <p><a href="/donut/api/operation/mutation">Mutations</a></p>
+    <ul class="menu-root">
+      
+    </ul>
+  </li>
+
+  <li>
+    <p><a href="/donut/api/interface">Interfaces</a></p>
+    <ul class="menu-root">
+      
+        
+        <li>
+          <a href="/donut/api/interface/contact/" class="sidebar-link">
+            Contact
+          </a>
+        </li>
+      
+        
+        <li>
+          <a href="/donut/api/interface/genericerror/" class="sidebar-link">
+            GenericError
+          </a>
+        </li>
+      
+        
+        <li>
+          <a href="/donut/api/interface/mutablecontact/" class="sidebar-link">
+            MutableContact
+          </a>
+        </li>
+      
+    </ul>
+  </li>
+
+  <li>
+    <p><a href="/donut/api/enum">Enums</a></p>
+    <ul class="menu-root">
+      
+      
+      <li>
+        <a href="/donut/api/enum/contactpriority/" class="sidebar-link">
+          ContactPriority
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/enum/credentialtype/" class="sidebar-link">
+          CredentialType
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/enum/verificationstatus/" class="sidebar-link">
+          VerificationStatus
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/enum/__directivelocation/" class="sidebar-link">
+          __DirectiveLocation
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/enum/__typekind/" class="sidebar-link">
+          __TypeKind
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+
+  <li>
+    <p><a href="/donut/api/union">Unions</a></p>
+    <ul class="menu-root">
+      
+      
+      <li>
+        <a href="/donut/api/union/contactresult/" class="sidebar-link">
+          ContactResult
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/union/credentialresult/" class="sidebar-link">
+          CredentialResult
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/union/errorresult/" class="sidebar-link">
+          ErrorResult
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/union/identityresult/" class="sidebar-link">
+          IdentityResult
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/union/loginresult/" class="sidebar-link">
+          LoginResult
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/union/logoutresult/" class="sidebar-link">
+          LogoutResult
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/union/mutablecontactresult/" class="sidebar-link">
+          MutableContactResult
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/union/mutablecredentialresult/" class="sidebar-link">
+          MutableCredentialResult
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/union/mutableidentityresult/" class="sidebar-link">
+          MutableIdentityResult
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/union/refreshresult/" class="sidebar-link">
+          RefreshResult
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/union/registerresult/" class="sidebar-link">
+          RegisterResult
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+
+  <li>
+    <p><a href="/donut/api/input_object">Input Objects</a></p>
+    <ul class="menu-root">
+      
+      
+      <li>
+        <a href="/donut/api/input_object/emailcredential/" class="sidebar-link">
+          EmailCredential
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/input_object/inputsession/" class="sidebar-link">
+          InputSession
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+
+  <li>
+    <p><a href="/donut/api/scalar">Scalars</a></p>
+    <ul class="menu-root">
+      
+      
+      <li>
+        <a href="/donut/api/scalar/boolean/" class="sidebar-link">
+          Boolean
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/scalar/float/" class="sidebar-link">
+          Float
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/scalar/id/" class="sidebar-link">
+          ID
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/scalar/int/" class="sidebar-link">
+          Int
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/scalar/string/" class="sidebar-link">
+          String
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+</ul>
+
+      </div>
+      <div id="content">
+
+        <h1>
+<a id="mutableidentity" class="anchor" href="#mutableidentity" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MutableIdentity</h1>
+<p>An identity</p>
+<h2>
+<a id="fields" class="anchor" href="#fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fields</h2>
+<div class="field-entry ">
+  <span id="addcontact" class="field-name anchored">addContact (<code><a href="/donut/api/union/mutablecontactresult">MutableContactResult</a></code>)</span>
+  <div class="description-wrapper">
+  <p>Add a contact to be associated with an identity</p>
+   <table class="arguments">
+  <thead>
+  <tr>
+    <th>Argument</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><code class="anchored">email</code></td>
+  <td>
+    <code><a href="/donut/api/scalar/string">String</a></code>
+  </td>
+  <td>
+    <p>The email contact to be added</p>
+   </td>
+  </tr>
+  <tr>
+  <td><code class="anchored">mobile</code></td>
+  <td>
+    <code><a href="/donut/api/scalar/string">String</a></code>
+  </td>
+  <td>
+    <p>The mobile contact to be added</p>
+   </td>
+  </tr>
+  </tbody>
+</table>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="contacts" class="field-name anchored">contacts (<code><a href="/donut/api/union/mutablecontactresult">[MutableContactResult]</a></code>)</span>
+  <div class="description-wrapper">
+  <p>The contacts associated with the identity</p>
+   <table class="arguments">
+  <thead>
+  <tr>
+    <th>Argument</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><code class="anchored">priority</code></td>
+  <td>
+    <code><a href="/donut/api/enum/contactpriority">ContactPriority</a></code>
+  </td>
+  <td>
+    <p>The priority of the contacts to retrieve</p>
+   </td>
+  </tr>
+  <tr>
+  <td><code class="anchored">status</code></td>
+  <td>
+    <code><a href="/donut/api/enum/verificationstatus">VerificationStatus</a></code>
+  </td>
+  <td>
+    <p>The status of the contacts to retrieve</p>
+   </td>
+  </tr>
+  </tbody>
+</table>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="credentials" class="field-name anchored">credentials (<code><a href="/donut/api/union/mutablecredentialresult">[MutableCredentialResult]</a></code>)</span>
+  <div class="description-wrapper">
+  <p>The credentials associated with the identity</p>
+   <table class="arguments">
+  <thead>
+  <tr>
+    <th>Argument</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><code class="anchored">associated</code></td>
+  <td>
+    <code><a href="/donut/api/scalar/boolean">Boolean</a></code>
+  </td>
+  <td>
+    <p>Whether to retrieve credentials that have been associated with the
+identity, or ones which have not.</p>
+   </td>
+  </tr>
+  <tr>
+  <td><code class="anchored">status</code></td>
+  <td>
+    <code><a href="/donut/api/enum/verificationstatus">VerificationStatus</a></code>
+  </td>
+  <td>
+    <p>The status of the credentials to retrieve</p>
+   </td>
+  </tr>
+  <tr>
+  <td><code class="anchored">type</code></td>
+  <td>
+    <code><a href="/donut/api/enum/credentialtype">CredentialType</a></code>
+  </td>
+  <td>
+    <p>The type of credential to retrieve</p>
+   </td>
+  </tr>
+  </tbody>
+</table>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="id" class="field-name anchored">id (<code><a href="/donut/api/scalar/id">ID!</a></code>)</span>
+  <div class="description-wrapper">
+  <p>The unique ID of the identity</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="setcredential" class="field-name anchored">setCredential (<code><a href="/donut/api/union/mutablecredentialresult">MutableCredentialResult</a></code>)</span>
+  <div class="description-wrapper">
+  <p>Add or replace a credential for an identity</p>
+   <table class="arguments">
+  <thead>
+  <tr>
+    <th>Argument</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><code class="anchored">emailCredential</code></td>
+  <td>
+    <code><a href="/donut/api/input_object/emailcredential">EmailCredential</a></code>
+  </td>
+  <td>
+    <p>The email credential to associate with the identity</p>
+   </td>
+  </tr>
+  </tbody>
+</table>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="token" class="field-name anchored">token (<code><a href="/donut/api/scalar/string">String!</a></code>)</span>
+  <div class="description-wrapper">
+  <p>The access token that granted access to this identity</p>
+  </div>
+</div>
+
+      </div>
+
+      <!-- mobile only -->
+      <div id="mobile-header">
+        <a class="menu-button"></a>
+        <a class="logo" href="/donut/api">
+
+        </a>
+      </div>
+      <div id="mobile-shade"></div>
+
+    </div>
+
+  </body>
+</html>

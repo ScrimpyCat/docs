@@ -99,6 +99,34 @@
       
         
       <li>
+        <a href="/donut/api/object/mutablecredential/" class="sidebar-link">
+          MutableCredential
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/mutableemailcontact/" class="sidebar-link">
+          MutableEmailContact
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/mutableidentity/" class="sidebar-link">
+          MutableIdentity
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/donut/api/object/mutablemobilecontact/" class="sidebar-link">
+          MutableMobileContact
+        </a>
+      </li>
+      
+        
+      <li>
         <a href="/donut/api/object/rootmutationtype/" class="sidebar-link">
           RootMutationType
         </a>
@@ -188,6 +216,13 @@
           </a>
         </li>
       
+        
+        <li>
+          <a href="/donut/api/interface/mutablecontact/" class="sidebar-link">
+            MutableContact
+          </a>
+        </li>
+      
     </ul>
   </li>
 
@@ -253,6 +288,13 @@
       
       
       <li>
+        <a href="/donut/api/union/errorresult/" class="sidebar-link">
+          ErrorResult
+        </a>
+      </li>
+      
+      
+      <li>
         <a href="/donut/api/union/identityresult/" class="sidebar-link">
           IdentityResult
         </a>
@@ -269,6 +311,27 @@
       <li>
         <a href="/donut/api/union/logoutresult/" class="sidebar-link">
           LogoutResult
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/union/mutablecontactresult/" class="sidebar-link">
+          MutableContactResult
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/union/mutablecredentialresult/" class="sidebar-link">
+          MutableCredentialResult
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/donut/api/union/mutableidentityresult/" class="sidebar-link">
+          MutableIdentityResult
         </a>
       </li>
       
@@ -360,6 +423,76 @@
 <a id="rootmutationtype" class="anchor" href="#rootmutationtype" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>RootMutationType</h1>
 <h2>
 <a id="fields" class="anchor" href="#fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fields</h2>
+<div class="field-entry ">
+  <span id="finaliseremovecontact" class="field-name anchored">finaliseRemoveContact (<code><a href="/donut/api/union/errorresult">ErrorResult</a></code>)</span>
+  <div class="description-wrapper">
+  <p>Finalise a contact be removed from its associated identity</p>
+   <table class="arguments">
+  <thead>
+  <tr>
+    <th>Argument</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><code class="anchored">email</code></td>
+  <td>
+    <code><a href="/donut/api/scalar/string">String</a></code>
+  </td>
+  <td>
+    <p>The email contact to be removed</p>
+   </td>
+  </tr>
+  <tr>
+  <td><code class="anchored">key</code></td>
+  <td>
+    <code><a href="/donut/api/scalar/string">String!</a></code>
+  </td>
+  <td>
+    <p>The confirmation key</p>
+   </td>
+  </tr>
+  <tr>
+  <td><code class="anchored">mobile</code></td>
+  <td>
+    <code><a href="/donut/api/scalar/string">String</a></code>
+  </td>
+  <td>
+    <p>The mobile contact to be removed</p>
+   </td>
+  </tr>
+  </tbody>
+</table>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="identity" class="field-name anchored">identity (<code><a href="/donut/api/union/mutableidentityresult">MutableIdentityResult</a></code>)</span>
+  <div class="description-wrapper">
+  <p>Update details of an identity</p>
+   <table class="arguments">
+  <thead>
+  <tr>
+    <th>Argument</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><code class="anchored">accessToken</code></td>
+  <td>
+    <code><a href="/donut/api/scalar/string">String</a></code>
+  </td>
+  <td>
+    <p>The token granting access to the identity</p>
+   </td>
+  </tr>
+  </tbody>
+</table>
+  </div>
+</div>
 <div class="field-entry ">
   <span id="login" class="field-name anchored">login (<code><a href="/donut/api/union/loginresult">LoginResult</a></code>)</span>
   <div class="description-wrapper">
@@ -459,6 +592,41 @@ replace them with a new session.</p>
   </td>
   <td>
     <p>The email credential to register with</p>
+   </td>
+  </tr>
+  </tbody>
+</table>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="requestremovecontact" class="field-name anchored">requestRemoveContact (<code><a href="/donut/api/union/errorresult">ErrorResult</a></code>)</span>
+  <div class="description-wrapper">
+  <p>Request a contact be removed from its associated identity</p>
+   <table class="arguments">
+  <thead>
+  <tr>
+    <th>Argument</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><code class="anchored">email</code></td>
+  <td>
+    <code><a href="/donut/api/scalar/string">String</a></code>
+  </td>
+  <td>
+    <p>The email contact to request be removed</p>
+   </td>
+  </tr>
+  <tr>
+  <td><code class="anchored">mobile</code></td>
+  <td>
+    <code><a href="/donut/api/scalar/string">String</a></code>
+  </td>
+  <td>
+    <p>The mobile contact to request be removed</p>
    </td>
   </tr>
   </tbody>

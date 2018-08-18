@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-373abb872b.js
+dist/sidebar_items-c02dbc7f06.js
 api-reference.html
 donut.html
 graphql.html
@@ -12,9 +12,11 @@ search.html
 404.html
 Donut.GraphQL.html
 Donut.GraphQL.Auth.html
+Donut.GraphQL.Error.html
 Donut.GraphQL.Identity.html
 Donut.GraphQL.Identity.Contact.html
 Donut.GraphQL.Identity.Credential.html
+Donut.GraphQL.Middleware.Capture.html
 Donut.GraphQL.Result.html
 Donut.GraphQL.Result.Error.html
 Donut.GraphQL.Result.InternalError.html

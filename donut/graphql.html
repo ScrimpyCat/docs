@@ -8,7 +8,7 @@
     <title>GraphQL – Donut vdev</title>
     <link rel="stylesheet" href="dist/app-480ffdc169.css" />
     
-    <script src="dist/sidebar_items-373abb872b.js"></script>
+    <script src="dist/sidebar_items-c02dbc7f06.js"></script>
     
     
     
@@ -99,7 +99,25 @@
   <a href="#accept-language" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Accept-Language
 </h3>
-<p>Indicate the current locale(s) to be used. e.g. <code>en-AU</code>.</p><h2 id="authentication" class="section-heading">
+<p>Indicate the current locale(s) to be used. e.g. <code>en-AU</code>.</p><h2 id="mutability" class="section-heading">
+  <a href="#mutability" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+   Mutability
+</h2>
+<p>Mutation queries may return mutable variants of the same types returned in regular queries. These mutable variants will expose the same fields as their immutable equivalent, but may also expose additional fields to mutate that individual object.</p><p>Example below will remove every credential associated with the identity.</p><pre><code class="elixir">mutation {
+  identity {
+    ... on MutableIdentity {
+      credentials(associated: true) {
+        ... on MutableCredential {
+          remove {
+            ... on Error {
+                message
+            }
+          }
+        }
+      }
+    }
+  }
+}</code></pre><h2 id="authentication" class="section-heading">
   <a href="#authentication" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
    Authentication
 </h2>
